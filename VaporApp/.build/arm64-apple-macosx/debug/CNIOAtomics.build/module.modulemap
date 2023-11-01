@@ -1,0 +1,4 @@
+module CNIOAtomics {
+    umbrella header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-nio/Sources/CNIOAtomics/include/CNIOAtomics.h"
+    export *
+}

@@ -1,0 +1,4 @@
+module RoutingKit {
+    header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/RoutingKit.build/RoutingKit-Swift.h"
+    requires objc
+}

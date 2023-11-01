@@ -1,0 +1,4 @@
+module CNIOBoringSSL {
+    umbrella header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-nio-ssl/Sources/CNIOBoringSSL/include/CNIOBoringSSL.h"
+    export *
+}

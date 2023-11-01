@@ -3,8 +3,8 @@ content-length: 21
 content-type: application/json
 
 {
-    "name": "Milky Way",
-    "meaning": "absdad"
+    "name": "abc",
+    "meaning": "123"
 }
 
 ### GET ALL
@@ -19,18 +19,18 @@ content-type: application/json
 
 ###
 
-PUT http://localhost:8080/api/words/191045C9-824C-445C-A3B0-5B3CABA277CB HTTP/1.1
+PUT http://localhost:8080/api/words/5F31152E-7F3C-420E-A840-B41B3F8CBB59 HTTP/1.1
 content-length: 21
 content-type: application/json
 
 {
     "name": "Milky Way",
-    "meaning": "absdad31313131"
+    "meaning": "gggadwad"
 }
 
 ### DELETE
 
-DELETE http://localhost:8080/api/words/191045C9-824C-445C-A3B0-5B3CABA277CB HTTP/1.1
+DELETE http://localhost:8080/api/words/5F31152E-7F3C-420E-A840-B41B3F8CBB59 HTTP/1.1
 content-length: 21
 content-type: application/json
 
@@ -49,3 +49,13 @@ GET http://localhost:8080/api/words/search?term=absdad
 content-length: 21
 content-type: application/json
 
+### FIRST
+
+GET http://localhost:8080/api/words/first
+content-length: 21
+content-type: application/json
+
+### SORT
+GET http://localhost:8080/api/words/sorted
+content-length: 21
+content-type: application/json

@@ -1,0 +1,4 @@
+module SQLKitBenchmark {
+    header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLKitBenchmark-Swift.h"
+    requires objc
+}

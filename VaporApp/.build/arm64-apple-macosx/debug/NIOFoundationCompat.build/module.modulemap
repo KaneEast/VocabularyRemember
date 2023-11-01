@@ -1,0 +1,4 @@
+module NIOFoundationCompat {
+    header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/NIOFoundationCompat.build/NIOFoundationCompat-Swift.h"
+    requires objc
+}

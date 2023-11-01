@@ -1,0 +1,4 @@
+module NIOExtras {
+    header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/NIOExtras.build/NIOExtras-Swift.h"
+    requires objc
+}

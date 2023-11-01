@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:VocabularyRemember}/VaporApp",
+            "name": "Debug App (VaporApp)",
+            "program": "${workspaceFolder:VocabularyRemember}/VaporApp/.build/debug/App",
+            "preLaunchTask": "swift: Build Debug App (VaporApp)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:VocabularyRemember}/VaporApp",
+            "name": "Release App (VaporApp)",
+            "program": "${workspaceFolder:VocabularyRemember}/VaporApp/.build/release/App",
+            "preLaunchTask": "swift: Build Release App (VaporApp)"
+        }
+    ]
+}

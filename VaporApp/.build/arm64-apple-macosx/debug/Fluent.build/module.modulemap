@@ -1,0 +1,4 @@
+module Fluent {
+    header "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Fluent.build/Fluent-Swift.h"
+    requires objc
+}

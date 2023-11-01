@@ -1,0 +1,4 @@
+module CVaporURLParser {
+    umbrella "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/vapor/Sources/CVaporURLParser/include"
+    export *
+}
