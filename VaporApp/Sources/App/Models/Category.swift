@@ -21,7 +21,7 @@ final class Category: Model, Content {
       through: WordCategoryPivot.self,
       from: \.$category,
       to: \.$word)
-    var acronyms: [Word]
+    var words: [Word]
 
     
     init() {}

@@ -14,12 +14,22 @@ docker run --name postgres -e POSTGRES_DB=vapor_database \
 ---------------------
 
 ``` sh
+// developing database
 docker run --name postgres \
   -e POSTGRES_DB=vapor_database \
   -e POSTGRES_USER=vapor_username \
   -e POSTGRES_PASSWORD=vapor_password \
   -p 5432:5432 -d postgres
 
+```
+
+``` sh
+// test database
+docker run --name postgres-test \
+  -e POSTGRES_DB=vapor-test \
+  -e POSTGRES_USER=vapor_username \
+  -e POSTGRES_PASSWORD=vapor_password \
+  -p 5433:5432 -d postgres
 ```
 
 ```
@@ -34,4 +44,18 @@ Use the Docker image named postgres for this container. If the image is not pres
 To check that your database is running, enter the following in Terminal to list all active containers:
 ```
 docker ps
+```
+
+
+## To test your application in Linux, open Terminal and type the following:
+``` sh
+# Build the different docker containers using the compose file created earlier.
+docker-compose -f docker-compose-testing.yml build
+# Spin up the different containers from the compose file created earlier and run the tests.
+# --abort-on-container-exit tells Docker Compose to stop the postgres container when the til-app container stops. 
+# The postgres container used for this test is different from, and doesn’t conflict with,
+# the one you’ve been using during development.
+docker-compose -f docker-compose-testing.yml up \
+  --abort-on-container-exit
+
 ```

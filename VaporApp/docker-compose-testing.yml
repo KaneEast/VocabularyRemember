@@ -1,0 +1,26 @@
+# Specify the Docker Compose version.
+version: '3.7'
+# Define the services for this application.
+services:
+  # Define a service for the application.
+  app:
+    # Set a dependency on the Postgres container, so Docker Compose starts the Postgres container first.
+    depends_on:
+      - postgres
+    # Build testing.Dockerfile in the current directory — the Dockerfile you created earlier.
+    build:
+      context: .
+      dockerfile: testing.Dockerfile
+    # Inject the DATABASE_HOST environment variable. Docker Compose has an internal DNS resolver. This allows the til-app container to connect to the postgres container with the hostname postgres. Also set the port for the database.
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+  # Define a service for the Postgres container.
+  postgres:
+    # Use the standard Postgres image.
+    image: "postgres"
+    # Set the same environment variables as used at the start of the chapter for the test database.
+    environment:
+      - POSTGRES_DB=vapor-test
+      - POSTGRES_USER=vapor_username
+      - POSTGRES_PASSWORD=vapor_password
