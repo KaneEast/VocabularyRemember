@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE01C04869B6028EEEC68222B42CCDFC"
-               BuildableName = "Pods_Wordsgram.framework"
-               BlueprintName = "Pods-Wordsgram"
+               BlueprintIdentifier = "A7420DC2E54AF8AABD02489771B47BB8"
+               BuildableName = "SwiftKeychainWrapper.framework"
+               BlueprintName = "SwiftKeychainWrapper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -7,6 +7,7 @@ target 'Wordsgram' do
 
   # Pods for Wordsgram
   #pod 'SwiftLint'
+  pod 'SwiftKeychainWrapper'
 
   target 'WordsgramTests' do
     inherit! :search_paths

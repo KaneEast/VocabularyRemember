@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct WordsgramApp: App {
+    init() {
+        NetworkMonitor.shared.startMonitoring()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

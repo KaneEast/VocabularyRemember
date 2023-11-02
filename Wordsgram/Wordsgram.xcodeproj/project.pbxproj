@@ -15,6 +15,16 @@
 		3C2066E72AF40DC300C74DBA /* WordsgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */; };
 		3C2066F12AF40DC300C74DBA /* WordsgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */; };
 		3C2066F32AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */; };
+		3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067022AF4204800C74DBA /* LoginScreen.swift */; };
+		3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067042AF4205F00C74DBA /* LoginViewModel.swift */; };
+		3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067062AF4208D00C74DBA /* LoginAction.swift */; };
+		3C20670A2AF424DD00C74DBA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067092AF424DD00C74DBA /* Auth.swift */; };
+		3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670C2AF425EC00C74DBA /* HomeScreen.swift */; };
+		3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670E2AF4262700C74DBA /* HomeViewModel.swift */; };
+		3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067122AF426A000C74DBA /* RootScreen.swift */; };
+		3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067152AF4284D00C74DBA /* MainButton.swift */; };
+		3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */; };
+		3C20671A2AF42A3600C74DBA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067192AF42A3600C74DBA /* APIError.swift */; };
 		B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */; };
 		F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +58,16 @@
 		3C2066EC2AF40DC300C74DBA /* WordsgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITests.swift; sourceTree = "<group>"; };
 		3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C2067022AF4204800C74DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3C2067042AF4205F00C74DBA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3C2067062AF4208D00C74DBA /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
+		3C2067092AF424DD00C74DBA /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		3C20670C2AF425EC00C74DBA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		3C20670E2AF4262700C74DBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3C2067122AF426A000C74DBA /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		3C2067152AF4284D00C74DBA /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3C2067192AF42A3600C74DBA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +131,9 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
+				3C2067142AF4283400C74DBA /* Common */,
+				3C2067082AF424C500C74DBA /* Utilities */,
+				3C2067102AF4267F00C74DBA /* Features */,
 				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
 				3C2066D72AF40DC000C74DBA /* ContentView.swift */,
 				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
@@ -142,6 +165,61 @@
 				3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */,
 			);
 			path = WordsgramUITests;
+			sourceTree = "<group>";
+		};
+		3C2067012AF4201200C74DBA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067022AF4204800C74DBA /* LoginScreen.swift */,
+				3C2067062AF4208D00C74DBA /* LoginAction.swift */,
+				3C2067042AF4205F00C74DBA /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3C2067082AF424C500C74DBA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067092AF424DD00C74DBA /* Auth.swift */,
+				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
+				3C2067192AF42A3600C74DBA /* APIError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3C20670B2AF425DC00C74DBA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3C20670C2AF425EC00C74DBA /* HomeScreen.swift */,
+				3C20670E2AF4262700C74DBA /* HomeViewModel.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3C2067102AF4267F00C74DBA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067112AF4269000C74DBA /* Root */,
+				3C2067012AF4201200C74DBA /* Login */,
+				3C20670B2AF425DC00C74DBA /* Screens */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3C2067112AF4269000C74DBA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067122AF426A000C74DBA /* RootScreen.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		3C2067142AF4283400C74DBA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067152AF4284D00C74DBA /* MainButton.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9FE9C5F37D255FAA011B9666 /* Pods */ = {
@@ -178,6 +256,7 @@
 				3C2066CE2AF40DC000C74DBA /* Sources */,
 				3C2066CF2AF40DC000C74DBA /* Frameworks */,
 				3C2066D02AF40DC000C74DBA /* Resources */,
+				97EAC011C743308A98DDEEF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +419,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		97EAC011C743308A98DDEEF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C34999563EE8F63D70400B34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,8 +470,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
+				3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */,
+				3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */,
+				3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */,
+				3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */,
+				3C20671A2AF42A3600C74DBA /* APIError.swift in Sources */,
+				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,
+				3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */,
 				3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */,
 				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
+				3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */,
+				3C20670A2AF424DD00C74DBA /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +555,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -507,7 +618,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -536,6 +647,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -565,6 +677,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -592,6 +705,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -612,6 +726,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -631,6 +746,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
@@ -649,6 +765,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
