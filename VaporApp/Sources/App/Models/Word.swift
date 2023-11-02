@@ -30,6 +30,13 @@ final class Word: Model {
     @Parent(key: "userID")
     var user: User
     
+    @Siblings(
+      through: WordCategoryPivot.self,
+      from: \.$word,
+      to: \.$category)
+    var categories: [Category]
+
+    
     // Provide an empty initializer as required by Model. Fluent uses this to initialize models returned from database queries.
     init() {}
     

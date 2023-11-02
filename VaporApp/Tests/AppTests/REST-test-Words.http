@@ -3,8 +3,8 @@ content-length: 21
 content-type: application/json
 
 {
-    "name": "abckane",
-    "meaning": "123kane",
+    "name": "money",
+    "meaning": "money111",
     "userID": "9589656E-7B46-471C-B0E3-38947CF4DE32"
 }
 
@@ -74,3 +74,7 @@ GET http://localhost:8080/api/users/9589656E-7B46-471C-B0E3-38947CF4DE32/words
 content-length: 21
 content-type: application/json
 
+###
+GET http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories
+content-length: 21
+content-type: application/json

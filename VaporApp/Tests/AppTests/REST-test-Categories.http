@@ -1,0 +1,26 @@
+POST http://localhost:8080/api/categories HTTP/1.1
+content-length: 21
+content-type: application/json
+
+{
+    "name": "Finance"
+}
+
+### GET
+GET http://localhost:8080/api/categories HTTP/1.1
+content-length: 21
+content-type: application/json
+
+###
+
+#POST http://localhost:8080/api/words/<ACRONYM_ID>/categories/<CATEGORY_ID>
+POST http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6
+content-length: 21
+content-type: application/json
+
+### GET WORDS
+GET http://localhost:8080/api/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6/words
+
+
+### Remove Relationship
+DELETE http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6
