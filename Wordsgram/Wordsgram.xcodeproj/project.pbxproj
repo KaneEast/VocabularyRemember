@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24C17956A55BFF5933388238 /* Pods_WordsgramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB38441B100ADF8C41C076E1 /* Pods_WordsgramUITests.framework */; };
+		3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */; };
+		3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066D72AF40DC000C74DBA /* ContentView.swift */; };
+		3C2066DA2AF40DC200C74DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2066D92AF40DC200C74DBA /* Assets.xcassets */; };
+		3C2066DD2AF40DC200C74DBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2066DC2AF40DC200C74DBA /* Preview Assets.xcassets */; };
+		3C2066E72AF40DC300C74DBA /* WordsgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */; };
+		3C2066F12AF40DC300C74DBA /* WordsgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */; };
+		3C2066F32AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */; };
+		B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */; };
+		F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C2066E32AF40DC300C74DBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C2066CA2AF40DC000C74DBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2066D12AF40DC000C74DBA;
+			remoteInfo = Wordsgram;
+		};
+		3C2066ED2AF40DC300C74DBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C2066CA2AF40DC000C74DBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2066D12AF40DC000C74DBA;
+			remoteInfo = Wordsgram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35D507343B859C4E7E1998BF /* Pods-WordsgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsgramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsgramTests/Pods-WordsgramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C2066D22AF40DC000C74DBA /* Wordsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramApp.swift; sourceTree = "<group>"; };
+		3C2066D72AF40DC000C74DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3C2066D92AF40DC200C74DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C2066DC2AF40DC200C74DBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C2066E22AF40DC300C74DBA /* WordsgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramTests.swift; sourceTree = "<group>"; };
+		3C2066EC2AF40DC300C74DBA /* WordsgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITests.swift; sourceTree = "<group>"; };
+		3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
+		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
+		985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordsgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33FD336951A8BF9A71144B9 /* Pods-WordsgramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsgramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsgramUITests/Pods-WordsgramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD4273582CA330D82E3DA5B5 /* Pods-WordsgramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsgramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsgramUITests/Pods-WordsgramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F303A8DBB7D3EFAB10E7168B /* Pods-WordsgramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsgramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsgramTests/Pods-WordsgramTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB38441B100ADF8C41C076E1 /* Pods_WordsgramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C2066CF2AF40DC000C74DBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066DF2AF40DC300C74DBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066E92AF40DC300C74DBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C17956A55BFF5933388238 /* Pods_WordsgramUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C2066C92AF40DC000C74DBA = {
+			isa = PBXGroup;
+			children = (
+				3C2066D42AF40DC000C74DBA /* Wordsgram */,
+				3C2066E52AF40DC300C74DBA /* WordsgramTests */,
+				3C2066EF2AF40DC300C74DBA /* WordsgramUITests */,
+				3C2066D32AF40DC000C74DBA /* Products */,
+				9FE9C5F37D255FAA011B9666 /* Pods */,
+				D06360FF29ECB829DEBA01F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C2066D32AF40DC000C74DBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C2066D22AF40DC000C74DBA /* Wordsgram.app */,
+				3C2066E22AF40DC300C74DBA /* WordsgramTests.xctest */,
+				3C2066EC2AF40DC300C74DBA /* WordsgramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
+			isa = PBXGroup;
+			children = (
+				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
+				3C2066D72AF40DC000C74DBA /* ContentView.swift */,
+				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
+				3C2066DB2AF40DC200C74DBA /* Preview Content */,
+			);
+			path = Wordsgram;
+			sourceTree = "<group>";
+		};
+		3C2066DB2AF40DC200C74DBA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3C2066DC2AF40DC200C74DBA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C2066E52AF40DC300C74DBA /* WordsgramTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */,
+			);
+			path = WordsgramTests;
+			sourceTree = "<group>";
+		};
+		3C2066EF2AF40DC300C74DBA /* WordsgramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */,
+				3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */,
+			);
+			path = WordsgramUITests;
+			sourceTree = "<group>";
+		};
+		9FE9C5F37D255FAA011B9666 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */,
+				87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */,
+				35D507343B859C4E7E1998BF /* Pods-WordsgramTests.debug.xcconfig */,
+				F303A8DBB7D3EFAB10E7168B /* Pods-WordsgramTests.release.xcconfig */,
+				DD4273582CA330D82E3DA5B5 /* Pods-WordsgramUITests.debug.xcconfig */,
+				D33FD336951A8BF9A71144B9 /* Pods-WordsgramUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D06360FF29ECB829DEBA01F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */,
+				57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */,
+				FB38441B100ADF8C41C076E1 /* Pods_WordsgramUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C2066D12AF40DC000C74DBA /* Wordsgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2066F62AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "Wordsgram" */;
+			buildPhases = (
+				C34999563EE8F63D70400B34 /* [CP] Check Pods Manifest.lock */,
+				3C2066CE2AF40DC000C74DBA /* Sources */,
+				3C2066CF2AF40DC000C74DBA /* Frameworks */,
+				3C2066D02AF40DC000C74DBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wordsgram;
+			productName = Wordsgram;
+			productReference = 3C2066D22AF40DC000C74DBA /* Wordsgram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C2066E12AF40DC300C74DBA /* WordsgramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2066F92AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "WordsgramTests" */;
+			buildPhases = (
+				90D81143AFE1288A3B9019B7 /* [CP] Check Pods Manifest.lock */,
+				3C2066DE2AF40DC300C74DBA /* Sources */,
+				3C2066DF2AF40DC300C74DBA /* Frameworks */,
+				3C2066E02AF40DC300C74DBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C2066E42AF40DC300C74DBA /* PBXTargetDependency */,
+			);
+			name = WordsgramTests;
+			productName = WordsgramTests;
+			productReference = 3C2066E22AF40DC300C74DBA /* WordsgramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C2066EB2AF40DC300C74DBA /* WordsgramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2066FC2AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "WordsgramUITests" */;
+			buildPhases = (
+				38B91C8A94D7800BF140748E /* [CP] Check Pods Manifest.lock */,
+				3C2066E82AF40DC300C74DBA /* Sources */,
+				3C2066E92AF40DC300C74DBA /* Frameworks */,
+				3C2066EA2AF40DC300C74DBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C2066EE2AF40DC300C74DBA /* PBXTargetDependency */,
+			);
+			name = WordsgramUITests;
+			productName = WordsgramUITests;
+			productReference = 3C2066EC2AF40DC300C74DBA /* WordsgramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C2066CA2AF40DC000C74DBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3C2066D12AF40DC000C74DBA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					3C2066E12AF40DC300C74DBA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3C2066D12AF40DC000C74DBA;
+					};
+					3C2066EB2AF40DC300C74DBA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3C2066D12AF40DC000C74DBA;
+					};
+				};
+			};
+			buildConfigurationList = 3C2066CD2AF40DC000C74DBA /* Build configuration list for PBXProject "Wordsgram" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C2066C92AF40DC000C74DBA;
+			productRefGroup = 3C2066D32AF40DC000C74DBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C2066D12AF40DC000C74DBA /* Wordsgram */,
+				3C2066E12AF40DC300C74DBA /* WordsgramTests */,
+				3C2066EB2AF40DC300C74DBA /* WordsgramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C2066D02AF40DC000C74DBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2066DD2AF40DC200C74DBA /* Preview Assets.xcassets in Resources */,
+				3C2066DA2AF40DC200C74DBA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066E02AF40DC300C74DBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066EA2AF40DC300C74DBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38B91C8A94D7800BF140748E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordsgramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90D81143AFE1288A3B9019B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordsgramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C34999563EE8F63D70400B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wordsgram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C2066CE2AF40DC000C74DBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */,
+				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066DE2AF40DC300C74DBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2066E72AF40DC300C74DBA /* WordsgramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2066E82AF40DC300C74DBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2066F12AF40DC300C74DBA /* WordsgramUITests.swift in Sources */,
+				3C2066F32AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C2066E42AF40DC300C74DBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C2066D12AF40DC000C74DBA /* Wordsgram */;
+			targetProxy = 3C2066E32AF40DC300C74DBA /* PBXContainerItemProxy */;
+		};
+		3C2066EE2AF40DC300C74DBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C2066D12AF40DC000C74DBA /* Wordsgram */;
+			targetProxy = 3C2066ED2AF40DC300C74DBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C2066F42AF40DC300C74DBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C2066F52AF40DC300C74DBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C2066F72AF40DC300C74DBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C2066F82AF40DC300C74DBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C2066FA2AF40DC300C74DBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D507343B859C4E7E1998BF /* Pods-WordsgramTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
+			};
+			name = Debug;
+		};
+		3C2066FB2AF40DC300C74DBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F303A8DBB7D3EFAB10E7168B /* Pods-WordsgramTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
+			};
+			name = Release;
+		};
+		3C2066FD2AF40DC300C74DBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD4273582CA330D82E3DA5B5 /* Pods-WordsgramUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wordsgram;
+			};
+			name = Debug;
+		};
+		3C2066FE2AF40DC300C74DBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33FD336951A8BF9A71144B9 /* Pods-WordsgramUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wordsgram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C2066CD2AF40DC000C74DBA /* Build configuration list for PBXProject "Wordsgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2066F42AF40DC300C74DBA /* Debug */,
+				3C2066F52AF40DC300C74DBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2066F62AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "Wordsgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2066F72AF40DC300C74DBA /* Debug */,
+				3C2066F82AF40DC300C74DBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2066F92AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "WordsgramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2066FA2AF40DC300C74DBA /* Debug */,
+				3C2066FB2AF40DC300C74DBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2066FC2AF40DC300C74DBA /* Build configuration list for PBXNativeTarget "WordsgramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2066FD2AF40DC300C74DBA /* Debug */,
+				3C2066FE2AF40DC300C74DBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C2066CA2AF40DC000C74DBA /* Project object */;
+}
