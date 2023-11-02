@@ -17,14 +17,15 @@ public func configure(_ app: Application) async throws {
         tls: .prefer(try .init(configuration: .clientDefault)))
     ), as: .psql)
 
-    // Add CreateAcronym to the list of migrations to run.
+    // migrations to run.
+    app.migrations.add(CreateUser())
     app.migrations.add(CreateWord())
-      
+    
     // Set the log level for the application to debug. This provides more information and enables you to see your migrations.
     app.logger.logLevel = .debug
 
     // Automatically run migrations and wait for the result. Fluent allows you to choose when to run your migrations. This is helpful when you need to schedule them, for example. You can use wait() here since you’re not running on an EventLoop.
-    try app.autoMigrate().wait()
+    try await app.autoMigrate().get()//.wait()
 
 
     // register routes

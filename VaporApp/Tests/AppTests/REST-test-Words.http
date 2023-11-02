@@ -1,0 +1,76 @@
+POST http://localhost:8080/api/words HTTP/1.1
+content-length: 21
+content-type: application/json
+
+{
+    "name": "abckane",
+    "meaning": "123kane",
+    "userID": "9589656E-7B46-471C-B0E3-38947CF4DE32"
+}
+
+### GET ALL WORDS
+GET http://localhost:8080/api/words HTTP/1.1
+content-length: 21
+content-type: application/json
+
+### GET - SEARCH
+GET http://localhost:8080/api/words/5F31152E-7F3C-420E-A840-B41B3F8CBB59 HTTP/1.1
+content-length: 21
+content-type: application/json
+
+### UPDATE WORD
+
+PUT http://localhost:8080/api/words/CAE7EB9A-AB7A-4B72-9D94-AB3AA6873C23 HTTP/1.1
+content-length: 21
+content-type: application/json
+
+{
+    "name": "abc",
+    "meaning": "xydddz",
+    "userID": "9589656E-7B46-471C-B0E3-38947CF4DE32",
+}
+
+##"wordID": "CAE7EB9A-AB7A-4B72-9D94-AB3AA6873C23"
+### DELETE
+DELETE http://localhost:8080/api/words/5F31152E-7F3C-420E-A840-B41B3F8CBB59 HTTP/1.1
+content-length: 21
+content-type: application/json
+
+{
+    "name": "Milky Way",
+    "meaning": "absdad31313131"
+}
+
+### SEARCH QUERY
+GET http://localhost:8080/api/words/search?term=Milky%20Way
+content-length: 21
+content-type: application/json
+
+### SEARCH QUERY
+GET http://localhost:8080/api/words/search?term=absdad
+content-length: 21
+content-type: application/json
+
+### FIRST
+
+GET http://localhost:8080/api/words/first
+content-length: 21
+content-type: application/json
+
+### SORT
+GET http://localhost:8080/api/words/sorted
+content-length: 21
+content-type: application/json
+
+### get user
+GET http://localhost:8080/api/words/CAE7EB9A-AB7A-4B72-9D94-AB3AA6873C23/user
+content-length: 21
+content-type: application/json
+
+
+### usersRoute.get(":userID", "words", use: getWordsHandler)
+
+GET http://localhost:8080/api/users/9589656E-7B46-471C-B0E3-38947CF4DE32/words
+content-length: 21
+content-type: application/json
+

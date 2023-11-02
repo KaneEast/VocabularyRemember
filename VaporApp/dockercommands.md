@@ -1,0 +1,37 @@
+``` sh
+# Stop the running Docker container postgres. This is the container currently running the database.
+docker stop postgres
+# Remove the Docker container postgres to delete any existing data.
+docker rm postgres
+# Start a new Docker container running PostgreSQL. For more information, see Chapter 6, “Configuring a Database”.
+docker run --name postgres -e POSTGRES_DB=vapor_database \
+  -e POSTGRES_USER=vapor_username \
+  -e POSTGRES_PASSWORD=vapor_password \
+  -p 5432:5432 -d postgres
+
+```
+
+---------------------
+
+``` sh
+docker run --name postgres \
+  -e POSTGRES_DB=vapor_database \
+  -e POSTGRES_USER=vapor_username \
+  -e POSTGRES_PASSWORD=vapor_password \
+  -p 5432:5432 -d postgres
+
+```
+
+```
+Run a new container named postgres.
+Specify the database name, username and password through environment variables.
+Allow applications to connect to the Postgres server on its default port: 5432.
+Run the server in the background as a daemon.
+Use the Docker image named postgres for this container. If the image is not present on your machine, Docker automatically downloads it.
+```
+
+----
+To check that your database is running, enter the following in Terminal to list all active containers:
+```
+docker ps
+```

@@ -13,13 +13,13 @@ struct CreateWord: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         // Define the table name for this model. This must match schema from the model.
         database.schema("words")
-        // Define the ID column in the database.
+            // Define the ID column in the database.
             .id()
-        // Define columns for name and meaning. Set the column type to string and mark the columns as required. This matches the non-optional String properties in the model. The field names must match the key of the property wrapper, not the name of the property itself.
+            // Define columns for name and meaning. Set the column type to string and mark the columns as required. This matches the non-optional String properties in the model. The field names must match the key of the property wrapper, not the name of the property itself.
             .field("name", .string, .required)
             .field("meaning", .string, .required)
-        // Create the table in the database.
-            .create()
+            .field("userID", .uuid, .required, .references("users", "id")) // Foreign key
+            .create() // Create the table in the database.
     }
     
     // Implement revert(on:) as required by Migration. You call this function when you revert your migrations. This deletes the table referenced with schema(_:).

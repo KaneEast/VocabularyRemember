@@ -12,4 +12,8 @@ func routes(_ app: Application) throws {
     
     let wordsController = WordsController()
     try app.register(collection: wordsController)
+    
+    let usersController = UsersController()
+    try app.register(collection: usersController)
+
 }
