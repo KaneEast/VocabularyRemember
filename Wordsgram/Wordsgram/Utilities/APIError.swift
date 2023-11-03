@@ -8,7 +8,17 @@
 import Foundation
 
 enum APIError: String, Error {
-    case jsonDecoding
     case response
     case noInternet
+}
+
+enum ResourceRequestError: String, Error {
+    case noData
+    case decodingError
+    case encodingError
+}
+
+enum CategoryAddError: String, Error {
+    case noID
+    case invalidResponse
 }

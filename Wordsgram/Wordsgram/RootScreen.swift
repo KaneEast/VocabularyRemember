@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RootScreen: View {
-    
+    @State private var selection: AppScreen? = .words
     @EnvironmentObject var auth: Auth
     
     var body: some View {
-        if auth.loggedIn {
-            HomeScreen()
+        if auth.isLoggedIn {
+            AppTabView(selection: $selection)
         } else {
             LoginScreen()
         }
