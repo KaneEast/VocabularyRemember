@@ -1,3 +1,40 @@
+# Configuring a Database
+
+## Choosing a database
+Vapor has official, Swift-native drivers for:
+
+- SQLite
+- MySQL
+- PostgreSQL
+- MongoDB
+
+
+## PostgreSQL
+``` sh
+docker run --name postgres \
+  -e POSTGRES_DB=vapor_database \
+  -e POSTGRES_USER=vapor_username \
+  -e POSTGRES_PASSWORD=vapor_password \
+  -p 5432:5432 -d postgres
+```
+
+Here’s what this does:
+
+- Run a new container named postgres.
+Specify the database name, username and password through environment variables.
+Allow applications to connect to the Postgres server on its default port: 5432.
+Run the server in the background as a daemon.
+Use the Docker image named postgres for this container. If the image is not present on your machine, Docker automatically downloads it.
+
+To check that your database is running, enter the following in Terminal to list all active containers:
+
+``` sh
+docker ps
+```
+
+## Configure.swift
+Database configuration happens in configure.swift
+``` swift
 import NIOSSL
 import Fluent
 import FluentPostgresDriver
@@ -51,3 +88,4 @@ public func configure(_ app: Application) async throws {
     // register routes
     try routes(app)
 }
+```
