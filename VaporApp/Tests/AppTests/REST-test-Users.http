@@ -3,6 +3,11 @@ POST http://localhost:8080/api/users/login
 Authorization: Basic kanein:password
 
 
+### LOGIN
+POST http://localhost:8080/api/users/login
+Authorization: Basic admin:password
+
+
 ### CREATE NEW USER
 POST http://localhost:8080/api/users HTTP/1.1
 content-length: 21
@@ -10,7 +15,7 @@ content-type: application/json
 
 {
     "name": "kane",
-    "username": "kanein1",
+    "username": "kanein12",
     "password": "password"
 }
 

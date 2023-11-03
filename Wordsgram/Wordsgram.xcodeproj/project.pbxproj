@@ -18,13 +18,11 @@
 		3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067022AF4204800C74DBA /* LoginScreen.swift */; };
 		3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067042AF4205F00C74DBA /* LoginViewModel.swift */; };
 		3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067062AF4208D00C74DBA /* LoginAction.swift */; };
-		3C20670A2AF424DD00C74DBA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067092AF424DD00C74DBA /* Auth.swift */; };
 		3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670C2AF425EC00C74DBA /* HomeScreen.swift */; };
 		3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670E2AF4262700C74DBA /* HomeViewModel.swift */; };
 		3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067122AF426A000C74DBA /* RootScreen.swift */; };
 		3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067152AF4284D00C74DBA /* MainButton.swift */; };
 		3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */; };
-		3C20671A2AF42A3600C74DBA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067192AF42A3600C74DBA /* APIError.swift */; };
 		3C20671E2AF4349200C74DBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20671D2AF4349200C74DBA /* User.swift */; };
 		3C2067202AF434AB00C74DBA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20671F2AF434AB00C74DBA /* Category.swift */; };
 		3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067212AF434C800C74DBA /* CreateWordData.swift */; };
@@ -36,6 +34,7 @@
 		3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */; };
 		3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */; };
 		3C2067352AF4D14700C74DBA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067342AF4D14700C74DBA /* Token.swift */; };
+		3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673A2AF55CAE00C74DBA /* Networking.swift */; };
 		B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */; };
 		F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,13 +71,11 @@
 		3C2067022AF4204800C74DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3C2067042AF4205F00C74DBA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3C2067062AF4208D00C74DBA /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
-		3C2067092AF424DD00C74DBA /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		3C20670C2AF425EC00C74DBA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3C20670E2AF4262700C74DBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3C2067122AF426A000C74DBA /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		3C2067152AF4284D00C74DBA /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		3C2067192AF42A3600C74DBA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		3C20671D2AF4349200C74DBA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3C20671F2AF434AB00C74DBA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3C2067212AF434C800C74DBA /* CreateWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordData.swift; sourceTree = "<group>"; };
@@ -90,6 +87,7 @@
 		3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRequest.swift; sourceTree = "<group>"; };
 		3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Keychain.swift"; sourceTree = "<group>"; };
 		3C2067342AF4D14700C74DBA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		3C20673A2AF55CAE00C74DBA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,14 +151,9 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
-				3C20671B2AF433F400C74DBA /* Domain */,
 				3C2067142AF4283400C74DBA /* Common */,
-				3C2067082AF424C500C74DBA /* Utilities */,
-				3C2067252AF4C12300C74DBA /* Navigation */,
+				3C20671B2AF433F400C74DBA /* Domain */,
 				3C2067102AF4267F00C74DBA /* Features */,
-				3C2067122AF426A000C74DBA /* RootScreen.swift */,
-				3C2066D72AF40DC000C74DBA /* ContentView.swift */,
-				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
 				3C2067112AF4269000C74DBA /* Root */,
 				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
 				3C2066DB2AF40DC200C74DBA /* Preview Content */,
@@ -206,11 +199,9 @@
 		3C2067082AF424C500C74DBA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067092AF424DD00C74DBA /* Auth.swift */,
 				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
 				3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */,
 				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
-				3C2067192AF42A3600C74DBA /* APIError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -228,6 +219,10 @@
 		3C2067112AF4269000C74DBA /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				3C2067252AF4C12300C74DBA /* Navigation */,
+				3C2067122AF426A000C74DBA /* RootScreen.swift */,
+				3C2066D72AF40DC000C74DBA /* ContentView.swift */,
+				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -243,6 +238,8 @@
 		3C20671B2AF433F400C74DBA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3C2067082AF424C500C74DBA /* Utilities */,
+				3C20673A2AF55CAE00C74DBA /* Networking.swift */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 			);
 			path = Domain;
@@ -402,6 +399,9 @@
 				Base,
 			);
 			mainGroup = 3C2066C92AF40DC000C74DBA;
+			packageReferences = (
+				3C2067382AF5488400C74DBA /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 3C2066D32AF40DC000C74DBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -538,6 +538,7 @@
 				3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */,
 				3C2067242AF434F100C74DBA /* Word.swift in Sources */,
 				3C20671E2AF4349200C74DBA /* User.swift in Sources */,
+				3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
 				3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */,
 				3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */,
@@ -545,7 +546,6 @@
 				3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */,
-				3C20671A2AF42A3600C74DBA /* APIError.swift in Sources */,
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
 				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,
 				3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */,
@@ -553,7 +553,6 @@
 				3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */,
 				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
 				3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */,
-				3C20670A2AF424DD00C74DBA /* Auth.swift in Sources */,
 				3C2067352AF4D14700C74DBA /* Token.swift in Sources */,
 				3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */,
 				3C2067202AF434AB00C74DBA /* Category.swift in Sources */,
@@ -893,6 +892,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C2067382AF5488400C74DBA /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 3C2066CA2AF40DC000C74DBA /* Project object */;
 }

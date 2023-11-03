@@ -9,23 +9,25 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    
-    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
+    @State var username = ""
+    @State var password = ""
+    @State private var showingLoginErrorAlert = false
+    @EnvironmentObject var auth: Auth
+//    @ObservedObject var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
         VStack {
-            
             Spacer()
             
             VStack {
-                TextField("Login", text: $viewModel.username)
+                TextField("Login", text: $username)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding(.top, 20)
                 
                 Divider()
                 
-                SecureField("Password", text: $viewModel.password)
+                SecureField("Password", text: $password)
                     .padding(.top, 20)
                 
                 Divider()
@@ -34,7 +36,7 @@ struct LoginScreen: View {
             Spacer()
             
             Button(
-                action: viewModel.login,
+                action: login,
                 label: {
                     Text("LoginButton")
                         .modifier(MainButton())
@@ -42,6 +44,22 @@ struct LoginScreen: View {
             )
         }
         .padding(30)
+        .alert(isPresented: $showingLoginErrorAlert) {
+            Alert(title: Text("Error"), message: Text("Could not log in. Check your credentials and try again"))
+        }
+    }
+    
+    func login() {
+        auth.login(username: username, password: password) { result in
+            switch result {
+            case .success:
+                break
+            case .failure:
+                DispatchQueue.main.async {
+                    self.showingLoginErrorAlert = true
+                }
+            }
+        }
     }
 }
 
