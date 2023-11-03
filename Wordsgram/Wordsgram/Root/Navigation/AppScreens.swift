@@ -35,9 +35,9 @@ extension AppScreen {
         case .words:
             WordNavigationStack()
         case .users:
-            WordNavigationStack()
+            UsersNavigationStack()
         case .categories:
-            WordNavigationStack()
+            CategoriesNavigationStack()
         }
     }
 }

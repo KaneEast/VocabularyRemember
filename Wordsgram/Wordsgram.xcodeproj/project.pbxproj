@@ -35,6 +35,8 @@
 		3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */; };
 		3C2067352AF4D14700C74DBA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067342AF4D14700C74DBA /* Token.swift */; };
 		3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673A2AF55CAE00C74DBA /* Networking.swift */; };
+		3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */; };
+		3C2067412AF5704000C74DBA /* CategoriesNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */; };
 		B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */; };
 		F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,8 @@
 		3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Keychain.swift"; sourceTree = "<group>"; };
 		3C2067342AF4D14700C74DBA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3C20673A2AF55CAE00C74DBA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNavigationStack.swift; sourceTree = "<group>"; };
+		3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationStack.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 		3C2067102AF4267F00C74DBA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3C20673F2AF56FC300C74DBA /* Categories */,
+				3C20673C2AF56E9700C74DBA /* Users */,
 				3C20672B2AF4C38E00C74DBA /* Words */,
 				3C2067282AF4C22300C74DBA /* Home */,
 				3C2067012AF4201200C74DBA /* Login */,
@@ -282,6 +288,22 @@
 				3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */,
 			);
 			path = Words;
+			sourceTree = "<group>";
+		};
+		3C20673C2AF56E9700C74DBA /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		3C20673F2AF56FC300C74DBA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		9FE9C5F37D255FAA011B9666 /* Pods */ = {
@@ -544,6 +566,7 @@
 				3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* AppScreens.swift in Sources */,
 				3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */,
+				3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */,
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
@@ -556,6 +579,7 @@
 				3C2067352AF4D14700C74DBA /* Token.swift in Sources */,
 				3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */,
 				3C2067202AF434AB00C74DBA /* Category.swift in Sources */,
+				3C2067412AF5704000C74DBA /* CategoriesNavigationStack.swift in Sources */,
 				3C20672D2AF4C3A600C74DBA /* WordNavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
