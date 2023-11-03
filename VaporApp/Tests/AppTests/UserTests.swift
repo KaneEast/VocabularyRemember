@@ -47,12 +47,12 @@ final class UserTests: XCTestCase {
         
         try app.test(.GET, usersURI, afterResponse: { response in
             XCTAssertEqual(response.status, .ok)
-            let users = try response.content.decode([User].self)
+            let users = try response.content.decode([User.Public].self)
             
-            XCTAssertEqual(users.count, 2)
-            XCTAssertEqual(users[0].name, usersName)
-            XCTAssertEqual(users[0].username, usersUsername)
-            XCTAssertEqual(users[0].id, user.id)
+            XCTAssertEqual(users.count, 3)
+            XCTAssertEqual(users[1].name, usersName)
+            XCTAssertEqual(users[1].username, usersUsername)
+            XCTAssertEqual(users[1].id, user.id)
         })
     }
     
@@ -64,12 +64,12 @@ final class UserTests: XCTestCase {
             password: "password")
         
         // Use test(_:_:beforeRequest:afterResponse:) to send a POST request to the API
-        try app.test(.POST, usersURI, beforeRequest: { req in
+        try app.test(.POST, usersURI, loggedInRequest: true, beforeRequest: { req in
             // Encode the request with the created user before you send the request.
             try req.content.encode(user)
         }, afterResponse: { response in
             // Decode the response body into a User object.
-            let receivedUser = try response.content.decode(User.self)
+            let receivedUser = try response.content.decode(User.Public.self)
             // Assert the response from the API matches the expected values.
             XCTAssertEqual(receivedUser.name, usersName)
             XCTAssertEqual(receivedUser.username, usersUsername)
@@ -78,11 +78,11 @@ final class UserTests: XCTestCase {
             // Make another request to get all the users from the API.
             try app.test(.GET, usersURI, afterResponse: { secondResponse in
                 // Ensure the response only contains the user you created in the first request.
-                let users = try secondResponse.content.decode([User].self)
-                XCTAssertEqual(users.count, 1)
-                XCTAssertEqual(users[0].name, usersName)
-                XCTAssertEqual(users[0].username, usersUsername)
-                XCTAssertEqual(users[0].id, receivedUser.id)
+                let users = try secondResponse.content.decode([User.Public].self)
+                XCTAssertEqual(users.count, 2)
+                XCTAssertEqual(users[1].name, usersName)
+                XCTAssertEqual(users[1].username, usersUsername)
+                XCTAssertEqual(users[1].id, receivedUser.id)
             })
         })
     }
@@ -96,7 +96,7 @@ final class UserTests: XCTestCase {
         
         // Get the user at /api/users/<USER ID>.
         try app.test(.GET, "\(usersURI)\(user.id!)", afterResponse: { response in
-            let receivedUser = try response.content.decode(User.self)
+            let receivedUser = try response.content.decode(User.Public.self)
             // Assert the values are the same as provided when creating the user.
             XCTAssertEqual(receivedUser.name, usersName)
             XCTAssertEqual(receivedUser.username, usersUsername)

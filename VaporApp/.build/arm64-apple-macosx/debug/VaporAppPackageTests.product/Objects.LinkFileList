@@ -26,11 +26,14 @@
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Controllers/CategoriesController.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Controllers/UsersController.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Controllers/WordsController.swift.o
+/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateAdminUser.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateCategory.swift.o
+/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateToken.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateUser.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateWord.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Migrations/CreateWordCategoryPivot.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Models/Category.swift.o
+/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Models/Token.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Models/User.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Models/Word.swift.o
 /Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Models/WordCategoryPivot.swift.o

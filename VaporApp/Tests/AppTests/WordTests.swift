@@ -52,18 +52,21 @@ final class WordTests: XCTestCase {
     }
     
     func testWordCanBeSavedWithAPI() throws {
+        let user = try User.create(on: app.db)
+
 //        let user = try User.create(on: app.db)
 //        let createWordData = CreateWordData(name: acronymname, meaning: acronymLong, userID: user.id!)
         let createWordData = CreateWordData(name: acronymname, meaning: acronymLong)
 
         
-        try app.test(.POST, acronymsURI, beforeRequest: { request in
+        try app.test(.POST, acronymsURI, loggedInUser: user,beforeRequest: { request in
             try request.content.encode(createWordData)
         }, afterResponse: { response in
             let receivedWord = try response.content.decode(Word.self)
             XCTAssertEqual(receivedWord.name, acronymname)
             XCTAssertEqual(receivedWord.meaning, acronymLong)
             XCTAssertNotNil(receivedWord.id)
+            XCTAssertEqual(receivedWord.$user.id, user.id)
             
             try app.test(.GET, acronymsURI, afterResponse: { allWordsResponse in
                 let acronyms = try allWordsResponse.content.decode([Word].self)
@@ -71,6 +74,7 @@ final class WordTests: XCTestCase {
                 XCTAssertEqual(acronyms[0].name, acronymname)
                 XCTAssertEqual(acronyms[0].meaning, acronymLong)
                 XCTAssertEqual(acronyms[0].id, receivedWord.id)
+                XCTAssertEqual(acronyms[0].$user.id, user.id)
             })
         })
     }
@@ -92,7 +96,7 @@ final class WordTests: XCTestCase {
         let newLong = "Oh My Gosh"
         let updatedWordData = CreateWordData(name: acronymname, meaning: newLong)//, userID: newUser.id!)
         
-        try app.test(.PUT, "\(acronymsURI)\(acronym.id!)", beforeRequest: { request in
+        try app.test(.PUT, "\(acronymsURI)\(acronym.id!)", loggedInUser: newUser,beforeRequest: { request in
             try request.content.encode(updatedWordData)
         })
         
@@ -112,7 +116,7 @@ final class WordTests: XCTestCase {
             XCTAssertEqual(acronyms.count, 1)
         })
         
-        try app.test(.DELETE, "\(acronymsURI)\(acronym.id!)")
+        try app.test(.DELETE, "\(acronymsURI)\(acronym.id!)", loggedInRequest: true)
         
         try app.test(.GET, acronymsURI, afterResponse: { response in
             let newWords = try response.content.decode([Word].self)
@@ -175,7 +179,8 @@ final class WordTests: XCTestCase {
         let acronym = try Word.create(user: user, on: app.db)
         
         try app.test(.GET, "\(acronymsURI)\(acronym.id!)/user", afterResponse: { response in
-            let acronymsUser = try response.content.decode(User.self)
+//            let acronymsUser = try response.content.decode(User.self)
+            let acronymsUser = try response.content.decode(User.Public.self)
             XCTAssertEqual(acronymsUser.id, user.id)
             XCTAssertEqual(acronymsUser.name, user.name)
             XCTAssertEqual(acronymsUser.username, user.username)
@@ -187,8 +192,8 @@ final class WordTests: XCTestCase {
         let category2 = try Category.create(name: "Funny", on: app.db)
         let acronym = try Word.create(on: app.db)
         
-        try app.test(.POST, "\(acronymsURI)\(acronym.id!)/categories/\(category.id!)")
-        try app.test(.POST, "\(acronymsURI)\(acronym.id!)/categories/\(category2.id!)")
+        try app.test(.POST, "\(acronymsURI)\(acronym.id!)/categories/\(category.id!)", loggedInRequest: true)
+        try app.test(.POST, "\(acronymsURI)\(acronym.id!)/categories/\(category2.id!)", loggedInRequest: true)
         
         try app.test(.GET, "\(acronymsURI)\(acronym.id!)/categories", afterResponse: { response in
             let categories = try response.content.decode([App.Category].self)
@@ -199,7 +204,7 @@ final class WordTests: XCTestCase {
             XCTAssertEqual(categories[1].name, category2.name)
         })
         
-        try app.test(.DELETE, "\(acronymsURI)\(acronym.id!)/categories/\(category.id!)")
+        try app.test(.DELETE, "\(acronymsURI)\(acronym.id!)/categories/\(category.id!)", loggedInRequest: true)
         
         try app.test(.GET, "\(acronymsURI)\(acronym.id!)/categories", afterResponse: { response in
             let newCategories = try response.content.decode([App.Category].self)

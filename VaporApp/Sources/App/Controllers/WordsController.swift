@@ -42,15 +42,15 @@ struct WordsController: RouteCollection {
         
         /// Connect the “create word” path to createHandler(_:data:) through this middleware group using the new WordCreateData.
         tokenAuthGroup.post(use: createHandler)
-        tokenAuthGroup.delete(":acronymID", use: deleteHandler)
-        tokenAuthGroup.put(":acronymID", use: updateHandler)
+        tokenAuthGroup.delete(":wordID", use: deleteHandler)
+        tokenAuthGroup.put(":wordID", use: updateHandler)
         tokenAuthGroup.post(
-            ":acronymID",
+            ":wordID",
             "categories",
             ":categoryID",
             use: addCategoriesHandler)
         tokenAuthGroup.delete(
-            ":acronymID",
+            ":wordID",
             "categories",
             ":categoryID",
             use: removeCategoriesHandler)

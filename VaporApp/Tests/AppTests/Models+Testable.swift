@@ -7,17 +7,35 @@
 
 @testable import App
 import Fluent
+import Vapor
+
 
 extension User {
+    // Make the username parameter an optional string that defaults to nil.
     static func create(
         name: String = "Luke",
-        username: String = "lukes",
+        username: String? = nil,
         on database: Database
     ) throws -> User {
-        let user = User(name: name, username: username, password: "password")
+        let createUsername: String
+        // If a username is supplied, use it.
+        if let suppliedUsername = username {
+            createUsername = suppliedUsername
+            /// If a username isn’t supplied, create a new, random one using UUID. This ensures the username is unique as required by the migration.
+        } else {
+            createUsername = UUID().uuidString
+        }
+        
+        // Hash the password and create a user.
+        let password = try Bcrypt.hash("password")
+        let user = User(
+            name: name,
+            username: createUsername,
+            password: password)
         try user.save(on: database).wait()
         return user
     }
+    
 }
 
 extension Word {

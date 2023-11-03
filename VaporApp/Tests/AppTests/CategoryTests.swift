@@ -52,7 +52,7 @@ final class CategoryTests: XCTestCase {
     func testCategoryCanBeSavedWithAPI() throws {
         let category = Category(name: categoryName)
         
-        try app.test(.POST, categoriesURI, beforeRequest: { request in
+        try app.test(.POST, categoriesURI, loggedInRequest: true, beforeRequest: { request in
             try request.content.encode(category)
         }, afterResponse: { response in
             let receivedCategory = try response.content.decode(Category.self)
@@ -86,8 +86,8 @@ final class CategoryTests: XCTestCase {
         
         let category = try Category.create(name: categoryName, on: app.db)
         
-        try app.test(.POST, "/api/words/\(acronym.id!)/categories/\(category.id!)")
-        try app.test(.POST, "/api/words/\(acronym2.id!)/categories/\(category.id!)")
+        try app.test(.POST, "/api/words/\(acronym.id!)/categories/\(category.id!)", loggedInRequest: true)
+        try app.test(.POST, "/api/words/\(acronym2.id!)/categories/\(category.id!)", loggedInRequest: true)
         
         try app.test(.GET, "\(categoriesURI)\(category.id!)/words", afterResponse: { response in
             let acronyms = try response.content.decode([Word].self)
@@ -96,5 +96,6 @@ final class CategoryTests: XCTestCase {
             XCTAssertEqual(acronyms[0].name, acronymShort)
             XCTAssertEqual(acronyms[0].meaning, acronymLong)
         })
+        
     }
 }
