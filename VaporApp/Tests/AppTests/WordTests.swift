@@ -52,8 +52,10 @@ final class WordTests: XCTestCase {
     }
     
     func testWordCanBeSavedWithAPI() throws {
-        let user = try User.create(on: app.db)
-        let createWordData = CreateWordData(name: acronymname, meaning: acronymLong, userID: user.id!)
+//        let user = try User.create(on: app.db)
+//        let createWordData = CreateWordData(name: acronymname, meaning: acronymLong, userID: user.id!)
+        let createWordData = CreateWordData(name: acronymname, meaning: acronymLong)
+
         
         try app.test(.POST, acronymsURI, beforeRequest: { request in
             try request.content.encode(createWordData)
@@ -88,7 +90,7 @@ final class WordTests: XCTestCase {
         let acronym = try Word.create(name: acronymname, meaning: acronymLong, on: app.db)
         let newUser = try User.create(on: app.db)
         let newLong = "Oh My Gosh"
-        let updatedWordData = CreateWordData(name: acronymname, meaning: newLong, userID: newUser.id!)
+        let updatedWordData = CreateWordData(name: acronymname, meaning: newLong)//, userID: newUser.id!)
         
         try app.test(.PUT, "\(acronymsURI)\(acronym.id!)", beforeRequest: { request in
             try request.content.encode(updatedWordData)

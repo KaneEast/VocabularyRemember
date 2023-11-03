@@ -48,7 +48,8 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateWord())
     app.migrations.add(CreateCategory())
     app.migrations.add(CreateWordCategoryPivot())
-    
+    app.migrations.add(CreateToken())
+
     
     // Set the log level for the application to debug. This provides more information and enables you to see your migrations.
     app.logger.logLevel = .debug

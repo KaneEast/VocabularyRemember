@@ -1,11 +1,12 @@
+### CREATE NEW WORD
 POST http://localhost:8080/api/words HTTP/1.1
-content-length: 21
+Authorization: Bearer GiDoSsoAssLrLWSmJhR4gw==
+#Authorization: Basic kanein:password
 content-type: application/json
 
 {
-    "name": "money",
-    "meaning": "money111",
-    "userID": "9589656E-7B46-471C-B0E3-38947CF4DE32"
+    "name": "money23",
+    "meaning": "money111223",
 }
 
 ### GET ALL WORDS
@@ -78,3 +79,4 @@ content-type: application/json
 GET http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories
 content-length: 21
 content-type: application/json
+

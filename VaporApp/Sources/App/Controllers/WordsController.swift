@@ -12,31 +12,48 @@ struct WordsController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         let wordsRoutes = routes.grouped("api", "words")
         wordsRoutes.get(use: getAllHandler)
-        wordsRoutes.post(use: createHandler)
+        //        wordsRoutes.post(use: createHandler)
         wordsRoutes.get(":wordID", use: getHandler)
-        wordsRoutes.put(":wordID", use: updateHandler)
-        wordsRoutes.delete(":wordID", use: deleteHandler)
+        //        wordsRoutes.put(":wordID", use: updateHandler)
+        //        wordsRoutes.delete(":wordID", use: deleteHandler)
         wordsRoutes.get("search", use: searchHandler)
         wordsRoutes.get("first", use: getFirstHandler)
         wordsRoutes.get("sorted", use: sortedHandler)
         wordsRoutes.get(":wordID", "user", use: getUserHandler)
-        wordsRoutes.post(
-            ":wordID",
-            "categories",
-            ":categoryID",
-            use: addCategoriesHandler)
+        //        wordsRoutes.post(
+        //            ":wordID",
+        //            "categories",
+        //            ":categoryID",
+        //            use: addCategoriesHandler)
         
         wordsRoutes.get(
             ":wordID",
             "categories",
             use: getCategoriesHandler)
         
-        wordsRoutes.delete(
-          ":wordID",
-          "categories",
-          ":categoryID",
-          use: removeCategoriesHandler)
-
+        /// Create a ModelTokenAuthenticator middleware for Token. This extracts the bearer token out of the request and converts it into a logged in user.
+        let tokenAuthMiddleware = Token.authenticator()
+        let guardAuthMiddleware = User.guardMiddleware()
+        /// Create a route group using tokenAuthMiddleware and guardAuthMiddleware to
+        /// protect the route for creating an word with token authentication.
+        let tokenAuthGroup = wordsRoutes.grouped(
+            tokenAuthMiddleware,
+            guardAuthMiddleware)
+        
+        /// Connect the “create word” path to createHandler(_:data:) through this middleware group using the new WordCreateData.
+        tokenAuthGroup.post(use: createHandler)
+        tokenAuthGroup.delete(":acronymID", use: deleteHandler)
+        tokenAuthGroup.put(":acronymID", use: updateHandler)
+        tokenAuthGroup.post(
+            ":acronymID",
+            "categories",
+            ":categoryID",
+            use: addCategoriesHandler)
+        tokenAuthGroup.delete(
+            ":acronymID",
+            "categories",
+            ":categoryID",
+            use: removeCategoriesHandler)
         
     }
     
@@ -47,11 +64,14 @@ struct WordsController: RouteCollection {
     func createHandler(_ req: Request) async throws -> Word {
         // Decode the request body to CreateWordData instead of Word
         let data = try req.content.decode(CreateWordData.self)
-        // Create an Word from the data received.
-        let acronym = Word(
+        // Get the authenticated user from the request.
+        let user = try req.auth.require(User.self)
+        // Create a new Word using the data from the request and the authenticated user.
+        let acronym = try Word(
             name: data.name,
             meaning: data.meaning,
-            userID: data.userID)
+            userID: user.requireID())
+        
         try await  acronym.save(on: req.db)
         return acronym
     }
@@ -70,14 +90,20 @@ struct WordsController: RouteCollection {
     
     func updateHandler(_ req: Request) async throws -> Word {
         do {
-            let updatedWord = try req.content.decode(CreateWordData.self)//req.content.decode(Word.self)
+            let updatedWord = try req.content.decode(CreateWordData.self)
+            
+            // Get the authenticated user from the request.
+            let user = try req.auth.require(User.self)
+            /// Get the user ID from the user. It’s useful to do this here as you can’t throw inside flatMap(_:).
+            let userID = try user.requireID()
+            
             guard let result = try await Word.find(req.parameters.get("wordID"), on: req.db) else {
                 throw Abort(.notFound)
             }
             
             result.name = updatedWord.name
             result.meaning = updatedWord.meaning
-            result.$user.id = updatedWord.userID
+            result.$user.id = userID
             try await result.save(on: req.db)
             return result
         } catch {
@@ -125,13 +151,13 @@ struct WordsController: RouteCollection {
         try await Word.query(on: req.db).sort(\.$name, .ascending).all()
     }
     
-    func getUserHandler(_ req: Request) async throws -> User {
+    func getUserHandler(_ req: Request) async throws -> User.Public {
         do {
             guard let word = try await Word.find(req.parameters.get("wordID"), on: req.db) else {
                 throw Abort(.notFound)
             }
             
-            return try await word.$user.get(on: req.db)
+            return try await word.$user.get(on: req.db).convertToPublic()
         } catch {
             throw Abort(.badRequest, reason: "Invalid wordID parameter")
         }
@@ -190,5 +216,5 @@ struct WordsController: RouteCollection {
 struct CreateWordData: Content {
     let name: String
     let meaning: String
-    let userID: UUID
+    //    let userID: UUID
 }

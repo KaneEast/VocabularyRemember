@@ -18,6 +18,9 @@ struct CreateUser: Migration {
         // Create the columns for the two other properties. These are both String and required. The name of the columns match the keys defined in the property wrapper for each property.
             .field("name", .string, .required)
             .field("username", .string, .required)
+            .field("password", .string, .required)
+            .unique(on: "username")
+
         // Create the table.
             .create()
     }

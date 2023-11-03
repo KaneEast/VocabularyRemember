@@ -59,3 +59,17 @@ docker-compose -f docker-compose-testing.yml up \
   --abort-on-container-exit
 
 ```
+
+# Postgres Migration
+``` sh
+# Stop the running Docker container postgres. This is the container currently running the database.
+docker stop postgres
+# Remove the Docker container postgres to delete any existing data.
+docker rm postgres
+# Start a new Docker container running PostgreSQL. For more information, see Chapter 6, “Configuring a Database”.
+docker run --name postgres -e POSTGRES_DB=vapor_database \
+  -e POSTGRES_USER=vapor_username \
+  -e POSTGRES_PASSWORD=vapor_password \
+  -p 5432:5432 -d postgres
+
+```
