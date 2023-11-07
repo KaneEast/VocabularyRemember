@@ -9,8 +9,6 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
-    
     var body: some View {
         VStack {
             Spacer()
@@ -21,14 +19,18 @@ struct HomeScreen: View {
             Spacer()
             
             Button(
-                action: viewModel.logout,
+                action: logout,
                 label: {
                     Text("Home.LogoutButton.Title")
-                        .modifier(MainButton(color: Color.red))
+                    .modifier(MainButton(color: Color.red))
                 }
             )
         }
         .padding(30)
+    }
+    
+    private func logout() {
+        Auth.shared.logout()
     }
 }
 

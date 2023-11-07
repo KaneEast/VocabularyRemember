@@ -15,7 +15,8 @@ struct WordsgramApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootScreen()
+                .environmentObject(Auth.shared)
         }
     }
 }

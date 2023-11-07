@@ -7,19 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24C17956A55BFF5933388238 /* Pods_WordsgramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB38441B100ADF8C41C076E1 /* Pods_WordsgramUITests.framework */; };
 		3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */; };
-		3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066D72AF40DC000C74DBA /* ContentView.swift */; };
 		3C2066DA2AF40DC200C74DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2066D92AF40DC200C74DBA /* Assets.xcassets */; };
 		3C2066DD2AF40DC200C74DBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2066DC2AF40DC200C74DBA /* Preview Assets.xcassets */; };
 		3C2066E72AF40DC300C74DBA /* WordsgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */; };
 		3C2066F12AF40DC300C74DBA /* WordsgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */; };
 		3C2066F32AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */; };
 		3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067022AF4204800C74DBA /* LoginScreen.swift */; };
-		3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067042AF4205F00C74DBA /* LoginViewModel.swift */; };
-		3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067062AF4208D00C74DBA /* LoginAction.swift */; };
 		3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670C2AF425EC00C74DBA /* HomeScreen.swift */; };
-		3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670E2AF4262700C74DBA /* HomeViewModel.swift */; };
 		3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067122AF426A000C74DBA /* RootScreen.swift */; };
 		3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067152AF4284D00C74DBA /* MainButton.swift */; };
 		3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */; };
@@ -28,7 +23,6 @@
 		3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067212AF434C800C74DBA /* CreateWordData.swift */; };
 		3C2067242AF434F100C74DBA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067232AF434F100C74DBA /* Word.swift */; };
 		3C2067272AF4C13600C74DBA /* AppScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067262AF4C13600C74DBA /* AppScreens.swift */; };
-		3C20672A2AF4C32C00C74DBA /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067292AF4C32B00C74DBA /* AppTabView.swift */; };
 		3C20672D2AF4C3A600C74DBA /* WordNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20672C2AF4C3A600C74DBA /* WordNavigationStack.swift */; };
 		3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */; };
 		3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */; };
@@ -37,8 +31,6 @@
 		3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673A2AF55CAE00C74DBA /* Networking.swift */; };
 		3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */; };
 		3C2067412AF5704000C74DBA /* CategoriesNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */; };
-		B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F2FC0126D33960E259B6A /* Pods_Wordsgram.framework */; };
-		F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +54,6 @@
 		35D507343B859C4E7E1998BF /* Pods-WordsgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsgramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsgramTests/Pods-WordsgramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2066D22AF40DC000C74DBA /* Wordsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramApp.swift; sourceTree = "<group>"; };
-		3C2066D72AF40DC000C74DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C2066D92AF40DC200C74DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2066DC2AF40DC200C74DBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C2066E22AF40DC300C74DBA /* WordsgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,10 +62,7 @@
 		3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITests.swift; sourceTree = "<group>"; };
 		3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3C2067022AF4204800C74DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		3C2067042AF4205F00C74DBA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		3C2067062AF4208D00C74DBA /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		3C20670C2AF425EC00C74DBA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		3C20670E2AF4262700C74DBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3C2067122AF426A000C74DBA /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		3C2067152AF4284D00C74DBA /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -83,7 +71,6 @@
 		3C2067212AF434C800C74DBA /* CreateWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordData.swift; sourceTree = "<group>"; };
 		3C2067232AF434F100C74DBA /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		3C2067262AF4C13600C74DBA /* AppScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreens.swift; sourceTree = "<group>"; };
-		3C2067292AF4C32B00C74DBA /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		3C20672C2AF4C3A600C74DBA /* WordNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordNavigationStack.swift; sourceTree = "<group>"; };
 		3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
 		3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRequest.swift; sourceTree = "<group>"; };
@@ -107,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D191F3D07EC7C0F0109509 /* Pods_Wordsgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5CAAEA83AE9412C33FE198F /* Pods_WordsgramTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C17956A55BFF5933388238 /* Pods_WordsgramUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2067142AF4283400C74DBA /* Common */,
-				3C20671B2AF433F400C74DBA /* Domain */,
+				3C20671B2AF433F400C74DBA /* Core */,
 				3C2067102AF4267F00C74DBA /* Features */,
 				3C2067112AF4269000C74DBA /* Root */,
 				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
@@ -190,21 +174,10 @@
 			path = WordsgramUITests;
 			sourceTree = "<group>";
 		};
-		3C2067012AF4201200C74DBA /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				3C2067022AF4204800C74DBA /* LoginScreen.swift */,
-				3C2067062AF4208D00C74DBA /* LoginAction.swift */,
-				3C2067042AF4205F00C74DBA /* LoginViewModel.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		3C2067082AF424C500C74DBA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
-				3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */,
 				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
 			);
 			path = Utilities;
@@ -217,7 +190,6 @@
 				3C20673C2AF56E9700C74DBA /* Users */,
 				3C20672B2AF4C38E00C74DBA /* Words */,
 				3C2067282AF4C22300C74DBA /* Home */,
-				3C2067012AF4201200C74DBA /* Login */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -225,9 +197,9 @@
 		3C2067112AF4269000C74DBA /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067252AF4C12300C74DBA /* Navigation */,
+				3C2067022AF4204800C74DBA /* LoginScreen.swift */,
+				3C2067262AF4C13600C74DBA /* AppScreens.swift */,
 				3C2067122AF426A000C74DBA /* RootScreen.swift */,
-				3C2066D72AF40DC000C74DBA /* ContentView.swift */,
 				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
 			);
 			path = Root;
@@ -241,14 +213,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3C20671B2AF433F400C74DBA /* Domain */ = {
+		3C20671B2AF433F400C74DBA /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067082AF424C500C74DBA /* Utilities */,
 				3C20673A2AF55CAE00C74DBA /* Networking.swift */,
+				3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */,
+				3C2067082AF424C500C74DBA /* Utilities */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 			);
-			path = Domain;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		3C20671C2AF4347F00C74DBA /* Model */ = {
@@ -263,20 +236,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3C2067252AF4C12300C74DBA /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				3C2067262AF4C13600C74DBA /* AppScreens.swift */,
-				3C2067292AF4C32B00C74DBA /* AppTabView.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
 		3C2067282AF4C22300C74DBA /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				3C20670C2AF425EC00C74DBA /* HomeScreen.swift */,
-				3C20670E2AF4262700C74DBA /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -422,7 +385,6 @@
 			);
 			mainGroup = 3C2066C92AF40DC000C74DBA;
 			packageReferences = (
-				3C2067382AF5488400C74DBA /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 3C2066D32AF40DC000C74DBA /* Products */;
 			projectDirPath = "";
@@ -470,18 +432,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordsgramUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 		90D81143AFE1288A3B9019B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -492,18 +452,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordsgramTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 		97EAC011C743308A98DDEEF9 /* [CP] Embed Pods Frameworks */ = {
@@ -514,18 +472,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram-frameworks.sh\"\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 		C34999563EE8F63D70400B34 /* [CP] Check Pods Manifest.lock */ = {
@@ -536,18 +492,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Wordsgram-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -563,17 +517,12 @@
 				3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
 				3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */,
-				3C2067052AF4205F00C74DBA /* LoginViewModel.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* AppScreens.swift in Sources */,
-				3C2067072AF4208D00C74DBA /* LoginAction.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */,
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
 				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,
-				3C20670F2AF4262700C74DBA /* HomeViewModel.swift in Sources */,
-				3C20672A2AF4C32C00C74DBA /* AppTabView.swift in Sources */,
-				3C2066D82AF40DC000C74DBA /* ContentView.swift in Sources */,
 				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
 				3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */,
 				3C2067352AF4D14700C74DBA /* Token.swift in Sources */,
@@ -738,7 +687,6 @@
 		};
 		3C2066F72AF40DC300C74DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -768,7 +716,6 @@
 		};
 		3C2066F82AF40DC300C74DBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -798,7 +745,6 @@
 		};
 		3C2066FA2AF40DC300C74DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35D507343B859C4E7E1998BF /* Pods-WordsgramTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -819,7 +765,6 @@
 		};
 		3C2066FB2AF40DC300C74DBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F303A8DBB7D3EFAB10E7168B /* Pods-WordsgramTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -840,7 +785,6 @@
 		};
 		3C2066FD2AF40DC300C74DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD4273582CA330D82E3DA5B5 /* Pods-WordsgramUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -859,7 +803,6 @@
 		};
 		3C2066FE2AF40DC300C74DBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D33FD336951A8BF9A71144B9 /* Pods-WordsgramUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -916,17 +859,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3C2067382AF5488400C74DBA /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 3C2066CA2AF40DC000C74DBA /* Project object */;
 }

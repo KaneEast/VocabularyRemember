@@ -11,7 +11,7 @@ enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case words
     case users
     case categories
-//    case account
+    case settings
     
     var id: AppScreen { self }
 }
@@ -26,6 +26,8 @@ extension AppScreen {
             Label("Users", systemImage: "person.3.fill")
         case .categories:
             Label("Categories", systemImage: "tag.fill")
+        case .settings:
+            Label("Settings", systemImage: "gear")
         }
     }
     
@@ -38,7 +40,27 @@ extension AppScreen {
             UsersNavigationStack()
         case .categories:
             CategoriesNavigationStack()
+        case .settings:
+            HomeScreen()
         }
     }
 }
 
+struct AppTabView: View {
+    @Binding var selection: AppScreen?
+    @EnvironmentObject var auth: Auth
+    
+    var body: some View {
+        TabView(selection: $selection) {
+            ForEach(AppScreen.allCases) { screen in
+                screen.destination
+                    .tag(screen as AppScreen?)
+                    .tabItem { screen.label }
+            }
+        }
+    }
+}
+
+#Preview {
+    AppTabView(selection: .constant(.words))
+}

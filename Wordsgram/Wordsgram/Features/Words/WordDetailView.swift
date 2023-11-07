@@ -45,14 +45,14 @@ struct WordDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-//        .toolbar {
-//            Button(
-//                action: {
-//                    showingSheet.toggle()
-//                }, label: {
-//                    Text("Edit")
-//                })
-//        }
+        .toolbar {
+            Button(
+                action: {
+                    showingSheet.toggle()
+                }, label: {
+                    Text("Edit")
+                })
+        }
 //        .sheet(isPresented: $showingSheet) {
 //            EditAcronymView(acronym: acronym)
 //        }
