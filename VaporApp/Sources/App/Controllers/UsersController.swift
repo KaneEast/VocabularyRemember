@@ -17,6 +17,7 @@ struct UsersController: RouteCollection {
         
         
         usersRoute.get(use: getAllHandler)
+        usersRoute.post(use: createHandler)
         usersRoute.get(":userID", use: getHandler)
         usersRoute.get(":userID", "words", use: getWordsHandler)
         
@@ -34,12 +35,14 @@ struct UsersController: RouteCollection {
         let tokenAuthGroup = usersRoute.grouped(
           tokenAuthMiddleware,
           guardAuthMiddleware)
-        tokenAuthGroup.post(use: createHandler)
+//        tokenAuthGroup.post(use: createHandler)
 
     }
     
     // Define the route handler function.
     func createHandler(_ req: Request) async throws -> User.Public {
+        // TODO: check if exsist
+        
         // Decode the user from the request body.
         let user = try req.content.decode(User.self)
         user.password = try Bcrypt.hash(user.password)

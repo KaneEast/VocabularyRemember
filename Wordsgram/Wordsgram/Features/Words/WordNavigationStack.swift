@@ -13,7 +13,7 @@ struct WordNavigationStack: View {
     @State private var isLoading = false
     @EnvironmentObject var auth: Auth
     @State private var words: [Word] = []
-    let acronymsRequest = ResourceRequest<Word>(resourcePath: "words")
+//    let acronymsRequest = ResourceRequest<Word>(resourcePath: "words")
     
     var body: some View {
         NavigationStack {
@@ -53,18 +53,18 @@ struct WordNavigationStack: View {
     }
     
     func loadData() {
-        acronymsRequest.getAll { acronymResult in
-            switch acronymResult {
-            case .failure:
-                DispatchQueue.main.async {
-                    self.showingAcronymErrorAlert = true
-                }
-            case .success(let words):
-                DispatchQueue.main.async {
-                    self.words = words
-                }
-            }
-        }
+//        acronymsRequest.getAll { acronymResult in
+//            switch acronymResult {
+//            case .failure:
+//                DispatchQueue.main.async {
+//                    self.showingAcronymErrorAlert = true
+//                }
+//            case .success(let words):
+//                DispatchQueue.main.async {
+//                    self.words = words
+//                }
+//            }
+//        }
     }
 }
 

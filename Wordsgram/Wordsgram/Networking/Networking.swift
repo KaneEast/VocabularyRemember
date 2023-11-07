@@ -2,11 +2,10 @@
 //  Networking.swift
 //  Wordsgram
 //
-//  Created by Kane on 2023/11/04.
+//  Created by Kane on 2023/11/08.
 //
 
 import Foundation
-import UIKit
 
 enum CategoryAddError: Error {
     case noID
@@ -56,7 +55,9 @@ class Auth: ObservableObject {
     }
     
     func login(username: String, password: String, completion: @escaping (AuthResult) -> Void) {
-        let path = "http://localhost:8080/api/users/login"
+//        let path = "http://localhost:8080/api/users/login"
+        let path = "http://192.168.2.101:8080/api/users/login"
+        
         guard let url = URL(string: path) else {
             fatalError("Failed to convert URL")
         }

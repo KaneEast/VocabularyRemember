@@ -24,6 +24,8 @@ public func configure(_ app: Application) async throws {
         databasePort = 5432
     }
     
+    app.http.server.configuration.hostname = "0.0.0.0"
+    
     app.databases.use(DatabaseConfigurationFactory.postgres(configuration: .init(
         hostname: Environment.get("DATABASE_HOST") ?? "localhost",
         port: databasePort,

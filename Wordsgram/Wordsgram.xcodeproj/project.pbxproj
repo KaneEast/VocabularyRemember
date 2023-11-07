@@ -13,7 +13,7 @@
 		3C2066E72AF40DC300C74DBA /* WordsgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066E62AF40DC300C74DBA /* WordsgramTests.swift */; };
 		3C2066F12AF40DC300C74DBA /* WordsgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */; };
 		3C2066F32AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */; };
-		3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067022AF4204800C74DBA /* LoginScreen.swift */; };
+		3C2067032AF4204800C74DBA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067022AF4204800C74DBA /* LoginView.swift */; };
 		3C20670D2AF425EC00C74DBA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20670C2AF425EC00C74DBA /* HomeScreen.swift */; };
 		3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067122AF426A000C74DBA /* RootScreen.swift */; };
 		3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067152AF4284D00C74DBA /* MainButton.swift */; };
@@ -25,12 +25,17 @@
 		3C2067272AF4C13600C74DBA /* AppScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067262AF4C13600C74DBA /* AppScreens.swift */; };
 		3C20672D2AF4C3A600C74DBA /* WordNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20672C2AF4C3A600C74DBA /* WordNavigationStack.swift */; };
 		3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */; };
-		3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */; };
 		3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */; };
 		3C2067352AF4D14700C74DBA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067342AF4D14700C74DBA /* Token.swift */; };
-		3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673A2AF55CAE00C74DBA /* Networking.swift */; };
 		3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */; };
 		3C2067412AF5704000C74DBA /* CategoriesNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */; };
+		3CAF94C02AFA908B00B8434D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94BF2AFA908B00B8434D /* SwiftyJSON */; };
+		3CAF94D92AFA9AE300B8434D /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94D82AFA9AE300B8434D /* Encodable+.swift */; };
+		3CAF94E82AFAB10B00B8434D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94E72AFAB10B00B8434D /* Networking.swift */; };
+		3CAF94EB2AFAB22E00B8434D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94EA2AFAB22E00B8434D /* Moya */; };
+		3CAF94EE2AFAB44200B8434D /* WGService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94ED2AFAB44200B8434D /* WGService.swift */; };
+		3CAF94F12AFACE0900B8434D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94F02AFACE0800B8434D /* LoginViewModel.swift */; };
+		3CAF94F32AFAD0CA00B8434D /* ReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +66,7 @@
 		3C2066EC2AF40DC300C74DBA /* WordsgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2066F02AF40DC300C74DBA /* WordsgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITests.swift; sourceTree = "<group>"; };
 		3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3C2067022AF4204800C74DBA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3C2067022AF4204800C74DBA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3C20670C2AF425EC00C74DBA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3C2067122AF426A000C74DBA /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		3C2067152AF4284D00C74DBA /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
@@ -73,12 +78,16 @@
 		3C2067262AF4C13600C74DBA /* AppScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreens.swift; sourceTree = "<group>"; };
 		3C20672C2AF4C3A600C74DBA /* WordNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordNavigationStack.swift; sourceTree = "<group>"; };
 		3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
-		3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRequest.swift; sourceTree = "<group>"; };
 		3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Keychain.swift"; sourceTree = "<group>"; };
 		3C2067342AF4D14700C74DBA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		3C20673A2AF55CAE00C74DBA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		3C20673D2AF56EA600C74DBA /* UsersNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNavigationStack.swift; sourceTree = "<group>"; };
 		3C2067402AF5704000C74DBA /* CategoriesNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationStack.swift; sourceTree = "<group>"; };
+		3CAF94D82AFA9AE300B8434D /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		3CAF94E72AFAB10B00B8434D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3CAF94ED2AFAB44200B8434D /* WGService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGService.swift; sourceTree = "<group>"; };
+		3CAF94EF2AFABAED00B8434D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3CAF94F02AFACE0800B8434D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViews.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAF94EB2AFAB22E00B8434D /* Moya in Frameworks */,
+				3CAF94C02AFA908B00B8434D /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,11 +150,14 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
+				3CAF94EC2AFAB43500B8434D /* Networking */,
+				3CAF94D72AFA9AD400B8434D /* Extension */,
 				3C2067142AF4283400C74DBA /* Common */,
 				3C20671B2AF433F400C74DBA /* Core */,
 				3C2067102AF4267F00C74DBA /* Features */,
 				3C2067112AF4269000C74DBA /* Root */,
 				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
+				3CAF94EF2AFABAED00B8434D /* Info.plist */,
 				3C2066DB2AF40DC200C74DBA /* Preview Content */,
 			);
 			path = Wordsgram;
@@ -186,6 +200,7 @@
 		3C2067102AF4267F00C74DBA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3CAF94F42AFAEF1500B8434D /* Login */,
 				3C20673F2AF56FC300C74DBA /* Categories */,
 				3C20673C2AF56E9700C74DBA /* Users */,
 				3C20672B2AF4C38E00C74DBA /* Words */,
@@ -197,7 +212,6 @@
 		3C2067112AF4269000C74DBA /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067022AF4204800C74DBA /* LoginScreen.swift */,
 				3C2067262AF4C13600C74DBA /* AppScreens.swift */,
 				3C2067122AF426A000C74DBA /* RootScreen.swift */,
 				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
@@ -208,6 +222,7 @@
 		3C2067142AF4283400C74DBA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */,
 				3C2067152AF4284D00C74DBA /* MainButton.swift */,
 			);
 			path = Common;
@@ -216,8 +231,6 @@
 		3C20671B2AF433F400C74DBA /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3C20673A2AF55CAE00C74DBA /* Networking.swift */,
-				3C2067302AF4D05A00C74DBA /* ResourceRequest.swift */,
 				3C2067082AF424C500C74DBA /* Utilities */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 			);
@@ -269,6 +282,32 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		3CAF94D72AFA9AD400B8434D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF94D82AFA9AE300B8434D /* Encodable+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3CAF94EC2AFAB43500B8434D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF94E72AFAB10B00B8434D /* Networking.swift */,
+				3CAF94ED2AFAB44200B8434D /* WGService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3CAF94F42AFAEF1500B8434D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067022AF4204800C74DBA /* LoginView.swift */,
+				3CAF94F02AFACE0800B8434D /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9FE9C5F37D255FAA011B9666 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +349,10 @@
 			dependencies = (
 			);
 			name = Wordsgram;
+			packageProductDependencies = (
+				3CAF94BF2AFA908B00B8434D /* SwiftyJSON */,
+				3CAF94EA2AFAB22E00B8434D /* Moya */,
+			);
 			productName = Wordsgram;
 			productReference = 3C2066D22AF40DC000C74DBA /* Wordsgram.app */;
 			productType = "com.apple.product-type.application";
@@ -385,6 +428,8 @@
 			);
 			mainGroup = 3C2066C92AF40DC000C74DBA;
 			packageReferences = (
+				3CAF94BE2AFA908B00B8434D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3CAF94E92AFAB22E00B8434D /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 3C2066D32AF40DC000C74DBA /* Products */;
 			projectDirPath = "";
@@ -511,12 +556,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAF94E82AFAB10B00B8434D /* Networking.swift in Sources */,
 				3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */,
 				3C2067242AF434F100C74DBA /* Word.swift in Sources */,
+				3CAF94F32AFAD0CA00B8434D /* ReusableViews.swift in Sources */,
 				3C20671E2AF4349200C74DBA /* User.swift in Sources */,
-				3C20673B2AF55CAF00C74DBA /* Networking.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
-				3C2067312AF4D05A00C74DBA /* ResourceRequest.swift in Sources */,
+				3CAF94EE2AFAB44200B8434D /* WGService.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* AppScreens.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersNavigationStack.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootScreen.swift in Sources */,
@@ -524,12 +570,14 @@
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
 				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,
 				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
-				3C2067032AF4204800C74DBA /* LoginScreen.swift in Sources */,
+				3C2067032AF4204800C74DBA /* LoginView.swift in Sources */,
 				3C2067352AF4D14700C74DBA /* Token.swift in Sources */,
 				3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */,
 				3C2067202AF434AB00C74DBA /* Category.swift in Sources */,
 				3C2067412AF5704000C74DBA /* CategoriesNavigationStack.swift in Sources */,
 				3C20672D2AF4C3A600C74DBA /* WordNavigationStack.swift in Sources */,
+				3CAF94D92AFA9AE300B8434D /* Encodable+.swift in Sources */,
+				3CAF94F12AFACE0900B8434D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,9 +741,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
+				DEVELOPMENT_TEAM = ANU45NJ4HN;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordsgram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -722,9 +772,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordsgram/Preview Content\"";
+				DEVELOPMENT_TEAM = ANU45NJ4HN;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordsgram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -859,6 +911,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CAF94BE2AFA908B00B8434D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		3CAF94E92AFAB22E00B8434D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CAF94BF2AFA908B00B8434D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CAF94BE2AFA908B00B8434D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3CAF94EA2AFAB22E00B8434D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CAF94E92AFAB22E00B8434D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C2066CA2AF40DC000C74DBA /* Project object */;
 }

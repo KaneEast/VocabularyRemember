@@ -12,7 +12,7 @@ struct UsersNavigationStack: View {
     @State private var users: [User] = []
     @State private var showingUserErrorAlert = false
     @EnvironmentObject var auth: Auth
-    let usersRequest = ResourceRequest<User>(resourcePath: "users")
+//    let usersRequest = ResourceRequest<User>(resourcePath: "users")
     
     var body: some View {
         NavigationStack {
@@ -49,18 +49,18 @@ struct UsersNavigationStack: View {
     }
     
     func loadData() {
-        usersRequest.getAll { userResult in
-            switch userResult {
-            case .failure:
-                DispatchQueue.main.async {
-                    self.showingUserErrorAlert = true
-                }
-            case .success(let users):
-                DispatchQueue.main.async {
-                    self.users = users
-                }
-            }
-        }
+//        usersRequest.getAll { userResult in
+//            switch userResult {
+//            case .failure:
+//                DispatchQueue.main.async {
+//                    self.showingUserErrorAlert = true
+//                }
+//            case .success(let users):
+//                DispatchQueue.main.async {
+//                    self.users = users
+//                }
+//            }
+//        }
     }
 }
 

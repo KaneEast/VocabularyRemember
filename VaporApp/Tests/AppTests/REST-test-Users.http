@@ -14,8 +14,19 @@ content-length: 21
 content-type: application/json
 
 {
-    "name": "kane",
-    "username": "kanein12",
+    "name": "kane444",
+    "username": "kanein1245",
+    "password": "password"
+}
+
+### CREATE NEW USER
+POST http://192.168.2.101:8080/api/users HTTP/1.1
+content-length: 21
+content-type: application/json
+
+{
+    "name": "abc1",
+    "username": "abc11",
     "password": "password"
 }
 

@@ -15,7 +15,7 @@ struct RootScreen: View {
         if auth.isLoggedIn {
             AppTabView(selection: $selection)
         } else {
-            LoginScreen()
+            LoginView()
         }
     }
 }
