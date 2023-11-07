@@ -14,7 +14,7 @@ struct CategoriesNavigationStack: View {
     let categoriesRequest = ResourceRequest<Category>(resourcePath: "categories")
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(categories, id: \.id) { category in
                 Text(category.name)
                     .font(.title2)
