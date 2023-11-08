@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum AuthState: String {
+enum AuthActionState: String {
     case SignUp // login
     case SignIn // register
 }
@@ -17,9 +17,6 @@ struct LoginView: View {
     @State private var requestError = false
     @State private var validationError = false
     @State private var signInSucces = false
-//    @EnvironmentObject var auth: Auth
-    
-    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {

@@ -164,7 +164,6 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067082AF424C500C74DBA /* Utilities */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 				3CAF94EC2AFAB43500B8434D /* Networking */,
 				3CAF94D72AFA9AD400B8434D /* Extension */,
@@ -201,15 +200,6 @@
 				3C2066F22AF40DC300C74DBA /* WordsgramUITestsLaunchTests.swift */,
 			);
 			path = WordsgramUITests;
-			sourceTree = "<group>";
-		};
-		3C2067082AF424C500C74DBA /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
-				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3C2067102AF4267F00C74DBA /* Features */ = {
@@ -302,6 +292,8 @@
 		3CAF94EC2AFAB43500B8434D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
+				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
 				3CAF94E72AFAB10B00B8434D /* Networking.swift */,
 				3CAF94ED2AFAB44200B8434D /* WGService.swift */,
 				3CAF94FB2AFBC42B00B8434D /* Parameters.swift */,

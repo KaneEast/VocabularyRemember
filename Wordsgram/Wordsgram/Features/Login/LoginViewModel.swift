@@ -45,8 +45,8 @@ class LoginViewModel: ObservableObject {
         var validation: String = ""
     }
     
-    @Published var authState: AuthState = .SignUp
-    @Published var authStates = [AuthState.SignUp, AuthState.SignIn]
+    @Published var authState: AuthActionState = .SignUp
+    @Published var authStates = [AuthActionState.SignUp, AuthActionState.SignIn]
     
     @Published var name: String = ""
     @Published var username = ""
