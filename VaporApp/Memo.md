@@ -10,4 +10,4 @@ When you deploy your application, or next revert the database, you won’t have 
 
 But, you can’t create a new user since that route requires authentication! One way to solve this is to seed the database and create a user when the application first boots up. In Vapor, you do this with a migration.
 
-#
+# admin token: AOM03FS90G7HgW0A0Ze0Dw==

@@ -1,12 +1,12 @@
 ### CREATE NEW WORD
 POST http://localhost:8080/api/words HTTP/1.1
-Authorization: Bearer GiDoSsoAssLrLWSmJhR4gw==
+Authorization: Bearer jhJq9Rqr33fbykGk0mu+aw==
 #Authorization: Basic kanein:password
 content-type: application/json
 
 {
-    "name": "money23",
-    "meaning": "money111223",
+    "name": "money",
+    "meaning": "abcde",
 }
 
 ### GET ALL WORDS

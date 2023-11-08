@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
+enum AppTab: Codable, Hashable, Identifiable, CaseIterable {
     case words
-    case users
     case categories
+    case users
     case settings
     
-    var id: AppScreen { self }
+    var id: AppTab { self }
 }
 
-extension AppScreen {
+extension AppTab {
     @ViewBuilder
     var label: some View {
         switch self {
         case .words:
             Label("words", systemImage: "person.crop.circle")
-        case .users:
-            Label("Users", systemImage: "person.3.fill")
         case .categories:
             Label("Categories", systemImage: "tag.fill")
+        case .users:
+            Label("Users", systemImage: "person.3.fill")
         case .settings:
             Label("Settings", systemImage: "gear")
         }
@@ -35,26 +35,26 @@ extension AppScreen {
     var destination: some View {
         switch self {
         case .words:
-            WordNavigationStack()
-        case .users:
-            UsersNavigationStack()
+            WordsView()
         case .categories:
-            CategoriesNavigationStack()
+            CategoriesView()
+        case .users:
+            UsersView()
         case .settings:
-            HomeScreen()
+            SettingsView()
         }
     }
 }
 
 struct AppTabView: View {
-    @Binding var selection: AppScreen?
+    @Binding var selection: AppTab?
     @EnvironmentObject var auth: Auth
     
     var body: some View {
         TabView(selection: $selection) {
-            ForEach(AppScreen.allCases) { screen in
+            ForEach(AppTab.allCases) { screen in
                 screen.destination
-                    .tag(screen as AppScreen?)
+                    .tag(screen as AppTab?)
                     .tabItem { screen.label }
             }
         }

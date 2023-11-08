@@ -1,5 +1,5 @@
 POST http://localhost:8080/api/categories HTTP/1.1
-Authorization: Bearer GiDoSsoAssLrLWSmJhR4gw==
+Authorization: Bearer AOM03FS90G7HgW0A0Ze0Dw==
 content-length: 21
 content-type: application/json
 

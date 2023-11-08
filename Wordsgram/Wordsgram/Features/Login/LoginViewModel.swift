@@ -101,16 +101,19 @@ class LoginViewModel: ObservableObject {
             return
         }
         
-        Auth.shared.login(username: name, password: password) { result in
-            switch result {
-            case .success:
-                break
-            case .failure:
-                DispatchQueue.main.async {
+        let provider = MoyaProvider<WGService>()
+        provider.rx.request(.login(username: name, password: password))
+            .filterSuccessfulStatusCodes()
+            .map(Token.self)
+            .subscribe { event in
+                switch event {
+                case let .success(token):
+                    Auth.shared.token = token.value
+                case .failure(let error):
+                    print(error.localizedDescription)
                     self.requestError = true
                 }
-            }
-        }
+            }//.dispose()
     }
     
     private func register() {
@@ -127,10 +130,14 @@ class LoginViewModel: ObservableObject {
                 let data = moyaResponse.data // Data, your JSON response is probably in here!
                 let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
                 
+                print("Register Successed, Please Login")
+                
                 // do something in your app
             case let .failure(error):
                 print(error.localizedDescription)
-                self.requestError = true
+                DispatchQueue.main.async {
+                    self.requestError = true
+                }
             }
         }
     }

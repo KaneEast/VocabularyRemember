@@ -10,12 +10,10 @@ import Moya
 
 enum WGService {
     case createUser(name: String, username: String, password: String)
-}
-
-struct UserCreateparam: Encodable {
-    let name: String
-    let username: String
-    let password: String
+    case login(username: String, password: String)
+    case requestWords
+    case requestUsers
+    case requestCategories
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -24,25 +22,60 @@ extension WGService: TargetType {
     var baseURL: URL { URL(string: "http://192.168.2.101:8080/api")! }
     var path: String {
         switch self {
-        case .createUser(_, _, _):
+        case .createUser:
             return "/users"
+        case .login:
+            return "/users/login"
+        case .requestWords:
+            return "/words"
+        case .requestUsers:
+            return "/users"
+        
+        case .requestCategories:
+            return "/categories"
         }
     }
     var method: Moya.Method {
         switch self {
         case .createUser:
             return .post
+        case .login:
+            return .post
+        case .requestWords:
+            return .get
+        case .requestUsers:
+            return .get
+        case .requestCategories:
+            return .get
         }
     }
     var task: Task {
         switch self {
         case let .createUser(name, username, password): // Always send parameters as JSON in request body
             return .requestJSONEncodable(UserCreateparam(name: name, username: username, password: password))
+        case .login:
+            return .requestPlain
+        case .requestWords, .requestUsers:
+            return .requestPlain // Send no parameters
+        case .requestCategories:
+            return .requestPlain
         }
     }
     
     var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        switch self {
+        case let .login(username, password):
+            guard let loginString = "\(username):\(password)".data(using: .utf8)?.base64EncodedString() else {
+                fatalError("Failed to encode credentials") // TODO: Should no fatal Error
+            }
+            return [
+                "Authorization": "Basic \(loginString)",
+                "Content-type": "application/json"
+            ]
+        default:
+            return ["Content-type": "application/json"]
+        }
+        
     }
 }
 
