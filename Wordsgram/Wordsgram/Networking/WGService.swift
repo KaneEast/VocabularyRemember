@@ -12,6 +12,7 @@ enum WGService {
     case createUser(name: String, username: String, password: String)
     case login(username: String, password: String)
     case requestWords
+    case createWord(name: String, meaning: String)
     case requestUsers
     case requestCategories
 }
@@ -33,32 +34,27 @@ extension WGService: TargetType {
         
         case .requestCategories:
             return "/categories"
+        case .createWord:
+            return "/words"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .createUser:
+        case .createUser, .login, .createWord:
             return .post
-        case .login:
-            return .post
-        case .requestWords:
+        case .requestWords, .requestUsers, .requestCategories:
             return .get
-        case .requestUsers:
-            return .get
-        case .requestCategories:
-            return .get
+        
         }
     }
     var task: Task {
         switch self {
         case let .createUser(name, username, password): // Always send parameters as JSON in request body
             return .requestJSONEncodable(UserCreateparam(name: name, username: username, password: password))
-        case .login:
-            return .requestPlain
-        case .requestWords, .requestUsers:
+        case .login, .requestWords, .requestUsers, .requestCategories:
             return .requestPlain // Send no parameters
-        case .requestCategories:
-            return .requestPlain
+        case let .createWord(name, meaning):
+            return .requestData("{\"name\": \"\(name)\", \"meaning\": \"\(meaning)\"}".utf8Encoded)
         }
     }
     
@@ -72,6 +68,13 @@ extension WGService: TargetType {
                 "Authorization": "Basic \(loginString)",
                 "Content-type": "application/json"
             ]
+        
+        case .createWord:
+            return [
+                "Authorization": "Bearer \(Auth.shared.token ?? "")",
+                "Content-type": "application/json"
+            ]
+            
         default:
             return ["Content-type": "application/json"]
         }

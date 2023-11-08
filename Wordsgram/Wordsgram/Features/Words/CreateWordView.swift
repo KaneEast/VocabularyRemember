@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Moya
 
 struct CreateWordView: View {
     @State var name = ""
@@ -49,7 +50,26 @@ struct CreateWordView: View {
     }
     
     func saveWord() {
+        guard name.count > 0, meaning.count > 0 else {
+            showingWordSaveErrorAlert = true
+            return
+        }
         
+        let provider = MoyaProvider<WGService>()
+        provider.rx.request(.createWord(name: name, meaning: meaning))
+            .filterSuccessfulStatusCodes()
+            .map(CreateWordResponse.self)
+            .subscribe { event in
+                switch event {
+                case let .success(word):
+                    DispatchQueue.main.async {
+                      presentationMode.wrappedValue.dismiss()
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self.showingWordSaveErrorAlert = true
+                }
+            }//.dispose()
     }
 }
 

@@ -41,6 +41,7 @@
 		3CAF94FA2AFBB63A00B8434D /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94F92AFBB63A00B8434D /* CombineMoya */; };
 		3CAF94FC2AFBC42B00B8434D /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FB2AFBC42B00B8434D /* Parameters.swift */; };
 		3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */; };
+		3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		3CAF94F52AFB961300B8434D /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
 		3CAF94FB2AFBC42B00B8434D /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordView.swift; sourceTree = "<group>"; };
+		3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordResponse.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				3CAF94E72AFAB10B00B8434D /* Networking.swift */,
 				3CAF94ED2AFAB44200B8434D /* WGService.swift */,
 				3CAF94FB2AFBC42B00B8434D /* Parameters.swift */,
+				3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootView.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* SettingsView.swift in Sources */,
+				3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */,
 				3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */,
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
 				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,

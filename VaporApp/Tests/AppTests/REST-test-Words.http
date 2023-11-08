@@ -5,8 +5,8 @@ Authorization: Bearer jhJq9Rqr33fbykGk0mu+aw==
 content-type: application/json
 
 {
-    "name": "money",
-    "meaning": "abcde",
+    "name": "Apple",
+    "meaning": "fruit",
 }
 
 ### GET ALL WORDS

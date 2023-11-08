@@ -43,8 +43,7 @@ struct WordsView: View {
 //                }
 //            }
             .sheet(isPresented: $showingSheet) {
-                Text("create word view")
-//                    .onDisappear(perform: loadData)
+                CreateWordView().onDisappear(perform: vm.getAllWords)
             }
         }
         .onAppear(perform: vm.getAllWords)
