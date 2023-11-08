@@ -42,6 +42,7 @@
 		3CAF94FC2AFBC42B00B8434D /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FB2AFBC42B00B8434D /* Parameters.swift */; };
 		3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */; };
 		3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */; };
+		3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		3CAF94FB2AFBC42B00B8434D /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordView.swift; sourceTree = "<group>"; };
 		3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordResponse.swift; sourceTree = "<group>"; };
+		3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2067402AF5704000C74DBA /* CategoriesView.swift */,
+				3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */,
 				3CAF94E82AFAB10B00B8434D /* Networking.swift in Sources */,
 				3CAF94F62AFB961300B8434D /* WordsViewModel.swift in Sources */,
 				3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */,

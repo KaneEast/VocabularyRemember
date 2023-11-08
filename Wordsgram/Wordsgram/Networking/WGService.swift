@@ -13,6 +13,7 @@ enum WGService {
     case login(username: String, password: String)
     case requestWords
     case createWord(name: String, meaning: String)
+    case createCategory(name: String)
     case requestUsers
     case requestCategories
 }
@@ -36,11 +37,13 @@ extension WGService: TargetType {
             return "/categories"
         case .createWord:
             return "/words"
+        case .createCategory:
+            return "/categories"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .createUser, .login, .createWord:
+        case .createUser, .login, .createWord, .createCategory:
             return .post
         case .requestWords, .requestUsers, .requestCategories:
             return .get
@@ -55,6 +58,8 @@ extension WGService: TargetType {
             return .requestPlain // Send no parameters
         case let .createWord(name, meaning):
             return .requestData("{\"name\": \"\(name)\", \"meaning\": \"\(meaning)\"}".utf8Encoded)
+        case let .createCategory(name):
+            return .requestData("{\"name\": \"\(name)\"}".utf8Encoded)
         }
     }
     
@@ -69,7 +74,7 @@ extension WGService: TargetType {
                 "Content-type": "application/json"
             ]
         
-        case .createWord:
+        case .createWord, .createCategory:
             return [
                 "Authorization": "Bearer \(Auth.shared.token ?? "")",
                 "Content-type": "application/json"

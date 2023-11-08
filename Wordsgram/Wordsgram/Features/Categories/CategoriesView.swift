@@ -30,8 +30,8 @@ struct CategoriesView: View {
             }
         }
         .sheet(isPresented: $showingSheet) {
-            //      CreateCategoryView()
-            //        .onDisappear(perform: loadData)
+            CreateCategoryView()
+                .onDisappear(perform: loadData)
         }
         .onAppear(perform: loadData)
         .alert(isPresented: $showingCategoryErrorAlert) {

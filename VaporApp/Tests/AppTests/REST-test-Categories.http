@@ -4,7 +4,7 @@ content-length: 21
 content-type: application/json
 
 {
-    "name": "Finance"
+    "name": "Health"
 }
 
 ### GET

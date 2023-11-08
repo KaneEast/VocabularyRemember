@@ -21,13 +21,13 @@ extension AppTab {
     var label: some View {
         switch self {
         case .words:
-            Label("words", systemImage: "person.crop.circle")
+            Label("words", systemImage: "pencil.circle.fill")
         case .categories:
-            Label("Categories", systemImage: "tag.fill")
+            Label("Categories", systemImage: "printer.filled.and.paper")
         case .users:
             Label("Users", systemImage: "person.3.fill")
         case .settings:
-            Label("Settings", systemImage: "gear")
+            Label("Settings", systemImage: "gearshape.fill")
         }
     }
     

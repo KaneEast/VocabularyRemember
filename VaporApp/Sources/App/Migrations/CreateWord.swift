@@ -19,6 +19,7 @@ struct CreateWord: Migration {
             .field("name", .string, .required)
             .field("meaning", .string, .required)
             .field("userID", .uuid, .required, .references("users", "id")) // Foreign key
+            .unique(on: "name")
             .create() // Create the table in the database.
     }
     
