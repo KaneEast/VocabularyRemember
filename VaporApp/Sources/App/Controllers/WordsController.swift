@@ -54,7 +54,7 @@ struct WordsController: RouteCollection {
             "categories",
             ":categoryID",
             use: removeCategoriesHandler)
-        
+        tokenAuthGroup.delete(":wordID", "categories", use: removeAllCategoriesFromWordHandler)
     }
     
     func getAllHandler(_ req: Request) async throws -> [Word] {
@@ -175,11 +175,39 @@ struct WordsController: RouteCollection {
             .flatMap { acronym, category in
                 acronym
                     .$categories
-                // Use attach(_:on:) to set up the relationship between acronym and category. This creates a pivot model and saves it in the database. Transform the result into a 201 Created response. Like many of Fluent’s operations, you call attach(_:on:) on the property wrappers projected value, rather than the property itself.
+                    // Use attach(_:on:) to set up the relationship between acronym and category. This creates a pivot model and saves it in the database. Transform the result into a 201 Created response. Like many of Fluent’s operations, you call attach(_:on:) on the property wrappers projected value, rather than the property itself.
                     .attach(category, on: req.db)
                     .transform(to: .created)
             }
     }
+
+//    func addCategoriesHandler(_ req: Request) async throws -> HTTPStatus {
+//        // Extract the word and category IDs from the request's parameters.
+//        guard let wordID = req.parameters.get("wordID", as: UUID.self),
+//              let categoryID = req.parameters.get("categoryID", as: UUID.self) else {
+//            throw Abort(.badRequest)
+//        }
+//
+//        // Fetch the word and category from the database.
+//        guard let word = try await Word.find(wordID, on: req.db),
+//              let category = try await Category.find(categoryID, on: req.db) else {
+//            throw Abort(.notFound)
+//        }
+//
+//        // Check if the category is already associated with the word.
+//        let existingCategory = try await word.$categories.query(on: req.db).filter(\.$id == category.id!).first()
+//        if existingCategory != nil {
+//            // If the category is already associated, throw a conflict error.
+//            throw Abort(.conflict, reason: "This category is already associated with the word.")
+//        }
+//
+//        // If the category is not associated, attach it.
+//        try await word.$categories.attach(category, on: req.db)
+//        
+//        // Return a 201 Created status after successfully attaching the category.
+//        return .created
+//    }
+
     
     // Querying the relationship
     // Defines route handler getCategoriesHandler(_:) returning EventLoopFuture<[Category]>.
@@ -211,6 +239,38 @@ struct WordsController: RouteCollection {
             }
     }
     
+//    func getCategoriesOfWordHandler(_ req: Request) -> EventLoopFuture<[Category]> {
+//        //Get the category from the database using the ID provided to the request. Ensure one is returned and unwrap the future.
+//        Word.find(req.parameters.get("categoryID"), on: req.db)
+//            .unwrap(or: Abort(.notFound))
+//            .flatMap { word in
+//                // Use the new property wrapper to get the acronyms. This uses get(on:) to perform the query for you. This is the same as query(on: req.db).all() from earlier.
+//                word.$categories.get(on: req.db)
+//            }
+//    }
+    
+    func removeAllCategoriesFromWordHandler(_ req: Request) async throws -> HTTPStatus {
+        // Extract the word ID from the request's parameters.
+        guard let wordID = req.parameters.get("wordID", as: UUID.self) else {
+            throw Abort(.badRequest, reason: "Invalid word ID.")
+        }
+
+        // Fetch the word from the database.
+        guard let word = try await Word.find(wordID, on: req.db) else {
+            throw Abort(.notFound, reason: "Word not found.")
+        }
+
+        // Query for all categories associated with the word.
+        let categories = try await word.$categories.query(on: req.db).all()
+
+        // Detach each category from the word.
+        for category in categories {
+            try await word.$categories.detach(category, on: req.db)
+        }
+
+        // Return a 204 No Content status after successfully detaching the categories.
+        return .noContent
+    }
 }
 
 struct CreateWordData: Content {

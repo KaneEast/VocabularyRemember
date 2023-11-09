@@ -11,12 +11,8 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                
-                Text("Home.Title")
-                    .font(.system(size: 24, weight: .bold, design: .default))
-                
+            VStack(spacing: 0) {
+                SettingsList()
                 Spacer()
                 
                 Button(
@@ -27,18 +23,45 @@ struct SettingsView: View {
                     }
                 )
             }
-            .padding(30)
+            .padding(20)
             .navigationTitle("Settings")
         }
     }
     
     private func signOut() {
-        Auth.shared.signOut()
+        AuthService.shared.signOut()
     }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+    }
+}
+
+struct SettingsList: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            ForEach(SettingsOption.allCases) { self[$0] }
+        }
+    }
+}
+
+private extension SettingsList {
+    @ViewBuilder subscript(option: SettingsOption) -> some View {
+        switch option {
+        case .settings1:
+            SettingsDisclosureRow(title: option.title, value: "")
+        case .settings2:
+            SettingsDisclosureRow(title: option.title, value: "")
+        case .settings3:
+            NavigationLink(destination: EmptyView()) {
+                SettingsDisclosureRow(title: option.title, value: "")
+            }
+        case .settings4:
+            NavigationLink(destination: EmptyView()) {
+                SettingsDisclosureRow(title: option.title, value: "")
+            }
+        }
     }
 }

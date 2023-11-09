@@ -9,26 +9,23 @@ import SwiftUI
 
 struct WordsView: View {
     @State private var showingSheet = false
-    @State private var showingAcronymErrorAlert = false
+    @State private var showingErrorAlert = false
     @State private var isLoading = false
-    @EnvironmentObject var auth: Auth
-    
-    @StateObject private var vm = WordsViewModel()
+    @EnvironmentObject var wordsService: WordsService
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(vm.words, id: \.id) { word in
-                    NavigationLink(destination: WordDetailView(acronym: word)) {
+                ForEach(wordsService.words, id: \.id) { word in
+                    NavigationLink(destination: WordDetailView(word: word)) {
                         VStack(alignment: .leading) {
                             Text(word.name).font(.title2)
                             Text(word.meaning).font(.caption)
                         }
                     }
                 }
-                .onDelete(perform: { indexSet in
-                    vm.deleteOne()
-                })
+                //.onDelete(perform: { indexSet in
+                //})
             }
             .navigationTitle("Words")
             .toolbar {
@@ -37,19 +34,17 @@ struct WordsView: View {
                     label: { Image(systemName: "plus") }
                 )
             }
-//            .overlay {
-//                if isLoading && vm.words.isEmpty {
-//                    ProgressView("Loading...")
-//                }
-//            }
             .sheet(isPresented: $showingSheet) {
-                CreateWordView().onDisappear(perform: vm.getAllWords)
+                CreateWordView().onDisappear(perform: fetch)
             }
         }
-        .onAppear(perform: vm.getAllWords)
-        .alert(isPresented: $showingAcronymErrorAlert) {
-            Alert(title: Text("Error"), message: Text("There was an error getting the acronyms"))
+        .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text("Error"), message: Text("There was an error getting the words"))
         }
+    }
+    
+    func fetch() {
+        Task { wordsService.fetchAllFromServer }
     }
 }
 

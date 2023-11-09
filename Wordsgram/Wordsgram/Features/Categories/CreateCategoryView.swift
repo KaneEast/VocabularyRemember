@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-import Moya
+//import Moya
 
 struct CreateCategoryView: View {
-    @State var name = ""
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var auth: Auth
-    @State private var showingCategorySaveErrorAlert = false
+    @EnvironmentObject var categoryService: CategoriesService
+    @State var name = ""
+    @State private var isShowError = false
     
     var body: some View {
         NavigationView {
@@ -38,38 +38,38 @@ struct CreateCategoryView: View {
                     .disabled(name.isEmpty)
             )
         }
-        .alert(isPresented: $showingCategorySaveErrorAlert) {
+        .alert(isPresented: $isShowError) {
             Alert(title: Text("Error"), message: Text("There was a problem saving the category"))
         }
     }
     
     func saveCategory() {
         guard name.count > 0 else {
-            showingCategorySaveErrorAlert = true
+            // TODO: show error
             return
         }
         
-        let provider = MoyaProvider<WGService>()
-        provider.rx.request(.createCategory(name: name))
-            .filterSuccessfulStatusCodes()
-            .map(Category.self)
-            .subscribe { event in
-                switch event {
-                case let .success(category):
-                    DispatchQueue.main.async {
-                      presentationMode.wrappedValue.dismiss()
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    self.showingCategorySaveErrorAlert = true
+        Task {
+            do {
+                let _ = try await categoryService.saveCategory(name: name)
+                try await categoryService.fetchAllFromServer()
+                await MainActor.run {
+                    presentationMode.wrappedValue.dismiss()
                 }
-            }//.dispose()
+                
+            } catch {
+                print(error.localizedDescription)
+                await MainActor.run {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            }
+        }
     }
 }
 
-struct CreateCategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateCategoryView()
-    }
-}
+//struct CreateCategoryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateCategoryView(categoryService: CategoriesService())
+//    }
+//}
 

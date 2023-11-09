@@ -108,7 +108,7 @@ class LoginViewModel: ObservableObject {
             .subscribe { event in
                 switch event {
                 case let .success(token):
-                    Auth.shared.token = token.value
+                    AuthService.shared.token = token.value
                 case .failure(let error):
                     print(error.localizedDescription)
                     self.requestError = true

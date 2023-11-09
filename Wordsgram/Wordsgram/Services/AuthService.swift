@@ -7,22 +7,10 @@
 
 import Foundation
 
-enum CategoryAddError: Error {
-    case noID
-    case invalidResponse
-}
-
-enum ResourceRequestError: Error {
-    case noData
-    case decodingError
-    case encodingError
-}
-
-
-class Auth: ObservableObject {
+class AuthService: ObservableObject {
     static let keychainKey = "WORDSGRAM-API-KEY"
     @Published private(set) var isLoggedIn = false
-    static let shared = Auth()
+    static let shared = AuthService()
     
     private init() {
         if token != nil {
@@ -32,13 +20,13 @@ class Auth: ObservableObject {
     
     var token: String? {
         get {
-            Keychain.load(key: Auth.keychainKey)
+            Keychain.load(key: AuthService.keychainKey)
         }
         set {
             if let newToken = newValue {
-                Keychain.save(key: Auth.keychainKey, data: newToken)
+                Keychain.save(key: AuthService.keychainKey, data: newToken)
             } else {
-                Keychain.delete(key: Auth.keychainKey)
+                Keychain.delete(key: AuthService.keychainKey)
             }
             DispatchQueue.main.async {
                 self.isLoggedIn = newValue != nil

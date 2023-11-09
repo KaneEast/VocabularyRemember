@@ -29,20 +29,32 @@
 		3C2067352AF4D14700C74DBA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067342AF4D14700C74DBA /* Token.swift */; };
 		3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C20673D2AF56EA600C74DBA /* UsersView.swift */; };
 		3C2067412AF5704000C74DBA /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2067402AF5704000C74DBA /* CategoriesView.swift */; };
+		3C7BBA432AFCD9F000C79107 /* WGProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA422AFCD9F000C79107 /* WGProviderFactory.swift */; };
+		3C7BBA462AFCEDBD00C79107 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA452AFCEDBD00C79107 /* Errors.swift */; };
+		3C7BBA482AFD08A200C79107 /* CategoryWithWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA472AFD08A200C79107 /* CategoryWithWordResponse.swift */; };
+		3C7BBA4A2AFD13D500C79107 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA492AFD13D400C79107 /* SettingsOption.swift */; };
+		3C7BBA4C2AFD140800C79107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA4B2AFD140800C79107 /* Constants.swift */; };
+		3C7BBA4E2AFD15A300C79107 /* SettingsDisclosureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA4D2AFD15A300C79107 /* SettingsDisclosureRow.swift */; };
+		3C7BBA502AFD18CC00C79107 /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA4F2AFD18CC00C79107 /* MainButtonView.swift */; };
+		3C7BBA532AFD287700C79107 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA522AFD287700C79107 /* WordsService.swift */; };
+		3C7BBA552AFD29DE00C79107 /* SystemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA542AFD29DE00C79107 /* SystemServices.swift */; };
+		3C7BBA572AFD300400C79107 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA562AFD300400C79107 /* CategoriesService.swift */; };
+		3C7BBA592AFD548C00C79107 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA582AFD548C00C79107 /* UserService.swift */; };
+		3C7BBA5B2AFD6BC500C79107 /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA5A2AFD6BC500C79107 /* Publisher+.swift */; };
 		3CAF94C02AFA908B00B8434D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94BF2AFA908B00B8434D /* SwiftyJSON */; };
 		3CAF94D92AFA9AE300B8434D /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94D82AFA9AE300B8434D /* Encodable+.swift */; };
-		3CAF94E82AFAB10B00B8434D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94E72AFAB10B00B8434D /* Networking.swift */; };
+		3CAF94E82AFAB10B00B8434D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94E72AFAB10B00B8434D /* AuthService.swift */; };
 		3CAF94EB2AFAB22E00B8434D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94EA2AFAB22E00B8434D /* Moya */; };
-		3CAF94EE2AFAB44200B8434D /* WGService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94ED2AFAB44200B8434D /* WGService.swift */; };
+		3CAF94EE2AFAB44200B8434D /* WGNeworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94ED2AFAB44200B8434D /* WGNeworkingService.swift */; };
 		3CAF94F12AFACE0900B8434D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94F02AFACE0800B8434D /* LoginViewModel.swift */; };
 		3CAF94F32AFAD0CA00B8434D /* ReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */; };
-		3CAF94F62AFB961300B8434D /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94F52AFB961300B8434D /* WordsViewModel.swift */; };
 		3CAF94F82AFBB3FB00B8434D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94F72AFBB3FB00B8434D /* RxMoya */; };
 		3CAF94FA2AFBB63A00B8434D /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CAF94F92AFBB63A00B8434D /* CombineMoya */; };
 		3CAF94FC2AFBC42B00B8434D /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FB2AFBC42B00B8434D /* Parameters.swift */; };
 		3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */; };
 		3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */; };
 		3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */; };
+		3CAF95042AFBF90200B8434D /* AddToCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF95032AFBF90200B8434D /* AddToCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,17 +101,29 @@
 		3C2067342AF4D14700C74DBA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3C20673D2AF56EA600C74DBA /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		3C2067402AF5704000C74DBA /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		3C7BBA422AFCD9F000C79107 /* WGProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGProviderFactory.swift; sourceTree = "<group>"; };
+		3C7BBA452AFCEDBD00C79107 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3C7BBA472AFD08A200C79107 /* CategoryWithWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWithWordResponse.swift; sourceTree = "<group>"; };
+		3C7BBA492AFD13D400C79107 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
+		3C7BBA4B2AFD140800C79107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C7BBA4D2AFD15A300C79107 /* SettingsDisclosureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisclosureRow.swift; sourceTree = "<group>"; };
+		3C7BBA4F2AFD18CC00C79107 /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
+		3C7BBA522AFD287700C79107 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
+		3C7BBA542AFD29DE00C79107 /* SystemServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemServices.swift; sourceTree = "<group>"; };
+		3C7BBA562AFD300400C79107 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		3C7BBA582AFD548C00C79107 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3C7BBA5A2AFD6BC500C79107 /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		3CAF94D82AFA9AE300B8434D /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
-		3CAF94E72AFAB10B00B8434D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		3CAF94ED2AFAB44200B8434D /* WGService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGService.swift; sourceTree = "<group>"; };
+		3CAF94E72AFAB10B00B8434D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3CAF94ED2AFAB44200B8434D /* WGNeworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGNeworkingService.swift; sourceTree = "<group>"; };
 		3CAF94EF2AFABAED00B8434D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CAF94F02AFACE0800B8434D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViews.swift; sourceTree = "<group>"; };
-		3CAF94F52AFB961300B8434D /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
 		3CAF94FB2AFBC42B00B8434D /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordView.swift; sourceTree = "<group>"; };
 		3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordResponse.swift; sourceTree = "<group>"; };
 		3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		3CAF95032AFBF90200B8434D /* AddToCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCategoryView.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +188,7 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
+				3C7BBA512AFD284B00C79107 /* Services */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 				3CAF94EC2AFAB43500B8434D /* Networking */,
 				3CAF94D72AFA9AD400B8434D /* Extension */,
@@ -220,6 +245,7 @@
 				3C2067262AF4C13600C74DBA /* AppTabView.swift */,
 				3C2067122AF426A000C74DBA /* RootView.swift */,
 				3C2066D52AF40DC000C74DBA /* WordsgramApp.swift */,
+				3C7BBA4B2AFD140800C79107 /* Constants.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -229,6 +255,7 @@
 			children = (
 				3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */,
 				3C2067152AF4284D00C74DBA /* MainButton.swift */,
+				3C7BBA4F2AFD18CC00C79107 /* MainButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				3C20670C2AF425EC00C74DBA /* SettingsView.swift */,
+				3C7BBA4D2AFD15A300C79107 /* SettingsDisclosureRow.swift */,
+				3C7BBA492AFD13D400C79107 /* SettingsOption.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -257,8 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				3C20672C2AF4C3A600C74DBA /* WordsView.swift */,
-				3CAF94F52AFB961300B8434D /* WordsViewModel.swift */,
 				3C20672E2AF4C4E500C74DBA /* WordDetailView.swift */,
+				3CAF95032AFBF90200B8434D /* AddToCategoryView.swift */,
 				3CAF94FD2AFBC97200B8434D /* CreateWordView.swift */,
 			);
 			path = Words;
@@ -281,10 +310,32 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		3C7BBA442AFCED9100C79107 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
+				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		3C7BBA512AFD284B00C79107 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3C7BBA542AFD29DE00C79107 /* SystemServices.swift */,
+				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
+				3C7BBA522AFD287700C79107 /* WordsService.swift */,
+				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
+				3C7BBA582AFD548C00C79107 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3CAF94D72AFA9AD400B8434D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				3CAF94D82AFA9AE300B8434D /* Encodable+.swift */,
+				3C7BBA5A2AFD6BC500C79107 /* Publisher+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -292,12 +343,13 @@
 		3CAF94EC2AFAB43500B8434D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
-				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
-				3CAF94E72AFAB10B00B8434D /* Networking.swift */,
-				3CAF94ED2AFAB44200B8434D /* WGService.swift */,
+				3C7BBA442AFCED9100C79107 /* Tools */,
+				3CAF94ED2AFAB44200B8434D /* WGNeworkingService.swift */,
 				3CAF94FB2AFBC42B00B8434D /* Parameters.swift */,
 				3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */,
+				3C7BBA472AFD08A200C79107 /* CategoryWithWordResponse.swift */,
+				3C7BBA422AFCD9F000C79107 /* WGProviderFactory.swift */,
+				3C7BBA452AFCEDBD00C79107 /* Errors.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -561,32 +613,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7BBA4E2AFD15A300C79107 /* SettingsDisclosureRow.swift in Sources */,
 				3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */,
-				3CAF94E82AFAB10B00B8434D /* Networking.swift in Sources */,
-				3CAF94F62AFB961300B8434D /* WordsViewModel.swift in Sources */,
+				3C7BBA532AFD287700C79107 /* WordsService.swift in Sources */,
+				3CAF94E82AFAB10B00B8434D /* AuthService.swift in Sources */,
+				3C7BBA552AFD29DE00C79107 /* SystemServices.swift in Sources */,
 				3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */,
+				3C7BBA432AFCD9F000C79107 /* WGProviderFactory.swift in Sources */,
 				3C2067242AF434F100C74DBA /* Word.swift in Sources */,
 				3CAF94F32AFAD0CA00B8434D /* ReusableViews.swift in Sources */,
 				3C20671E2AF4349200C74DBA /* User.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
-				3CAF94EE2AFAB44200B8434D /* WGService.swift in Sources */,
+				3CAF94EE2AFAB44200B8434D /* WGNeworkingService.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* AppTabView.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootView.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* SettingsView.swift in Sources */,
 				3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */,
+				3C7BBA5B2AFD6BC500C79107 /* Publisher+.swift in Sources */,
 				3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */,
+				3C7BBA502AFD18CC00C79107 /* MainButtonView.swift in Sources */,
+				3C7BBA462AFCEDBD00C79107 /* Errors.swift in Sources */,
 				3C2067332AF4D0B600C74DBA /* Auth+Keychain.swift in Sources */,
 				3C2067162AF4284D00C74DBA /* MainButton.swift in Sources */,
 				3C2066D62AF40DC000C74DBA /* WordsgramApp.swift in Sources */,
 				3C2067032AF4204800C74DBA /* LoginView.swift in Sources */,
 				3C2067352AF4D14700C74DBA /* Token.swift in Sources */,
 				3C20672F2AF4C4E500C74DBA /* WordDetailView.swift in Sources */,
+				3C7BBA4C2AFD140800C79107 /* Constants.swift in Sources */,
 				3C2067202AF434AB00C74DBA /* Category.swift in Sources */,
 				3C2067412AF5704000C74DBA /* CategoriesView.swift in Sources */,
+				3C7BBA4A2AFD13D500C79107 /* SettingsOption.swift in Sources */,
+				3C7BBA482AFD08A200C79107 /* CategoryWithWordResponse.swift in Sources */,
+				3CAF95042AFBF90200B8434D /* AddToCategoryView.swift in Sources */,
+				3C7BBA592AFD548C00C79107 /* UserService.swift in Sources */,
 				3C20672D2AF4C3A600C74DBA /* WordsView.swift in Sources */,
 				3CAF94D92AFA9AE300B8434D /* Encodable+.swift in Sources */,
 				3CAF94F12AFACE0900B8434D /* LoginViewModel.swift in Sources */,
+				3C7BBA572AFD300400C79107 /* CategoriesService.swift in Sources */,
 				3CAF94FC2AFBC42B00B8434D /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,33 +1,37 @@
+### Create New Category
 POST http://localhost:8080/api/categories HTTP/1.1
 Authorization: Bearer AOM03FS90G7HgW0A0Ze0Dw==
 content-length: 21
 content-type: application/json
 
 {
-    "name": "Health"
+    "name": "Machine"
 }
 
-### GET
+### GET All Category
 GET http://localhost:8080/api/categories HTTP/1.1
 content-length: 21
 content-type: application/json
 
-
-### GET USERS
-GET http://localhost:8080/api/users HTTP/1.1
+### GET All Category With it's Words
+GET http://localhost:8080/api/categories/withWords HTTP/1.1
 content-length: 21
 content-type: application/json
 
-###
-
-#POST http://localhost:8080/api/words/<ACRONYM_ID>/categories/<CATEGORY_ID>
-POST http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6
+### POST Add Catagory(Health) to Word(2D3D9CC6-CD10-4A9F-A4B8-E2113E179E3D)
+POST http://localhost:8080/api/words/2D3D9CC6-CD10-4A9F-A4B8-E2113E179E3D/categories/07ED5600-CC8D-4857-8E65-9981B920EC85
 content-length: 21
 content-type: application/json
+Authorization: Bearer AOM03FS90G7HgW0A0Ze0Dw==
 
-### GET WORDS
-GET http://localhost:8080/api/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6/words
+### GET Category(Technology)s WORDS
+GET http://localhost:8080/api/categories/F7BDF43F-E5FC-4C6F-B156-1178B3837AEC/words
+
+
+### GET Category(Finance)s WORDS
+GET http://localhost:8080/api/categories/396C39C6-1A7E-4984-8C33-89C98CD10ED6/words
 
 
 ### Remove Relationship
-DELETE http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories/C460D2FB-6A2F-4707-A812-EB8089F66AD6
+DELETE http://localhost:8080/api/words/2D3D9CC6-CD10-4A9F-A4B8-E2113E179E3D/categories/07ED5600-CC8D-4857-8E65-9981B920EC85
+Authorization: Bearer AOM03FS90G7HgW0A0Ze0Dw==

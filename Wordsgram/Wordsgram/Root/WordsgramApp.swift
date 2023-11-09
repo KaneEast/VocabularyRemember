@@ -9,14 +9,16 @@ import SwiftUI
 
 @main
 struct WordsgramApp: App {
+    let systemServices = SystemServices()
     init() {
-//        NetworkMonitor.shared.startMonitoring()
+        NetworkMonitor.shared.startMonitoring()
+        systemServices.fetch()
     }
     
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environmentObject(Auth.shared)
+                .modifier(SystemServices())
         }
     }
 }

@@ -16,6 +16,9 @@ enum WGService {
     case createCategory(name: String)
     case requestUsers
     case requestCategories
+    case addToCategory(wordID: String, categoryID: String)
+    case getCategoryOfWord(wordID: String)
+    case getAllCategoriesWords
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -24,37 +27,35 @@ extension WGService: TargetType {
     var baseURL: URL { URL(string: "http://192.168.2.101:8080/api")! }
     var path: String {
         switch self {
-        case .createUser:
+        case .createUser, .requestUsers:
             return "/users"
         case .login:
             return "/users/login"
-        case .requestWords:
+        case .createWord, .requestWords:
             return "/words"
-        case .requestUsers:
-            return "/users"
-        
-        case .requestCategories:
+        case .createCategory, .requestCategories:
             return "/categories"
-        case .createWord:
-            return "/words"
-        case .createCategory:
-            return "/categories"
+        case let .addToCategory(wid, cid):
+            return "/words/\(wid)/categories/\(cid)"
+        case let .getCategoryOfWord(wid):
+            return "/words/\(wid)/categories"
+        case .getAllCategoriesWords:
+            return "/categories/withWords"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .createUser, .login, .createWord, .createCategory:
+        case .createUser, .login, .createWord, .createCategory, .addToCategory:
             return .post
-        case .requestWords, .requestUsers, .requestCategories:
+        case .requestWords, .requestUsers, .requestCategories, .getCategoryOfWord, .getAllCategoriesWords:
             return .get
-        
         }
     }
     var task: Task {
         switch self {
         case let .createUser(name, username, password): // Always send parameters as JSON in request body
             return .requestJSONEncodable(UserCreateparam(name: name, username: username, password: password))
-        case .login, .requestWords, .requestUsers, .requestCategories:
+        case .login, .requestWords, .requestUsers, .requestCategories, .addToCategory, .getCategoryOfWord, .getAllCategoriesWords:
             return .requestPlain // Send no parameters
         case let .createWord(name, meaning):
             return .requestData("{\"name\": \"\(name)\", \"meaning\": \"\(meaning)\"}".utf8Encoded)
@@ -74,9 +75,9 @@ extension WGService: TargetType {
                 "Content-type": "application/json"
             ]
         
-        case .createWord, .createCategory:
+        case .createWord, .createCategory, .addToCategory:
             return [
-                "Authorization": "Bearer \(Auth.shared.token ?? "")",
+                "Authorization": "Bearer \(AuthService.shared.token ?? "")",
                 "Content-type": "application/json"
             ]
             

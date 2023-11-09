@@ -10,21 +10,22 @@ import Vapor
 struct CategoriesController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         let categoriesRoute = routes.grouped("api", "categories")
-//        categoriesRoute.post(use: createHandler)
+        //        categoriesRoute.post(use: createHandler)
         let tokenAuthMiddleware = Token.authenticator()
         let guardAuthMiddleware = User.guardMiddleware()
         let tokenAuthGroup = categoriesRoute.grouped(
-          tokenAuthMiddleware,
-          guardAuthMiddleware)
+            tokenAuthMiddleware,
+            guardAuthMiddleware)
         tokenAuthGroup.post(use: createHandler)
-
+        
         categoriesRoute.get(use: getAllHandler)
         categoriesRoute.get(":categoryID", use: getHandler)
         categoriesRoute.get(
-          ":categoryID",
-          "words",
-          use: getAcronymsHandler)
-
+            ":categoryID",
+            "words",
+            use: getAcronymsHandler)
+        
+        categoriesRoute.get("withWords", use: getAllCategoriesWithWordsHandler)
     }
     
     func createHandler(_ req: Request) throws -> EventLoopFuture<Category> {
@@ -52,5 +53,26 @@ struct CategoriesController: RouteCollection {
             }
     }
     
+    func getAllCategoriesWithWordsHandler(_ req: Request) async throws -> [Category.CategoryWithWords] {
+        // Fetch all categories from the database
+        let categories = try await Category.query(on: req.db).all()
+        
+        // Use a TaskGroup to fetch words for each category
+        var categoriesWithWords: [Category.CategoryWithWords] = []
+        try await withThrowingTaskGroup(of: Category.CategoryWithWords.self) { group in
+            for category in categories {
+                group.addTask {
+                    let words = try await category.$words.query(on: req.db).all()
+                    return Category.CategoryWithWords(category: category, words: words)
+                }
+            }
+            
+            for try await categoryWithWords in group {
+                categoriesWithWords.append(categoryWithWords)
+            }
+        }
+        
+        return categoriesWithWords
+    }
 }
 

@@ -20,7 +20,6 @@ content-length: 21
 content-type: application/json
 
 ### UPDATE WORD
-
 PUT http://localhost:8080/api/words/CAE7EB9A-AB7A-4B72-9D94-AB3AA6873C23 HTTP/1.1
 content-length: 21
 content-type: application/json
@@ -75,8 +74,15 @@ GET http://localhost:8080/api/users/9589656E-7B46-471C-B0E3-38947CF4DE32/words
 content-length: 21
 content-type: application/json
 
-###
-GET http://localhost:8080/api/words/C5EC4910-9B93-44BD-9513-2074680A3F38/categories
+### GET Word(money)s Categories
+GET http://localhost:8080/api/words/52F13DEA-DDB3-4179-BCC1-2D8CF4E92ABC/categories
 content-length: 21
 content-type: application/json
 
+
+# Auth as admin:password
+### DELETE Word(money)s Categories
+DELETE http://localhost:8080/api/words/52F13DEA-DDB3-4179-BCC1-2D8CF4E92ABC/categories
+content-length: 21
+content-type: application/json
+Authorization: Bearer jhJq9Rqr33fbykGk0mu+aw==

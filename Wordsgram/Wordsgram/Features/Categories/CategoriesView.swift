@@ -9,15 +9,49 @@ import SwiftUI
 import Moya
 
 struct CategoriesView: View {
+    @EnvironmentObject var categoryService: CategoriesService
     @State private var showingSheet = false
-    @State private var categories: [Category] = []
     @State private var showingCategoryErrorAlert = false
     
     var body: some View {
         NavigationStack {
-            List(categories, id: \.id) { category in
-                Text(category.name)
-                    .font(.title2)
+            let columns = [GridItem(),
+                           GridItem(),
+                           GridItem()
+            ]
+            
+            ScrollView {
+                LazyVGrid(columns: columns) {
+//                List {
+                    ForEach(categoryService.detailedCategories, id: \.category.id) { res in
+                        ZStack  {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.orange)
+//                                .frame(height: 150)
+                            
+                            VStack(alignment: .leading) {
+                                Text(res.category.name)
+                                    .font(.title2)
+                                
+                                Text("Words: \(res.words.count)")
+                                    .font(.title3)
+                            }
+                        }
+                        .onAppear {
+                            print("Displaying category: \(res.category.name)")
+                            print("Displaying category: \(res.category.id)")
+                        }
+//                        .frame(height: 150)
+                        .frame(height: 50)
+                        
+                        
+                    }
+                }
+                .onAppear {
+                    print("CreateCategoryView - categories count: \(categoryService.detailedCategories.count)")
+                    
+                }
+                .padding()
             }
             .navigationTitle("Categories")
             .toolbar {
@@ -31,30 +65,10 @@ struct CategoriesView: View {
         }
         .sheet(isPresented: $showingSheet) {
             CreateCategoryView()
-                .onDisappear(perform: loadData)
         }
-        .onAppear(perform: loadData)
         .alert(isPresented: $showingCategoryErrorAlert) {
-            Alert(title: Text("Error"), message: Text("There was an error getting the acronyms"))
+            Alert(title: Text("Error"), message: Text("There was an error getting the words"))
         }
-    }
-    
-    func loadData() {
-        let provider = MoyaProvider<WGService>()
-        provider.rx.request(.requestCategories)
-            .filterSuccessfulStatusCodes()
-            .map([Category].self)
-            .subscribe { event in
-                switch event {
-                case let .success(categories):
-                    DispatchQueue.main.async {
-                        self.categories = categories
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    self.showingCategoryErrorAlert = true
-                }
-            }//.dispose()
     }
 }
 

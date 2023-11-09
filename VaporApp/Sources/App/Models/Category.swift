@@ -30,5 +30,11 @@ final class Category: Model, Content {
         self.id = id
         self.name = name
     }
+    
+    // Define the response structure for a category with its associated words.
+    struct CategoryWithWords: Content {
+        let category: Category
+        let words: [Word]
+    }
 }
 

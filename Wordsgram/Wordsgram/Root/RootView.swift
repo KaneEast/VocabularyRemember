@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @State private var selection: AppTab? = .words
-    @EnvironmentObject var auth: Auth
+    @EnvironmentObject var auth: AuthService
     
     var body: some View {
         if auth.isLoggedIn {

@@ -4,67 +4,105 @@
 //
 //  Created by Kane on 2023/11/03.
 //
+
 import SwiftUI
+import Moya
 
 struct WordDetailView: View {
-    var acronym: Word
+    var word: Word
     @State private var user: User?
     @State private var categories: [Category] = []
     @State private var short = ""
     @State private var long = ""
     @State private var showingSheet = false
     @State private var isShowingAddToCategoryView = false
-    @State private var showingUserErrorAlert = false
+    @State private var showingSaveSuccessAlert = false
     @State private var showingCategoriesErrorAlert = false
+    @State var selectedItem: Category?
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var categoryService: CategoriesService
     
     var body: some View {
-        Form {
-            Section(header: Text("Acronym").textCase(.uppercase)) {
-                Text(acronym.name)
-            }
-            Section(header: Text("Meaning").textCase(.uppercase)) {
-                Text(acronym.meaning)
-            }
-            if let user = user {
-                Section(header: Text("User").textCase(.uppercase)) {
-                    Text(user.name)
+        VStack {
+            Form {
+                Section(header: Text("Word").textCase(.uppercase)) {
+                    Text(word.name)
                 }
-            }
-            if !categories.isEmpty {
-                Section(header: Text("Categories").textCase(.uppercase)) {
-                    List(categories, id: \.id) { category in
-                        Text(category.name)
+                Section(header: Text("Meaning").textCase(.uppercase)) {
+                    Text(word.meaning)
+                }
+                if let user = user {
+                    Section(header: Text("User").textCase(.uppercase)) {
+                        Text(user.name)
                     }
                 }
-            }
-            Section {
-                Button("Add To Category") {
-                    isShowingAddToCategoryView = true
+                
+                Section(header: Text("Categories").textCase(.uppercase)) {
+                    AddToCategoryView(word: word, selectedItem: $selectedItem)
                 }
+                
+                
             }
+            Button(
+                action: addToCategory,
+                label: {
+                    Text("Save")
+                        .modifier(MainButton())
+                }
+            )
+            .padding()
+            
+            Spacer()
         }
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            Button(
-                action: {
-                    showingSheet.toggle()
-                }, label: {
-                    Text("Edit")
-                })
+//        .toolbar {
+//            Button(
+//                action: {
+//                    showingSheet.toggle()
+//                }, label: {
+//                    Text("Edit")
+//                })
+//        }
+        .sheet(isPresented: $showingSheet) {
+            //
         }
-//        .sheet(isPresented: $showingSheet) {
-//            EditAcronymView(acronym: acronym)
-//        }
-//        NavigationLink(destination: AddToCategoryView(acronym: acronym, selectedCategories: self.categories), isActive: $isShowingAddToCategoryView) {
-//            EmptyView()
-//        }
-//        .onAppear(perform: getAcronymData)
-//        .alert(isPresented: $showingUserErrorAlert) {
-//            Alert(title: Text("Error"), message: Text("There was an error getting the acronym's user"))
-//        }
-//        .alert(isPresented: $showingCategoriesErrorAlert) {
-//            Alert(title: Text("Error"), message: Text("There was an error getting the acronym's categories"))
-//        }
+        .onAppear(perform: loadData)
+        .alert(isPresented: $showingSaveSuccessAlert) {
+            Alert(title: Text("Success"), message: Text("Succesfully changed Category."))
+        }
+        .alert(isPresented: $showingCategoriesErrorAlert) {
+            Alert(title: Text("Error"), message: Text("Category change failed."))
+        }
+    }
+    
+    func loadData() {
+        guard let wid = word.id else {
+            return
+        }
+        
+        categoryService.getCategoryOfWord(wordID: wid)
+        self.selectedItem = categories.first
+    }
+    
+    func addToCategory() {
+        guard let wid = word.id, let cid = selectedItem?.id else {
+            return
+        }
+        let provider = WGProviderFactory.makeProvider()
+        provider.rx.request(.addToCategory(wordID: wid.uuidString, categoryID: cid.uuidString))
+            .filterSuccessfulStatusCodes()
+            .subscribe { event in
+                switch event {
+                case .success:
+                    DispatchQueue.main.async {
+                        self.showingSaveSuccessAlert = true
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        print(error.localizedDescription)
+                        self.showingSheet = true
+                    }
+                }
+            }//.dispose()
     }
 }

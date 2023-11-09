@@ -48,8 +48,6 @@ extension AppTab {
 
 struct AppTabView: View {
     @Binding var selection: AppTab?
-    @EnvironmentObject var auth: Auth
-    
     var body: some View {
         TabView(selection: $selection) {
             ForEach(AppTab.allCases) { screen in
