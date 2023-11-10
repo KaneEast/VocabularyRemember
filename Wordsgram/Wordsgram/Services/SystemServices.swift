@@ -26,6 +26,7 @@ struct SystemServices: ViewModifier {
     
     func fetch() {
         Task {
+            // TODO: catch errors
             try? await SystemServices.words.fetchAllFromServer()
             try? await SystemServices.categories.fetchAllFromServer()
             try? await SystemServices.categories.fetchCategories()

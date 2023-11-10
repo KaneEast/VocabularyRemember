@@ -18,7 +18,7 @@ struct WordsgramApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .modifier(SystemServices())
+                .modifier(systemServices)
         }
     }
 }

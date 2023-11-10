@@ -231,9 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				3CAF94F42AFAEF1500B8434D /* Login */,
-				3C20673C2AF56E9700C74DBA /* Users */,
-				3C20673F2AF56FC300C74DBA /* Categories */,
 				3C20672B2AF4C38E00C74DBA /* Words */,
+				3C20673F2AF56FC300C74DBA /* Categories */,
+				3C20673C2AF56E9700C74DBA /* Users */,
 				3C2067282AF4C22300C74DBA /* Settings */,
 			);
 			path = Features;

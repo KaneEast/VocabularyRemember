@@ -49,6 +49,7 @@ struct CreateWordView: View {
         }
     }
     
+    // TODO: move to service use combine
     func saveWord() {
         guard name.count > 0, meaning.count > 0 else {
             showingWordSaveErrorAlert = true

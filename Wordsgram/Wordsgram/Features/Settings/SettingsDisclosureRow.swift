@@ -28,12 +28,12 @@ struct SettingsDisclosureRow: View {
     }
 }
 
-//struct SettingsDisclosureRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SettingsDisclosureRow(title: "Disclosure", value: "HELLO")
-//            .padding()
+struct SettingsDisclosureRow_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsDisclosureRow(title: "Disclosure", value: "HELLO")
+            .padding()
 //            .background(Color.background)
 //            .inAllColorSchemes
-//    }
-//}
+    }
+}
 

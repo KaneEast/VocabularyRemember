@@ -84,6 +84,7 @@ struct WordDetailView: View {
         self.selectedItem = categories.first
     }
     
+    // TODO: move to service use combine
     func addToCategory() {
         guard let wid = word.id, let cid = selectedItem?.id else {
             return
