@@ -20,7 +20,7 @@ final class Word: Model {
     @ID(key: .id)
     var id: UUID?
     
-    // Define two String properties to hold the acronym and its definition. These use the @Field property wrapper to denote a generic database field. The key parameter is the name of the column in the database.
+    // Define two String properties to hold the word and its definition. These use the @Field property wrapper to denote a generic database field. The key parameter is the name of the column in the database.
     @Field(key: "name")
     var name: String
     

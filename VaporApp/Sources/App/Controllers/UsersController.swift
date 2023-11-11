@@ -21,7 +21,7 @@ struct UsersController: RouteCollection {
         usersRoute.get(":userID", use: getHandler)
         usersRoute.get(":userID", "words", use: getWordsHandler)
         
-        /// Create a protected route group using HTTP basic authentication, as you did for creating an acronym.
+        /// Create a protected route group using HTTP basic authentication, as you did for creating an word.
         /// This doesn’t use GuardAuthenticationMiddleware since req.auth.require(_:) throws the correct error if a user isn’t authenticated.
         let basicAuthMiddleware = User.authenticator()
         let basicAuthGroup = usersRoute.grouped(basicAuthMiddleware)

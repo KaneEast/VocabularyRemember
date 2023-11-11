@@ -67,13 +67,13 @@ struct WordsController: RouteCollection {
         // Get the authenticated user from the request.
         let user = try req.auth.require(User.self)
         // Create a new Word using the data from the request and the authenticated user.
-        let acronym = try Word(
+        let word = try Word(
             name: data.name,
             meaning: data.meaning,
             userID: user.requireID())
         
-        try await  acronym.save(on: req.db)
-        return acronym
+        try await  word.save(on: req.db)
+        return word
     }
     
     func getHandler(_ req: Request) async throws -> Word {
@@ -165,17 +165,17 @@ struct WordsController: RouteCollection {
     
     // Define a new route handler, addCategoriesHandler(_:), that returns EventLoopFuture<HTTPStatus>.
     func addCategoriesHandler(_ req: Request) -> EventLoopFuture<HTTPStatus> {
-        // Define two properties to query the database and get the acronym and category from the IDs provided to the request. Each property is an EventLoopFuture.
-        let acronymQuery = Word.find(req.parameters.get("wordID"), on: req.db)
+        // Define two properties to query the database and get the word and category from the IDs provided to the request. Each property is an EventLoopFuture.
+        let wordQuery = Word.find(req.parameters.get("wordID"), on: req.db)
             .unwrap(or: Abort(.notFound))
         let categoryQuery = Category.find(req.parameters.get("categoryID"), on: req.db)
             .unwrap(or: Abort(.notFound))
         // Use and(_:) to wait for both futures to return.
-        return acronymQuery.and(categoryQuery)
-            .flatMap { acronym, category in
-                acronym
+        return wordQuery.and(categoryQuery)
+            .flatMap { word, category in
+                word
                     .$categories
-                    // Use attach(_:on:) to set up the relationship between acronym and category. This creates a pivot model and saves it in the database. Transform the result into a 201 Created response. Like many of Fluent’s operations, you call attach(_:on:) on the property wrappers projected value, rather than the property itself.
+                    // Use attach(_:on:) to set up the relationship between word and category. This creates a pivot model and saves it in the database. Transform the result into a 201 Created response. Like many of Fluent’s operations, you call attach(_:on:) on the property wrappers projected value, rather than the property itself.
                     .attach(category, on: req.db)
                     .transform(to: .created)
             }
@@ -215,24 +215,24 @@ struct WordsController: RouteCollection {
         // Get the word from the database using the provided ID and unwrap the returned future.
         Word.find(req.parameters.get("wordID"), on: req.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap { acronym in
+            .flatMap { word in
                 // Use the new property wrapper to get the categories. Then use a Fluent query to return all the categories.
-                acronym.$categories.query(on: req.db).all()
+                word.$categories.query(on: req.db).all()
             }
     }
     
     // Define a new route handler, removeCategoriesHandler(_:), that returns an EventLoopFuture<HTTPStatus>.
     func removeCategoriesHandler(_ req: Request) -> EventLoopFuture<HTTPStatus> {
-        // Perform two queries to get the acronym and category from the IDs provided.
-        let acronymQuery = Word.find(req.parameters.get("wordID"), on: req.db)
+        // Perform two queries to get the word and category from the IDs provided.
+        let wordQuery = Word.find(req.parameters.get("wordID"), on: req.db)
             .unwrap(or: Abort(.notFound))
         let categoryQuery = Category.find(req.parameters.get("categoryID"), on: req.db)
             .unwrap(or: Abort(.notFound))
         // Use and(_:) to wait for both futures to return.
-        return acronymQuery.and(categoryQuery)
-            .flatMap { acronym, category in
-                // Use detach(_:on:) to remove the relationship between acronym and category. This finds the pivot model in the database and deletes it. Transform the result into a 204 No Content response.
-                acronym
+        return wordQuery.and(categoryQuery)
+            .flatMap { word, category in
+                // Use detach(_:on:) to remove the relationship between word and category. This finds the pivot model in the database and deletes it. Transform the result into a 204 No Content response.
+                word
                     .$categories
                     .detach(category, on: req.db)
                     .transform(to: .noContent)
@@ -244,7 +244,7 @@ struct WordsController: RouteCollection {
 //        Word.find(req.parameters.get("categoryID"), on: req.db)
 //            .unwrap(or: Abort(.notFound))
 //            .flatMap { word in
-//                // Use the new property wrapper to get the acronyms. This uses get(on:) to perform the query for you. This is the same as query(on: req.db).all() from earlier.
+//                // Use the new property wrapper to get the words. This uses get(on:) to perform the query for you. This is the same as query(on: req.db).all() from earlier.
 //                word.$categories.get(on: req.db)
 //            }
 //    }

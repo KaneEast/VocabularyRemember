@@ -1,6 +1,6 @@
 # Foreign key constraints
 
-## Foreign key constraints describe a link between two tables. They are frequently used for validation. Currently, there’s no link between the user table and the acronym table in the database. Fluent is the only thing that has knowledge of the link.
+## Foreign key constraints describe a link between two tables. They are frequently used for validation. Currently, there’s no link between the user table and the word table in the database. Fluent is the only thing that has knowledge of the link.
 
 ## Using foreign key constraints has a number of benefits:
 

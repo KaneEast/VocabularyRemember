@@ -79,22 +79,22 @@ final class CategoryTests: XCTestCase {
     }
     
     func testGettingACategoriesAcronymsFromTheAPI() throws {
-        let acronymShort = "OMG"
-        let acronymLong = "Oh My God"
-        let acronym = try Word.create(name: acronymShort, meaning: acronymLong, on: app.db)
-        let acronym2 = try Word.create(on: app.db)
+        let wordShort = "OMG"
+        let wordLong = "Oh My God"
+        let word = try Word.create(name: wordShort, meaning: wordLong, on: app.db)
+        let word2 = try Word.create(on: app.db)
         
         let category = try Category.create(name: categoryName, on: app.db)
         
-        try app.test(.POST, "/api/words/\(acronym.id!)/categories/\(category.id!)", loggedInRequest: true)
-        try app.test(.POST, "/api/words/\(acronym2.id!)/categories/\(category.id!)", loggedInRequest: true)
+        try app.test(.POST, "/api/words/\(word.id!)/categories/\(category.id!)", loggedInRequest: true)
+        try app.test(.POST, "/api/words/\(word2.id!)/categories/\(category.id!)", loggedInRequest: true)
         
         try app.test(.GET, "\(categoriesURI)\(category.id!)/words", afterResponse: { response in
-            let acronyms = try response.content.decode([Word].self)
-            XCTAssertEqual(acronyms.count, 2)
-            XCTAssertEqual(acronyms[0].id, acronym.id)
-            XCTAssertEqual(acronyms[0].name, acronymShort)
-            XCTAssertEqual(acronyms[0].meaning, acronymLong)
+            let words = try response.content.decode([Word].self)
+            XCTAssertEqual(words.count, 2)
+            XCTAssertEqual(words[0].id, word.id)
+            XCTAssertEqual(words[0].name, wordShort)
+            XCTAssertEqual(words[0].meaning, wordLong)
         })
         
     }
