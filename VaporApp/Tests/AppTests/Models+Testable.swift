@@ -45,18 +45,18 @@ extension Word {
         user: User? = nil,
         on database: Database
     ) throws -> Word {
-        var acronymsUser = user
+        var wordsUser = user
         
-        if acronymsUser == nil {
-            acronymsUser = try User.create(on: database)
+        if wordsUser == nil {
+            wordsUser = try User.create(on: database)
         }
         
-        let acronym = Word(
+        let word = Word(
             name: name,
             meaning: meaning,
-            userID: acronymsUser!.id!)
-        try acronym.save(on: database).wait()
-        return acronym
+            userID: wordsUser!.id!)
+        try word.save(on: database).wait()
+        return word
     }
 }
 

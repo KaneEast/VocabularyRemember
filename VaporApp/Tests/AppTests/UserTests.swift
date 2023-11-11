@@ -105,16 +105,16 @@ final class UserTests: XCTestCase {
     }
     
     func testGettingAUsersAcronymsFromTheAPI() throws {
-        // Create a user for the acronyms.
+        // Create a user for the words.
         let user = try User.create(on: app.db)
-        // Define some expected values for an acronym.
-        let acronymShort = "OMG"
-        let acronymLong = "Oh My God"
+        // Define some expected values for an word.
+        let wordShort = "OMG"
+        let wordLong = "Oh My God"
         
-        // Create two acronyms in the database using the created user. Use the expected values for the first acronym.
-        let acronym1 = try Word.create(
-            name: acronymShort,
-            meaning: acronymLong,
+        // Create two words in the database using the created user. Use the expected values for the first word.
+        let word1 = try Word.create(
+            name: wordShort,
+            meaning: wordLong,
             user: user,
             on: app.db)
         _ = try Word.create(
@@ -123,14 +123,14 @@ final class UserTests: XCTestCase {
             user: user,
             on: app.db)
         
-        // Get the user’s acronyms from the API by sending a request to /api/users/<USER ID>/acronyms.
+        // Get the user’s words from the API by sending a request to /api/users/<USER ID>/words.
         try app.test(.GET, "\(usersURI)\(user.id!)/words", afterResponse: { response in
-            let acronyms = try response.content.decode([Word].self)
-            // Assert the response returns the correct number of acronyms and the first one matches the expected values.
-            XCTAssertEqual(acronyms.count, 2)
-            XCTAssertEqual(acronyms[0].id, acronym1.id)
-            XCTAssertEqual(acronyms[0].name, acronymShort)
-            XCTAssertEqual(acronyms[0].meaning, acronymLong)
+            let words = try response.content.decode([Word].self)
+            // Assert the response returns the correct number of words and the first one matches the expected values.
+            XCTAssertEqual(words.count, 2)
+            XCTAssertEqual(words[0].id, word1.id)
+            XCTAssertEqual(words[0].name, wordShort)
+            XCTAssertEqual(words[0].meaning, wordLong)
         })
     }
     

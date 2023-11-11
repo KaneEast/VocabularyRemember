@@ -48,7 +48,7 @@ struct CategoriesController: RouteCollection {
         Category.find(req.parameters.get("categoryID"), on: req.db)
             .unwrap(or: Abort(.notFound))
             .flatMap { category in
-                // Use the new property wrapper to get the acronyms. This uses get(on:) to perform the query for you. This is the same as query(on: req.db).all() from earlier.
+                // Use the new property wrapper to get the words. This uses get(on:) to perform the query for you. This is the same as query(on: req.db).all() from earlier.
                 category.$words.get(on: req.db)
             }
     }

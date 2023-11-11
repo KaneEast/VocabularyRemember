@@ -50,9 +50,9 @@
    - An architectural standard closely related to HTTP.
    - Many apps use RESTful APIs.
    - REST standardizes resource access, simplifying client development.
-   - Example endpoints for an acronyms API: 
-     - GET /api/acronyms/: Retrieve all acronyms.
-     - POST /api/acronyms: Create a new acronym.
-     - GET /api/acronyms/1: Retrieve the acronym with ID 1.
-     - PUT /api/acronyms/1: Update the acronym with ID 1.
-     - DELETE /api/acronyms/1: Delete the acronym with ID 1.
+   - Example endpoints for an words API: 
+     - GET /api/words/: Retrieve all words.
+     - POST /api/words: Create a new word.
+     - GET /api/words/1: Retrieve the word with ID 1.
+     - PUT /api/words/1: Update the word with ID 1.
+     - DELETE /api/words/1: Delete the word with ID 1.
