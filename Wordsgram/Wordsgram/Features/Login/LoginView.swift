@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 enum AuthActionState: String {
     case SignUp // login
@@ -13,9 +14,11 @@ enum AuthActionState: String {
 }
 
 struct LoginView: View {
+    @EnvironmentObject var authService: AuthService
+    @EnvironmentObject var appState: AppState
     @StateObject private var vm = LoginViewModel()
-    @State private var requestError = false
-    @State private var validationError = false
+    //    @State private var requestError = false
+    //    @State private var validationError = false
     @State private var signInSucces = false
     
     var body: some View {
@@ -24,11 +27,18 @@ struct LoginView: View {
             HeaderView("Wordsgram", subtitle: "Introduction", desc: "")
                 .frame(maxWidth: .infinity)
             
+            Picker("authState", selection: $vm.authState) {
+                ForEach(vm.authStates, id: \.self) {
+                    Text($0.rawValue)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
             GroupBox(FieldType.username.headerText) {
                 HStack {
-                    TextField(FieldType.username.placeHolderText, text: $vm.name)
+                    TextField(FieldType.username.placeHolderText, text: $vm.username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(.system(size: 24, weight: .medium, design: .default))
+                        .font(.system(size: 16, weight: .medium, design: .default))
                     Text(vm.usernameValidation).font(.subheadline)
                 }
             }
@@ -38,7 +48,7 @@ struct LoginView: View {
                     HStack {
                         TextField(FieldType.name.placeHolderText, text: $vm.name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .font(.system(size: 24, weight: .medium, design: .default))
+                            .font(.system(size: 16, weight: .medium, design: .default))
                         Text(vm.nameValidation).font(.subheadline)
                     }
                 }
@@ -48,31 +58,38 @@ struct LoginView: View {
                 HStack {
                     SecureField(FieldType.password.placeHolderText, text: $vm.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .font(.system(size: 24, weight: .medium, design: .default))
+                        .font(.system(size: 16, weight: .medium, design: .default))
                     Text(vm.passwordValidation).font(.subheadline)
                 }
             }
             
-            
-            Button(
-                action: vm.loginOrRegister,
-                label: {
-                    Text(vm.authState == .SignIn ? "Sign Ip" : "Sign Up")
-                        .modifier(MainButton())
-                }
-            )
-            
-            Picker("authState", selection: $vm.authState) {
-                ForEach(vm.authStates, id: \.self) {
-                    Text($0.rawValue)
-                }
+            HStack {
+                Button(
+                    action: vm.loginOrRegister,
+                    label: {
+                        Text(vm.authState == .SignIn ? "Sign In" : "Sign Up")
+                    }
+                ).modifier(MainButton())
+                
+                Button(
+                    action: {
+                        appState.isNoLoginMode = true
+                    },
+                    label: {
+                        Text("Just Use")
+                    }
+                ).modifier(MainButton())
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .frame(height: 44)
             
             Spacer()
         }
         .padding()
+        .alert(item: $vm.alertType) { alertType in
+            alertType.alert
+        }
     }
+    
 }
 
 #Preview {

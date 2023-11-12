@@ -47,10 +47,10 @@ struct WordDetailView: View {
                 action: addToCategory,
                 label: {
                     Text("Save")
-                        .modifier(MainButton())
+                        .modifier(MainButton(color: Color.red))
                 }
             )
-            .padding()
+            .padding(.horizontal, 80)
             
             Spacer()
         }

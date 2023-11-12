@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var authService: AuthService
     
     var body: some View {
         NavigationStack {
@@ -16,7 +17,7 @@ struct SettingsView: View {
                 Spacer()
                 
                 Button(
-                    action: signOut,
+                    action: authService.signOut,
                     label: {
                         Text("Sign Out")
                             .modifier(MainButton(color: Color.red))
@@ -28,9 +29,9 @@ struct SettingsView: View {
         }
     }
     
-    private func signOut() {
-        AuthService.shared.signOut()
-    }
+//    private func signOut() {
+//        AuthService.shared.signOut()
+//    }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
@@ -58,7 +59,7 @@ private extension SettingsList {
             NavigationLink(destination: EmptyView()) {
                 SettingsDisclosureRow(title: option.title, value: "")
             }
-        case .settings4:
+        case .libraries:
             NavigationLink(destination: EmptyView()) {
                 SettingsDisclosureRow(title: option.title, value: "")
             }

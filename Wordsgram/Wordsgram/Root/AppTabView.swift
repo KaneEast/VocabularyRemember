@@ -48,12 +48,23 @@ extension AppTab {
 
 struct AppTabView: View {
     @Binding var selection: AppTab?
+    @EnvironmentObject var appState: AppState
+    
+    var tabs: [AppTab] {
+        appState.isNoLoginMode ? [.words, .categories, .settings] : AppTab.allCases
+    }
+    
     var body: some View {
         TabView(selection: $selection) {
-            ForEach(AppTab.allCases) { screen in
+            ForEach(tabs) { screen in
                 screen.destination
                     .tag(screen as AppTab?)
                     .tabItem { screen.label }
+            }
+        }
+        .task {
+            if AuthService.shared.isLoggedIn {
+                SystemServices.fetch()
             }
         }
     }

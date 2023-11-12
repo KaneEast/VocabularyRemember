@@ -55,6 +55,9 @@
 		3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */; };
 		3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */; };
 		3CAF95042AFBF90200B8434D /* AddToCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF95032AFBF90200B8434D /* AddToCategoryView.swift */; };
+		3CD6BA4B2B0015DE001FC874 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6BA4A2B0015DE001FC874 /* AlertType.swift */; };
+		3CD6BA4D2B0015EB001FC874 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6BA4C2B0015EB001FC874 /* AppError.swift */; };
+		3CD6BA4F2B00219D001FC874 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6BA4E2B00219D001FC874 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWordResponse.swift; sourceTree = "<group>"; };
 		3CAF95012AFBEFD100B8434D /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 		3CAF95032AFBF90200B8434D /* AddToCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCategoryView.swift; sourceTree = "<group>"; };
+		3CD6BA4A2B0015DE001FC874 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		3CD6BA4C2B0015EB001FC874 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3CD6BA4E2B00219D001FC874 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		57A802D08E9973EDE335F8DB /* Pods_WordsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D9CC1C0A783F576E623FE9 /* Pods-Wordsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.release.xcconfig"; sourceTree = "<group>"; };
 		91A3B7EDCEC3092E91B9B708 /* Pods-Wordsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsgram/Pods-Wordsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 				3CAF94F22AFAD0C900B8434D /* ReusableViews.swift */,
 				3C2067152AF4284D00C74DBA /* MainButton.swift */,
 				3C7BBA4F2AFD18CC00C79107 /* MainButtonView.swift */,
+				3CD6BA4A2B0015DE001FC874 /* AlertType.swift */,
+				3CD6BA4C2B0015EB001FC874 /* AppError.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				3C7BBA542AFD29DE00C79107 /* SystemServices.swift */,
+				3CD6BA4E2B00219D001FC874 /* AppState.swift */,
 				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
 				3C7BBA522AFD287700C79107 /* WordsService.swift */,
 				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
@@ -622,15 +631,18 @@
 				3C7BBA432AFCD9F000C79107 /* WGProviderFactory.swift in Sources */,
 				3C2067242AF434F100C74DBA /* Word.swift in Sources */,
 				3CAF94F32AFAD0CA00B8434D /* ReusableViews.swift in Sources */,
+				3CD6BA4F2B00219D001FC874 /* AppState.swift in Sources */,
 				3C20671E2AF4349200C74DBA /* User.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
 				3CAF94EE2AFAB44200B8434D /* WGNeworkingService.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* AppTabView.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */,
+				3CD6BA4B2B0015DE001FC874 /* AlertType.swift in Sources */,
 				3C2067132AF426A000C74DBA /* RootView.swift in Sources */,
 				3C20670D2AF425EC00C74DBA /* SettingsView.swift in Sources */,
 				3CAF95002AFBE34100B8434D /* CreateWordResponse.swift in Sources */,
 				3C7BBA5B2AFD6BC500C79107 /* Publisher+.swift in Sources */,
+				3CD6BA4D2B0015EB001FC874 /* AppError.swift in Sources */,
 				3CAF94FE2AFBC97200B8434D /* CreateWordView.swift in Sources */,
 				3C7BBA502AFD18CC00C79107 /* MainButtonView.swift in Sources */,
 				3C7BBA462AFCEDBD00C79107 /* Errors.swift in Sources */,

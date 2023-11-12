@@ -14,5 +14,5 @@ extension String {
   static let settings1 = "settings 1"
   static let settings2 = "settings 2"
   static let settings3 = "settings 3"
-  static let settings4 = "settings 4"
+  static let libraries = "Libraries"
 }
