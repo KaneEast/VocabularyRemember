@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SystemServices: ViewModifier {
-//    private static var appState: AppState = AppState()
-//    private static var auth = AuthService()
+    private static var appState: AppState = AppState()
+    private static var auth = AuthService.shared
     private static var words = WordsService()
     private static var categories = CategoriesService()
     private static var users = UserService()
@@ -17,14 +17,14 @@ struct SystemServices: ViewModifier {
     func body(content: Content) -> some View {
         content
             .accentColor(.red)
-            .environmentObject(AuthService.shared)
-//            .environmentObject(Self.appState)
+            .environmentObject(Self.auth)
+            .environmentObject(Self.appState)
             .environmentObject(Self.words)
             .environmentObject(Self.categories)
             .environmentObject(Self.users)
     }
     
-    func fetch() {
+    static func fetch() {
         Task {
             // TODO: catch errors
             try? await SystemServices.words.fetchAllFromServer()

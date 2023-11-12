@@ -10,7 +10,7 @@ enum SettingsOption: Int, Identifiable, CaseIterable {
   case settings1
   case settings2
   case settings3
-  case settings4
+  case libraries
   
   var id: Int { rawValue }
   
@@ -22,8 +22,8 @@ enum SettingsOption: Int, Identifiable, CaseIterable {
       return .settings2
     case .settings3:
       return .settings3
-    case .settings4:
-      return .settings4
+    case .libraries:
+      return .libraries
     }
   }
   

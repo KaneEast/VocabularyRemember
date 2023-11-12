@@ -8,6 +8,7 @@
 import Combine
 
 extension Publisher {
+    @discardableResult
     func asyncValue() async throws -> Output {
         try await withCheckedThrowingContinuation { continuation in
             var cancellable: AnyCancellable?
