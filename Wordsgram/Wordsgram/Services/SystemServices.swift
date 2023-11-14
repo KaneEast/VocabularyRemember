@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SystemServices: ViewModifier {
     private static var appState: AppState = AppState()
@@ -22,6 +23,7 @@ struct SystemServices: ViewModifier {
             .environmentObject(Self.words)
             .environmentObject(Self.categories)
             .environmentObject(Self.users)
+            .modelContainer(for: [Book.self])
     }
     
     static func fetch() {

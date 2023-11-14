@@ -12,12 +12,8 @@ struct WordsgramApp: App {
     let systemServices = SystemServices()
     init() {
         NetworkMonitor.shared.startMonitoring()
-//        if AuthService.shared.isLoggedIn {
-//            SystemServices.fetch()
-//        }
-        
-        UITabBar.appearance().tintColor = UIColor.red
         UINavigationBar.appearance().tintColor = UIColor.red
+        UITabBar.appearance().tintColor = UIColor.red
     }
     
     var body: some Scene {

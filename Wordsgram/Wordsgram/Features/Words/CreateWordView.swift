@@ -42,7 +42,7 @@ struct CreateWordView: View {
                         Text("Save")
                     }
                     .disabled(name.isEmpty || meaning.isEmpty)
-            )
+            ).foregroundColor(.red)
         }
         .alert(isPresented: $showingWordSaveErrorAlert) {
             Alert(title: Text("Error"), message: Text("There was a problem saving the Word"))

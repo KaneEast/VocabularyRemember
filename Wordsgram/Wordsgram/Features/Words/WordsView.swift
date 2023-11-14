@@ -35,7 +35,7 @@ struct WordsView: View {
                 )
             }
             .sheet(isPresented: $showingSheet) {
-                CreateWordView().onDisappear(perform: fetch)
+                CreateWordView().onDisappear(perform: fetchWords)
             }
         }
         .alert(isPresented: $showingErrorAlert) {
@@ -43,7 +43,7 @@ struct WordsView: View {
         }
     }
     
-    func fetch() {
+    func fetchWords() {
         Task { wordsService.fetchAllFromServer }
     }
 }

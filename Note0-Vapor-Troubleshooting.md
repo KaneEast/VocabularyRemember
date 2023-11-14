@@ -1,4 +1,4 @@
-# Vapor Trable Shooting
+# Vapor Troubleshooting
 
 1. Address already in use
 $ sudo lsof -i :8080
