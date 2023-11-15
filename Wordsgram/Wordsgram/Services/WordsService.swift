@@ -15,6 +15,10 @@ class WordsService: ObservableObject {
         words.count
     }
     
+    init(words: [Word] = [Word]()) {
+        self.words = words
+    }
+    
     func fetchAllFromServer() async throws {
         let words: [Word] = try await  WGProviderFactory.shared.requestPublisher(.requestWords)
             .filterSuccessfulStatusCodes()

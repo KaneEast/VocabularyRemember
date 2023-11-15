@@ -17,6 +17,14 @@ struct SettingsView: View {
                 Spacer()
                 
                 Button(
+                    action: saveCount,
+                    label: {
+                        Text("App Groups Test Button")
+                            .modifier(MainButton(color: Color.red))
+                    }
+                )
+                
+                Button(
                     action: authService.signOut,
                     label: {
                         Text("Sign Out")
@@ -29,9 +37,9 @@ struct SettingsView: View {
         }
     }
     
-//    private func signOut() {
-//        AuthService.shared.signOut()
-//    }
+    private func saveCount() {
+        UserDefaultsHelper.persistRecords(1)
+    }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
@@ -64,5 +72,13 @@ private extension SettingsList {
                 SettingsDisclosureRow(title: option.title, value: "")
             }
         }
+    }
+}
+
+#Preview {
+    Group {
+        SettingsView()
+        SettingsView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }

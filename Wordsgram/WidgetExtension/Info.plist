@@ -6,14 +6,10 @@
 	<string>$(USER_DEFAULTS_SUITE_NAME)</string>
 	<key>USER_DEFAULTS_RECORDS_KEY</key>
 	<string>$(USER_DEFAULTS_RECORDS_KEY)</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict/>
-	</array>
-	<key>NSAppTransportSecurity</key>
+	<key>NSExtension</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
 	</dict>
 </dict>
 </plist>

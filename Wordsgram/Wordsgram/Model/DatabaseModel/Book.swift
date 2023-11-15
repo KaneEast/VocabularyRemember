@@ -29,6 +29,17 @@ final class Book {
     @Relationship(deleteRule: .nullify, inverse: \Genre.books)
     var genres = [Genre]()
     
+    /// This property is marked optional because we are adding a new attribute to our existing app and previously
+    /// saved data should not be affected with this change as long as we are either adding new property as optional or with a default value.
+    
+    /// Images are large and its not a good idea to store them in the data store directly(Due to performance issues), 
+    /// we can opt to store only the reference of the image and actual data for the image can be located somewhere else on the disk.
+    /// We don’t have to do any of that manually as well, we can leverage SwiftData’s Attribute macro and
+    /// define the schema configuration to store image’s binary data externally.
+    
+    @Attribute(.externalStorage)
+    var cover: Data?
+    
     init(title: String, author: String, publishedYear: Int) {
         self.title = title
         self.author = author

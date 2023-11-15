@@ -13,13 +13,16 @@ struct AddNewGenre: View {
     
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    @FocusState private var nameIsFocused: Bool
     
     var body: some View {
         NavigationStack {
             VStack {
                 TextField("Add New Genre", text: $name)
+                    .focused($nameIsFocused)
                     .textFieldStyle(.roundedBorder)
                     .navigationTitle("Add New Genre")
+                    .navigationBarTitleDisplayMode(.inline)
                     .padding(.horizontal)
                 
                 HStack {
@@ -33,15 +36,20 @@ struct AddNewGenre: View {
                         }
                         dismiss()
                     }
-                    .buttonStyle(.borderedProminent)
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.red)
                     
                     Button("Cancel") {
                         dismiss()
                     }
                     .buttonStyle(.bordered)
+                    .foregroundColor(.red)
                 }
                 
                 Spacer()
+            }
+            .task {
+                nameIsFocused = true
             }
         }
     }
