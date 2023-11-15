@@ -48,6 +48,11 @@ struct WordsView: View {
     }
 }
 
-//#Preview {
-//    WordsView()
-//}
+#Preview {
+    WordsView()
+        .environmentObject(WordsService(words: [Word(
+            name: "a",
+            meaning: "b",
+            userID: UUID())
+        ]))
+}

@@ -1,0 +1,15 @@
+//
+//  Staging.xcconfig
+//  Wordsgram
+//
+//  Created by Kane on 2023/11/15.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Base.xcconfig"
+
+APP_NAME = $(inherited)QA
+
+USER_DEFAULTS_RECORDS_KEY = BookRecords-Staging

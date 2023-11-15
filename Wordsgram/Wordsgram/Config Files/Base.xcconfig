@@ -1,0 +1,19 @@
+//
+//  Base.xcconfig
+//  Wordsgram
+//
+//  Created by Kane on 2023/11/15.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = Wordsgram
+
+BASE_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram
+
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER)
+
+USER_DEFAULTS_SUITE_NAME = group.$(BASE_BUNDLE_IDENTIFIER)
+
+ONLY_ACTIVE_ARCH[config=Debug][sdk=*][arch=*] = YES

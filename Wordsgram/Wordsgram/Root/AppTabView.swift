@@ -73,10 +73,17 @@ struct AppTabView: View {
             }
             .background(.ultraThinMaterial)
         }
-        
         .task {
             if AuthService.shared.isLoggedIn {
                 SystemServices.fetch()
+            }
+        }
+        .onAppear {
+            guard let urlApp = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last else { return }
+
+            let url = urlApp.appendingPathComponent("default.store")
+            if FileManager.default.fileExists(atPath: url.path) {
+                print("DataStore is located at \(url.absoluteString)")
             }
         }
     }
