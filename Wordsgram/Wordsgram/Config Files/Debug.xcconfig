@@ -13,3 +13,5 @@
 APP_NAME = $(inherited)Dev
 
 USER_DEFAULTS_RECORDS_KEY = BookRecords-Debug
+
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Dev

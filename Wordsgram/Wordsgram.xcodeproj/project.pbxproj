@@ -189,6 +189,10 @@
 		3CAB623C2B04948800645B5F /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		3CAB623D2B04A03700645B5F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3CAB623F2B04A22A00645B5F /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		3CAB624B2B04EEC800645B5F /* WidgetBase.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WidgetBase.xcconfig; sourceTree = "<group>"; };
+		3CAB624C2B04EEDB00645B5F /* WidgetDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WidgetDebug.xcconfig; sourceTree = "<group>"; };
+		3CAB624D2B04EEE900645B5F /* WidgetStaging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WidgetStaging.xcconfig; sourceTree = "<group>"; };
+		3CAB624E2B04EEF700645B5F /* WidgetRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WidgetRelease.xcconfig; sourceTree = "<group>"; };
 		3CAF94D82AFA9AE300B8434D /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		3CAF94E72AFAB10B00B8434D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3CAF94ED2AFAB44200B8434D /* WGNeworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGNeworkingService.swift; sourceTree = "<group>"; };
@@ -454,6 +458,10 @@
 				3CAB62392B04901500645B5F /* Debug.xcconfig */,
 				3CAB623A2B04902700645B5F /* Staging.xcconfig */,
 				3CAB623B2B04903B00645B5F /* Release.xcconfig */,
+				3CAB624B2B04EEC800645B5F /* WidgetBase.xcconfig */,
+				3CAB624C2B04EEDB00645B5F /* WidgetDebug.xcconfig */,
+				3CAB624D2B04EEE900645B5F /* WidgetStaging.xcconfig */,
+				3CAB624E2B04EEF700645B5F /* WidgetRelease.xcconfig */,
 			);
 			path = "Config Files";
 			sourceTree = "<group>";
@@ -964,7 +972,7 @@
 			baseConfigurationReference = 3CAB62392B04901500645B5F /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wordsgram/Wordsgram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1003,7 +1011,7 @@
 			baseConfigurationReference = 3CAB623B2B04903B00645B5F /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wordsgram/Wordsgram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1031,6 +1039,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1052,9 +1061,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
 			};
 			name = Debug;
@@ -1074,9 +1086,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
 			};
 			name = Release;
@@ -1094,9 +1109,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Wordsgram;
 			};
 			name = Debug;
@@ -1114,16 +1132,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Wordsgram;
 			};
 			name = Release;
 		};
 		3CAB622E2B0489E300645B5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB62392B04901500645B5F /* Debug.xcconfig */;
+			baseConfigurationReference = 3CAB624C2B04EEDB00645B5F /* WidgetDebug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -1145,15 +1166,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram.WidgetExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3CAB622F2B0489E300645B5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623B2B04903B00645B5F /* Release.xcconfig */;
+			baseConfigurationReference = 3CAB624E2B04EEF700645B5F /* WidgetRelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -1175,9 +1199,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram.WidgetExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1250,7 +1277,7 @@
 			baseConfigurationReference = 3CAB623A2B04902700645B5F /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wordsgram/Wordsgram.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1278,6 +1305,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1286,7 +1314,7 @@
 		};
 		3CAB62352B048C2100645B5F /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623A2B04902700645B5F /* Staging.xcconfig */;
+			baseConfigurationReference = 3CAB624D2B04EEE900645B5F /* WidgetStaging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -1308,9 +1336,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.Wordsgram.WidgetExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Staging;
 		};
@@ -1329,9 +1360,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
 			};
 			name = Staging;
@@ -1349,9 +1383,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Wordsgram;
 			};
 			name = Staging;
