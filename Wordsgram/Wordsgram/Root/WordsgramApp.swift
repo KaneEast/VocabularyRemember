@@ -11,6 +11,15 @@ import SwiftUI
 struct WordsgramApp: App {
     let systemServices = SystemServices()
     init() {
+        #if DEBUG
+        let env = "Debug"
+        #elseif STAGING
+        let env = "Staging"
+        #else
+        let env = "Release"
+        #endif
+        print("-- Running on the \(env) Environment now! --")
+        
         NetworkMonitor.shared.startMonitoring()
         UINavigationBar.appearance().tintColor = UIColor.red
         UITabBar.appearance().tintColor = UIColor.red

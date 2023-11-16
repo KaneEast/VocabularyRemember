@@ -1,5 +1,5 @@
 //
-//  Staging.xcconfig
+//  WidgetBase.xcconfig
 //  Wordsgram
 //
 //  Created by Kane on 2023/11/15.
@@ -10,8 +10,6 @@
 
 #include "Base.xcconfig"
 
-APP_NAME = $(inherited)QA
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER).widget
 
-USER_DEFAULTS_RECORDS_KEY = BookRecords-Staging
-
-ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Dev
+#include "Debug.xcconfig"

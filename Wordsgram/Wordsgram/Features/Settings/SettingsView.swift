@@ -37,8 +37,11 @@ struct SettingsView: View {
         }
     }
     
+    static var count = 0
     private func saveCount() {
-        UserDefaultsHelper.persistRecords(1)
+        
+        SettingsView.count += 1
+        UserDefaultsHelper.persistRecords(SettingsView.count)
     }
 }
 
