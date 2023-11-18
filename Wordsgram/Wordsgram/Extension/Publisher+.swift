@@ -8,11 +8,9 @@
 import Combine
 
 extension Publisher {
-    @discardableResult
-    func asyncValue() async throws -> Output {
+    func asyncValue(storeIn cancellables: inout Set<AnyCancellable>) async throws -> Output {
         try await withCheckedThrowingContinuation { continuation in
-            var cancellable: AnyCancellable?
-            cancellable = self.sink(
+            self.sink(
                 receiveCompletion: { completion in
                     switch completion {
                     case .finished:
@@ -20,13 +18,12 @@ extension Publisher {
                     case .failure(let error):
                         continuation.resume(throwing: error)
                     }
-                    cancellable?.cancel()
                 },
                 receiveValue: { value in
                     continuation.resume(returning: value)
-                    cancellable?.cancel()
                 }
             )
+            .store(in: &cancellables)
         }
     }
 }

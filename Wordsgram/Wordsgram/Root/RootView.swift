@@ -8,24 +8,20 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selection: AppTab? = .words
+    @State private var selection: Tabs? = .books
     @EnvironmentObject var auth: AuthService
     @EnvironmentObject var appState: AppState
-    
-    init() {
-    }
+    init() {}
     
     var body: some View {
-        if auth.isLoggedIn || appState.isNoLoginMode {
-            AppTabView(selection: $selection)
+        if auth.isLoggedIn || appState.isNoUser {
+            MyTabView(selection: $selection)
         } else {
             LoginView()
         }
     }
 }
 
-struct RootScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
-    }
+#Preview {
+    RootView()
 }
