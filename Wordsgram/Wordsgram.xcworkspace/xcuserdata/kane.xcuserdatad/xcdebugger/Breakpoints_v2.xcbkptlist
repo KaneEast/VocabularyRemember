@@ -52,5 +52,337 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "215C0654-CEB7-48C7-897F-1AC63F72C95B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Networking/GoogleBookService/GoogleBookService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "headers"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3787535-BB03-459A-A1A6-16673D025929"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Networking/GoogleBookService/GoogleBookService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "path"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C9EDF44-2892-48AF-8795-B505F6C7B89B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Networking/GoogleBookService/GoogleBookService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "method"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEC7C647-65F7-415E-8F96-293FCADFB178"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Networking/GoogleBookService/GoogleBookService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "task"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBD0F8EA-D15E-4670-AEE7-B22C998D5AB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Wordsgram-fydeypmiwgaipedpdwltirdefcqk/SourcePackages/checkouts/Moya/Sources/Moya/MoyaProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "request(_:callbackQueue:progress:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C94D8D15-B040-457C-8085-383E5F1C61BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Wordsgram-fydeypmiwgaipedpdwltirdefcqk/SourcePackages/checkouts/Moya/Sources/Moya/MoyaProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "request(_:callbackQueue:progress:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5E6880E-7852-4362-9A47-65B0051E3879"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/RWNetworking/Requests/LoginRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B0C1168-05D3-47A0-A2B9-635B437204D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/RWNetworking/Services/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "makeRequest(request:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8B0C1168-05D3-47A0-A2B9-635B437204D2 - d2619edc9d553b90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Wordsgram.Service.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Wordsgram.Request&gt;(request: &#x3c4;_1_0, parameters: Swift.Array&lt;Wordsgram.Parameter&gt;) async throws -&gt; &#x3c4;_1_0.Response"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/RWNetworking/Services/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "8B0C1168-05D3-47A0-A2B9-635B437204D2 - 6b6cb7ba880d7178"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Swift.Int) -&gt; Swift.Bool in implicit closure #1 (Swift.Range&lt;Swift.Int&gt;) -&gt; (Swift.Int) -&gt; Swift.Bool in Wordsgram.Service.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Wordsgram.Request&gt;(request: &#x3c4;_1_0, parameters: Swift.Array&lt;Wordsgram.Parameter&gt;) async throws -&gt; &#x3c4;_1_0.Response"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/RWNetworking/Services/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48FEB043-6CDD-43F7-BFB7-AA4E22BE04D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Features/Login/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C456F929-DCAA-4CD2-B34C-167036D0A29C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/RWNetworking/Services/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "prepare(request:parameters:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "C456F929-DCAA-4CD2-B34C-167036D0A29C - 3937fad6660864a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "prepare&lt;&#x3c4;_0_0&gt;&lt;&#x3c4;_1_0&gt;&lt;&#x3c4;_2_0 where &#x3c4;_0_0: Wordsgram.Service, &#x3c4;_1_0: Wordsgram.Request, &#x3c4;_2_0: Wordsgram.Request&gt;(request: &#x3c4;_2_0, parameters: Swift.Array&lt;Wordsgram.Parameter&gt;) throws -&gt; Foundation.URLRequest"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/RWNetworking/Services/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "4664">
+               </Location>
+               <Location
+                  uuid = "C456F929-DCAA-4CD2-B34C-167036D0A29C - 3937fad6660864a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "prepare&lt;&#x3c4;_0_0&gt;&lt;&#x3c4;_1_0&gt;&lt;&#x3c4;_2_0 where &#x3c4;_0_0: Wordsgram.Service, &#x3c4;_1_0: Wordsgram.Request, &#x3c4;_2_0: Wordsgram.Request&gt;(request: &#x3c4;_2_0, parameters: Swift.Array&lt;Wordsgram.Parameter&gt;) throws -&gt; Foundation.URLRequest"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/RWNetworking/Services/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "4520">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wordsgram/Features/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "loginOrRegister()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - 621d539b20b94771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - e2ebeb51d01bfb1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - e2282268362d0b7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - fcde171be531d578"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - 898cc435c806b779"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "A6B9AE90-DCD7-4B8B-AE2D-F8156CC2BCB1 - 5c257823adcedcdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in Wordsgram.LoginViewModel.loginOrRegister() -&gt; ()"
+                  moduleName = "Wordsgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kane/Documents/VocabularyRemember/Wordsgram/Wordsgram/Features/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
