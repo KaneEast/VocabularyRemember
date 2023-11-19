@@ -16,7 +16,7 @@ class MyLogger: EventMonitor {
   }
   
   func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
-    print("Response received:")
+//    print("Response received:")
     printPrettyJson(response.data)
   }
   
@@ -36,6 +36,5 @@ class MyLogger: EventMonitor {
       print("Error: \(error.localizedDescription)")
     }
   }
-  
 }
 

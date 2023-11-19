@@ -13,7 +13,7 @@ public extension TextView {
   func placeholder(_ placeholder: String) -> TextView {
     self.placeholder(placeholder) { $0 }
   }
-
+  
   /// Specify a placeholder with the specified configuration
   ///
   /// Example:
@@ -29,18 +29,17 @@ public extension TextView {
     view.placeholderText = placeholder
     return view
   }
-
+  
   /// Specify a custom placeholder view
   func placeholder(_ placeholder: some View) -> TextView {
     var view = self
     view.placeholderView = AnyView(placeholder)
     return view
   }
-
+  
   func setKeyboardType(_ keyboardType: UIKeyboardType) -> TextView {
     var view = self
     view.keyboard = keyboardType
     return view
   }
 }
-

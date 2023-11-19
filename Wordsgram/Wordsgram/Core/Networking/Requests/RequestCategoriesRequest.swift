@@ -8,12 +8,12 @@
 import Alamofire
 import Foundation
 struct RequestCategoriesRequest: APIRequest {
-    typealias Response = [Category] // Replace with your actual response model
-
-    var environment: NetworkEnvironment { .production }
-    var path: String { "/categories" }
-    var method: HTTPMethod { .get }
-    var parameters: Encodable? { nil }
-    var headers: HTTPHeaders?
-    var encoding: ParameterEncoding { URLEncoding.default }
+  typealias Response = [Category]
+  
+  var environment: NetworkEnvironment { .production }
+  var path: String { "/categories" }
+  var method: HTTPMethod { .get }
+  var parameters: Encodable? { nil }
+  var headers: HTTPHeaders?
+  var encoding: ParameterEncoding { URLEncoding.default }
 }

@@ -8,18 +8,18 @@
 import SwiftUI
 public struct TextView: View {
   @Environment(\.layoutDirection) private var layoutDirection
-
+  
   @Binding private var text: NSMutableAttributedString
   @Binding private var isEmpty: Bool
-
+  
   @State private var calculatedHeight: CGFloat = 44
-
+  
   private var getTextView: ((UITextView) -> Void)?
-
+  
   var placeholderView: AnyView?
   var placeholderText: String?
   var keyboard: UIKeyboardType = .default
-
+  
   /// Makes a new TextView that supports `NSAttributedString`
   /// - Parameters:
   ///   - text: A binding to the attributed text
@@ -31,10 +31,10 @@ public struct TextView: View {
       get: { text.wrappedValue.string.isEmpty },
       set: { _ in }
     )
-
+    
     self.getTextView = getTextView
   }
-
+  
   public var body: some View {
     Representable(
       text: $text,
@@ -66,14 +66,14 @@ extension TextView {
     @Binding var text: NSMutableAttributedString
     @Binding var calculatedHeight: CGFloat
     @Environment(\.sizeCategory) var sizeCategory
-
+    
     let keyboard: UIKeyboardType
     var getTextView: ((UITextView) -> Void)?
-
+    
     func makeUIView(context: Context) -> UIKitTextView {
       context.coordinator.textView
     }
-
+    
     func updateUIView(_: UIKitTextView, context: Context) {
       context.coordinator.update(representable: self)
       if !context.coordinator.didBecomeFirstResponder {
@@ -81,7 +81,7 @@ extension TextView {
         context.coordinator.didBecomeFirstResponder = true
       }
     }
-
+    
     @discardableResult func makeCoordinator() -> Coordinator {
       Coordinator(
         text: $text,
@@ -99,7 +99,7 @@ final class UIKitTextView: UITextView {
       UIKeyCommand(input: UIKeyCommand.inputEscape, modifierFlags: [], action: #selector(escape(_:))),
     ]
   }
-
+  
   @objc private func escape(_: Any) {
     resignFirstResponder()
   }
@@ -108,16 +108,16 @@ final class UIKitTextView: UITextView {
 extension TextView.Representable {
   final class Coordinator: NSObject, UITextViewDelegate {
     let textView: UIKitTextView
-
+    
     private var originalText: NSMutableAttributedString = .init()
     private var text: Binding<NSMutableAttributedString>
     private var sizeCategory: ContentSizeCategory
     private var calculatedHeight: Binding<CGFloat>
-
+    
     var didBecomeFirstResponder = false
-
+    
     var getTextView: ((UITextView) -> Void)?
-
+    
     init(text: Binding<NSMutableAttributedString>,
          calculatedHeight: Binding<CGFloat>,
          sizeCategory: ContentSizeCategory,
@@ -129,16 +129,16 @@ extension TextView.Representable {
       textView.isScrollEnabled = false
       textView.textContainer.lineFragmentPadding = 0
       textView.textContainerInset = .zero
-
+      
       self.text = text
       self.calculatedHeight = calculatedHeight
       self.sizeCategory = sizeCategory
       self.getTextView = getTextView
-
+      
       super.init()
-
+      
       textView.delegate = self
-
+      
       textView.font = Font.scaledBodyUIFont
       textView.adjustsFontForContentSizeCategory = true
       textView.autocapitalizationType = .sentences
@@ -152,24 +152,24 @@ extension TextView.Representable {
       if ProcessInfo.processInfo.isiOSAppOnMac {
         textView.inlinePredictionType = .no
       }
-
+      
       self.getTextView?(textView)
     }
-
+    
     func textViewDidBeginEditing(_: UITextView) {
       originalText = text.wrappedValue
       DispatchQueue.main.async {
         self.recalculateHeight()
       }
     }
-
+    
     func textViewDidChange(_ textView: UITextView) {
       DispatchQueue.main.async {
         self.text.wrappedValue = NSMutableAttributedString(attributedString: textView.attributedText)
         self.recalculateHeight()
       }
     }
-
+    
     func textView(_: UITextView, shouldChangeTextIn _: NSRange, replacementText _: String) -> Bool {
       true
     }
@@ -182,11 +182,11 @@ extension TextView.Representable.Coordinator {
     recalculateHeight()
     textView.setNeedsDisplay()
   }
-
+  
   private func recalculateHeight() {
     let newSize = textView.sizeThatFits(CGSize(width: textView.frame.width, height: .greatestFiniteMagnitude))
     guard calculatedHeight.wrappedValue != newSize.height else { return }
-
+    
     DispatchQueue.main.async { // call in next render cycle.
       self.calculatedHeight.wrappedValue = newSize.height
     }

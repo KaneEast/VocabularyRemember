@@ -7,13 +7,13 @@
 
 import SwiftUI
 struct AsAnyViewModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        AnyView(content)
-    }
+  func body(content: Content) -> some View {
+    AnyView(content)
+  }
 }
 
 extension View {
-    func asAnyView() -> some View {
-        self.modifier(AsAnyViewModifier())
-    }
+  func asAnyView() -> some View {
+    self.modifier(AsAnyViewModifier())
+  }
 }

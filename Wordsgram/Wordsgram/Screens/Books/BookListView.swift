@@ -16,11 +16,11 @@ struct BookListView: View {
   var body: some View {
     NavigationStack(path: $routerPath.path) {
       BookListSubview()
-        .searchable(text: $bookProvider.searchTerm, prompt: "Search book title")
-        .navigationTitle("Books")
         .toolbar {
           ToolbarItem(placement: .topBarTrailing) {
-            Button{ routerPath.presentedSheet = .addNewBook } label: {
+            Button {
+              routerPath.presentedSheet = .addNewBook
+            } label: {
               Image(systemName: "plus.circle")
             }
           }
@@ -36,6 +36,8 @@ struct BookListView: View {
             }
           }
         }
+        .navigationTitle("Books")
+        .searchable(text: $bookProvider.searchTerm, prompt: "Search book title")
         .withAppRouter()
         .withSheetDestinations(sheetDestinations: $routerPath.presentedSheet)
     }

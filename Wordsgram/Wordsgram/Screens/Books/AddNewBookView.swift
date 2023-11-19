@@ -13,7 +13,7 @@ struct AddNewBookView: View {
   @EnvironmentObject var service: BookService
   @EnvironmentObject var provider: BookProvider
   @Environment(\.dismiss) private var dismiss
-
+  
   @State var title = NSMutableAttributedString(string: "")
   @State private var author: String = ""
   @State private var publishedYear: Int?

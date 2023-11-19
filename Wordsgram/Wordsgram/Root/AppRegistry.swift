@@ -22,7 +22,6 @@ extension View {
   
   func withSheetDestinations(sheetDestinations: Binding<SheetDestination?>) -> some View {
     sheet(item: sheetDestinations) { destination in
-      //            EmptyView()
       switch destination {
       case .addNewBook:
         AddNewBookView()

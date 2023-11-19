@@ -7,16 +7,16 @@
 
 import Foundation
 enum CategoryAddError: Error {
-    case noID
-    case invalidResponse
+  case noID
+  case invalidResponse
 }
 
 enum ResourceRequestError: Error {
-    case noData
-    case decodingError
-    case encodingError
+  case noData
+  case decodingError
+  case encodingError
 }
 
 enum AppError: Error {
-    case validationError
+  case validationError
 }
