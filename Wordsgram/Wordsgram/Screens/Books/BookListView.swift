@@ -15,7 +15,7 @@ struct BookListView: View {
   
   var body: some View {
     NavigationStack(path: $routerPath.path) {
-      BookListSubview()
+      subview1
         .toolbar {
           ToolbarItem(placement: .topBarTrailing) {
             Button {
@@ -41,6 +41,51 @@ struct BookListView: View {
         .withAppRouter()
         .withSheetDestinations(sheetDestinations: $routerPath.presentedSheet)
     }
+  }
+  
+  @ViewBuilder
+  private var subview1: some View {
+    if !bookProvider.filteredBooks.isEmpty {
+      List {
+        ForEach(bookProvider.filteredBooks) { book in
+          NavigationLink(value: RouterDestination.bookDetail(book: book)) {
+            BookCellView(book: book)
+          }
+        }
+        .onDelete {
+          delete(indexSet: $0)
+        }
+      }
+      .listStyle(PlainListStyle())
+    }
+    else if bookProvider.searchTerm.isEmpty {
+      ContentUnavailableView("No Books, yet", systemImage: "square.stack.3d.up.slash.fill")
+    } else {
+      ContentUnavailableView.search(text: bookProvider.searchTerm)
+    }
+  }
+  
+  //  var subview: some View {
+  //    if !bookProvider.filteredBooks.isEmpty {
+  //      List {
+  //        ForEach(bookProvider.filteredBooks) { book in
+  //          NavigationLink(value: RouterDestination.bookDetail(book: book)) {
+  //            BookCellView(book: book)
+  //          }
+  //        }
+  //        .onDelete(perform: delete(indexSet:))
+  //      }
+  //      .listStyle(PlainListStyle())
+  //    } else if bookProvider.searchTerm.isEmpty {
+  //      ContentUnavailableView("No Books, yet", systemImage: "square.stack.3d.up.slash.fill")
+  //    } else {
+  //      ContentUnavailableView.search(text: bookProvider.searchTerm)
+  //    }
+  //  }
+  
+  @MainActor
+  private func delete(indexSet: IndexSet) {
+    bookProvider.deleteFromFiltered(indexSet: indexSet)
   }
 }
 
