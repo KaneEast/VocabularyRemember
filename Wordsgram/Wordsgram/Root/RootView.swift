@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selection: Tabs? = .books
-    @EnvironmentObject var auth: AuthService
-    @EnvironmentObject var appState: AppState
-    init() {}
-    
-    var body: some View {
-        if auth.isLoggedIn || appState.isNoUser {
-            MyTabView(selection: $selection)
-        } else {
-            LoginView()
-        }
+  @State private var selection: Tabs? = .books
+  @EnvironmentObject var auth: AuthService
+  @EnvironmentObject var appState: AppState
+  init() {}
+  
+  var body: some View {
+    if auth.isLoggedIn || appState.isNoUser {
+      MyTabView(selection: $selection)
+    } else {
+      LoginView()
     }
+  }
 }
 
 #Preview {
-    RootView()
+  RootView()
 }

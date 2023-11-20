@@ -37,7 +37,6 @@
 		3C7BBA592AFD548C00C79107 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA582AFD548C00C79107 /* UserService.swift */; };
 		3C7BBA5B2AFD6BC500C79107 /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BBA5A2AFD6BC500C79107 /* Publisher+.swift */; };
 		3C9FF9202B09323D00BDF74C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF91F2B09323D00BDF74C /* WebView.swift */; };
-		3C9FF9242B09359000BDF74C /* ModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF9232B09359000BDF74C /* ModelRepository.swift */; };
 		3C9FF9262B09401400BDF74C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF9252B09401400BDF74C /* DataProvider.swift */; };
 		3C9FF92A2B0967E000BDF74C /* BookProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF9292B0967DF00BDF74C /* BookProvider.swift */; };
 		3C9FF92C2B0967FF00BDF74C /* GenreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF92B2B0967FF00BDF74C /* GenreProvider.swift */; };
@@ -46,7 +45,6 @@
 		3C9FF9332B096BC300BDF74C /* BookSearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FF9322B096BC200BDF74C /* BookSearchDetailView.swift */; };
 		3CAB620A2B042B0700645B5F /* GenreSortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB62092B042B0600645B5F /* GenreSortOrder.swift */; };
 		3CAB620C2B042B5300645B5F /* GenreListSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB620B2B042B5300645B5F /* GenreListSubview.swift */; };
-		3CAB620E2B042DC500645B5F /* BookListSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB620D2B042DC500645B5F /* BookListSubview.swift */; };
 		3CAB62102B043F9800645B5F /* SortingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB620F2B043F9800645B5F /* SortingOption.swift */; };
 		3CAB62122B046F9600645B5F /* UIApplication+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB62112B046F9500645B5F /* UIApplication+DismissKeyboard.swift */; };
 		3CAB621B2B0489DF00645B5F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAB621A2B0489DF00645B5F /* WidgetKit.framework */; };
@@ -90,7 +88,6 @@
 		3CD6BABD2B03155A001FC874 /* GenreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6BABC2B03155A001FC874 /* GenreDetailView.swift */; };
 		3CE3BE322B05E40900E6D916 /* AlertAnywhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE312B05E40900E6D916 /* AlertAnywhere.swift */; };
 		3CE3BE342B05E83F00E6D916 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE332B05E83F00E6D916 /* CountryListView.swift */; };
-		3CE3BE362B05FED300E6D916 /* GoogleBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE352B05FED300E6D916 /* GoogleBookService.swift */; };
 		3CE3BE3B2B06071100E6D916 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE3A2B06071100E6D916 /* BookService.swift */; };
 		3CE3BE502B06FD9500E6D916 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE4F2B06FD9500E6D916 /* NetworkEnvironment.swift */; };
 		3CE3BE522B06FDA600E6D916 /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3BE512B06FDA600E6D916 /* NetworkSessionManager.swift */; };
@@ -180,7 +177,6 @@
 		3C7BBA582AFD548C00C79107 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3C7BBA5A2AFD6BC500C79107 /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		3C9FF91F2B09323D00BDF74C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		3C9FF9232B09359000BDF74C /* ModelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRepository.swift; sourceTree = "<group>"; };
 		3C9FF9252B09401400BDF74C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		3C9FF9292B0967DF00BDF74C /* BookProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookProvider.swift; sourceTree = "<group>"; };
 		3C9FF92B2B0967FF00BDF74C /* GenreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreProvider.swift; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 		3C9FF9322B096BC200BDF74C /* BookSearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchDetailView.swift; sourceTree = "<group>"; };
 		3CAB62092B042B0600645B5F /* GenreSortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSortOrder.swift; sourceTree = "<group>"; };
 		3CAB620B2B042B5300645B5F /* GenreListSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListSubview.swift; sourceTree = "<group>"; };
-		3CAB620D2B042DC500645B5F /* BookListSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListSubview.swift; sourceTree = "<group>"; };
 		3CAB620F2B043F9800645B5F /* SortingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingOption.swift; sourceTree = "<group>"; };
 		3CAB62112B046F9500645B5F /* UIApplication+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		3CAB62192B0489DF00645B5F /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,7 +236,6 @@
 		3CD6BABC2B03155A001FC874 /* GenreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDetailView.swift; sourceTree = "<group>"; };
 		3CE3BE312B05E40900E6D916 /* AlertAnywhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAnywhere.swift; sourceTree = "<group>"; };
 		3CE3BE332B05E83F00E6D916 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
-		3CE3BE352B05FED300E6D916 /* GoogleBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBookService.swift; sourceTree = "<group>"; };
 		3CE3BE3A2B06071100E6D916 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		3CE3BE4F2B06FD9500E6D916 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		3CE3BE512B06FDA600E6D916 /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
@@ -318,6 +312,7 @@
 		3C2066D42AF40DC000C74DBA /* Wordsgram */ = {
 			isa = PBXGroup;
 			children = (
+				3C3898A62B0B5E3000FE7B0B /* OldCode */,
 				3C9FF9212B09355600BDF74C /* Core */,
 				3C2067142AF4283400C74DBA /* Components */,
 				3CAB62382B048FB800645B5F /* Config Files */,
@@ -345,6 +340,8 @@
 		3C2067112AF4269000C74DBA /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				3CE3BE782B07D05300E6D916 /* Router.swift */,
+				3CE3BE7A2B07D18700E6D916 /* AppRegistry.swift */,
 				3C2067262AF4C13600C74DBA /* MyTabView.swift */,
 				3C2067122AF426A000C74DBA /* RootView.swift */,
 				3C2066D52AF40DC000C74DBA /* TheApp.swift */,
@@ -413,17 +410,43 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		3C3898A42B0AA49800FE7B0B /* OldScreens */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF94F42AFAEF1500B8434D /* Login */,
+				3C20673C2AF56E9700C74DBA /* Users */,
+				3C20673F2AF56FC300C74DBA /* Categories */,
+				3C20672B2AF4C38E00C74DBA /* Words */,
+			);
+			path = OldScreens;
+			sourceTree = "<group>";
+		};
+		3C3898A52B0AA4B300FE7B0B /* OldMicroServices */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
+				3C7BBA522AFD287700C79107 /* WordsService.swift */,
+				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
+				3C7BBA582AFD548C00C79107 /* UserService.swift */,
+			);
+			path = OldMicroServices;
+			sourceTree = "<group>";
+		};
+		3C3898A62B0B5E3000FE7B0B /* OldCode */ = {
+			isa = PBXGroup;
+			children = (
+				3C3898A52B0AA4B300FE7B0B /* OldMicroServices */,
+				3C3898A42B0AA49800FE7B0B /* OldScreens */,
+			);
+			path = OldCode;
+			sourceTree = "<group>";
+		};
 		3C7BBA512AFD284B00C79107 /* MicroServices */ = {
 			isa = PBXGroup;
 			children = (
 				3C7BBA542AFD29DE00C79107 /* SystemServices.swift */,
 				3CD6BA4E2B00219D001FC874 /* AppState.swift */,
-				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
-				3C7BBA522AFD287700C79107 /* WordsService.swift */,
-				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
-				3C7BBA582AFD548C00C79107 /* UserService.swift */,
 				3CE3BE3A2B06071100E6D916 /* BookService.swift */,
-				3CE3BE372B06023B00E6D916 /* GoogleBookService */,
 			);
 			path = MicroServices;
 			sourceTree = "<group>";
@@ -431,33 +454,23 @@
 		3C9FF9212B09355600BDF74C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3C7BBA512AFD284B00C79107 /* MicroServices */,
-				3C9FF92F2B09685E00BDF74C /* Database */,
-				3C9FF9222B09358400BDF74C /* Repository */,
-				3CE3BE772B07D03600E6D916 /* Env */,
 				3CE3BE492B06E6B100E6D916 /* Networking */,
+				3C7BBA512AFD284B00C79107 /* MicroServices */,
+				3C9FF9222B09358400BDF74C /* DataProvider */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		3C9FF9222B09358400BDF74C /* Repository */ = {
+		3C9FF9222B09358400BDF74C /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				3C9FF9232B09359000BDF74C /* ModelRepository.swift */,
+				3CD6BA9D2B02D4DA001FC874 /* DatabaseModel */,
 				3C9FF9252B09401400BDF74C /* DataProvider.swift */,
 				3C9FF9292B0967DF00BDF74C /* BookProvider.swift */,
 				3C9FF92D2B09682F00BDF74C /* MockBookProvider.swift */,
 				3C9FF92B2B0967FF00BDF74C /* GenreProvider.swift */,
 			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		3C9FF92F2B09685E00BDF74C /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				3CD6BA9D2B02D4DA001FC874 /* DatabaseModel */,
-			);
-			path = Database;
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		3CAB621E2B0489E000645B5F /* WidgetExtension */ = {
@@ -523,7 +536,6 @@
 			isa = PBXGroup;
 			children = (
 				3CD6BAA32B02DE00001FC874 /* BookListView.swift */,
-				3CAB620D2B042DC500645B5F /* BookListSubview.swift */,
 				3CD6BAA92B02E84C001FC874 /* BookDetailView.swift */,
 				3CD6BAA72B02E5DE001FC874 /* BookCellView.swift */,
 				3CD6BAA12B02DC19001FC874 /* AddNewBookView.swift */,
@@ -547,18 +559,11 @@
 			path = Genre;
 			sourceTree = "<group>";
 		};
-		3CE3BE372B06023B00E6D916 /* GoogleBookService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GoogleBookService;
-			sourceTree = "<group>";
-		};
 		3CE3BE492B06E6B100E6D916 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				3C7BBA452AFCEDBD00C79107 /* Errors.swift */,
-				3CE3BE722B07ABEB00E6D916 /* Core */,
+				3CE3BE722B07ABEB00E6D916 /* NetworkCore */,
 				3CE3BE6F2B07A96600E6D916 /* Requests */,
 				3C20671C2AF4347F00C74DBA /* Model */,
 			);
@@ -580,7 +585,6 @@
 				3CE3BE672B079F9200E6D916 /* GetCategoryOfWordRequest.swift */,
 				3CE3BE692B079FA900E6D916 /* GetAllCategoriesWordsRequest.swift */,
 				3CE9FCB92B080BD8005CE3C9 /* BookSearchRequest.swift */,
-				3CE3BE352B05FED300E6D916 /* GoogleBookService.swift */,
 				3C7BBA472AFD08A200C79107 /* CategoryWithWordResponse.swift */,
 				3CAF94FF2AFBE34100B8434D /* CreateWordResponse.swift */,
 			);
@@ -602,18 +606,14 @@
 		3CE3BE712B07AB5D00E6D916 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3CD6BAB32B0309EE001FC874 /* Genre */,
 				3CD6BAA02B02DC0F001FC874 /* Books */,
-				3C20672B2AF4C38E00C74DBA /* Words */,
-				3C20673F2AF56FC300C74DBA /* Categories */,
-				3C20673C2AF56E9700C74DBA /* Users */,
+				3CD6BAB32B0309EE001FC874 /* Genre */,
 				3C2067282AF4C22300C74DBA /* Settings */,
-				3CAF94F42AFAEF1500B8434D /* Login */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		3CE3BE722B07ABEB00E6D916 /* Core */ = {
+		3CE3BE722B07ABEB00E6D916 /* NetworkCore */ = {
 			isa = PBXGroup;
 			children = (
 				3CE3BE4F2B06FD9500E6D916 /* NetworkEnvironment.swift */,
@@ -623,16 +623,7 @@
 				3C2067172AF429CB00C74DBA /* NetworkMonitor.swift */,
 				3C2067322AF4D0B600C74DBA /* Auth+Keychain.swift */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		3CE3BE772B07D03600E6D916 /* Env */ = {
-			isa = PBXGroup;
-			children = (
-				3CE3BE782B07D05300E6D916 /* Router.swift */,
-				3CE3BE7A2B07D18700E6D916 /* AppRegistry.swift */,
-			);
-			path = Env;
+			path = NetworkCore;
 			sourceTree = "<group>";
 		};
 		3CE9FCC72B082FC0005CE3C9 /* Modifiers */ = {
@@ -811,7 +802,6 @@
 				3CE3BE682B079F9200E6D916 /* GetCategoryOfWordRequest.swift in Sources */,
 				3CAB62402B04A22A00645B5F /* UserDefaultsHelper.swift in Sources */,
 				3CD6BAA22B02DC19001FC874 /* AddNewBookView.swift in Sources */,
-				3CAB620E2B042DC500645B5F /* BookListSubview.swift in Sources */,
 				3C7BBA4E2AFD15A300C79107 /* SettingsDisclosureRow.swift in Sources */,
 				3CAF95022AFBEFD100B8434D /* CreateCategoryView.swift in Sources */,
 				3C7BBA532AFD287700C79107 /* WordsService.swift in Sources */,
@@ -819,7 +809,6 @@
 				3CE9FCBA2B080BD8005CE3C9 /* BookSearchRequest.swift in Sources */,
 				3CAF94E82AFAB10B00B8434D /* AuthService.swift in Sources */,
 				3C7BBA552AFD29DE00C79107 /* SystemServices.swift in Sources */,
-				3CE3BE362B05FED300E6D916 /* GoogleBookService.swift in Sources */,
 				3CE3BE522B06FDA600E6D916 /* NetworkSessionManager.swift in Sources */,
 				3C2067222AF434C800C74DBA /* CreateWordData.swift in Sources */,
 				3C9FF9262B09401400BDF74C /* DataProvider.swift in Sources */,
@@ -837,7 +826,6 @@
 				3C20671E2AF4349200C74DBA /* User.swift in Sources */,
 				3CAB62502B05AAB200645B5F /* Color+.swift in Sources */,
 				3CE3BE7B2B07D18700E6D916 /* AppRegistry.swift in Sources */,
-				3C9FF9242B09359000BDF74C /* ModelRepository.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* MyTabView.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */,
@@ -1132,102 +1120,6 @@
 			};
 			name = Release;
 		};
-		3C2066FA2AF40DC300C74DBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB62392B04901500645B5F /* Debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
-			};
-			name = Debug;
-		};
-		3C2066FB2AF40DC300C74DBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623B2B04903B00645B5F /* Release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
-			};
-			name = Release;
-		};
-		3C2066FD2AF40DC300C74DBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB62392B04901500645B5F /* Debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Wordsgram;
-			};
-			name = Debug;
-		};
-		3C2066FE2AF40DC300C74DBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623B2B04903B00645B5F /* Release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Wordsgram;
-			};
-			name = Release;
-		};
 		3CAB622E2B0489E300645B5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CAB624C2B04EEDB00645B5F /* WidgetDebug.xcconfig */;
@@ -1428,54 +1320,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Staging;
-		};
-		3CAB62362B048C2100645B5F /* Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623A2B04902700645B5F /* Staging.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordsgram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wordsgram";
-			};
-			name = Staging;
-		};
-		3CAB62372B048C2100645B5F /* Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAB623A2B04902700645B5F /* Staging.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANU45NJ4HN;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kane.yin.WordsgramUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Wordsgram;
 			};
 			name = Staging;
 		};

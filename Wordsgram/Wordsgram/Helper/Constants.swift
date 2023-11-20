@@ -7,9 +7,7 @@
 
 import Foundation
 
-extension String {
-  
-
+extension String {  
   // MARK: Settings screens
   static let settings1 = "settings 1"
   static let settings2 = "settings 2"

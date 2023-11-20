@@ -8,12 +8,12 @@
 import Alamofire
 import Foundation
 struct GetAllCategoriesWordsRequest: APIRequest {
-    typealias Response = [CategoryWithWordResponse] // Replace with your actual response model
-
-    var environment: NetworkEnvironment { .production }
-    var path: String { "/categories/withWords" }
-    var method: HTTPMethod { .get }
-    var parameters: Encodable? { nil }
-    var headers: HTTPHeaders?
-    var encoding: ParameterEncoding { URLEncoding.default }
+  typealias Response = [CategoryWithWordResponse]
+  
+  var environment: NetworkEnvironment { .production }
+  var path: String { "/categories/withWords" }
+  var method: HTTPMethod { .get }
+  var parameters: Encodable? { nil }
+  var headers: HTTPHeaders?
+  var encoding: ParameterEncoding { URLEncoding.default }
 }

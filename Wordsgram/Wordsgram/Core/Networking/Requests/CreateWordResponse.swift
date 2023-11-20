@@ -7,13 +7,11 @@
 
 import Foundation
 struct CreateWordResponse: Codable {
-    let name, id, meaning: String
-    let user: User
-    
-    // MARK: - User
-    struct User: Codable {
-        let id: String
-    }
+  let name, id, meaning: String
+  let user: User
+  
+  // MARK: - User
+  struct User: Codable {
+    let id: String
+  }
 }
-
-

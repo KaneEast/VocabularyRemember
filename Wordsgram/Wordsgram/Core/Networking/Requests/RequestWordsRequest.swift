@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 struct RequestWordsRequest: APIRequest {
-    typealias Response = [Word] // Replace with your actual response model
-
-    var environment: NetworkEnvironment { .production }
-    var path: String { "/words" }
-    var method: HTTPMethod { .get }
-    var parameters: Encodable? = nil
-    let encoding: ParameterEncoding = URLEncoding.default
-    var headers: HTTPHeaders?
+  typealias Response = [Word]
+  
+  var environment: NetworkEnvironment { .production }
+  var path: String { "/words" }
+  var method: HTTPMethod { .get }
+  var parameters: Encodable? = nil
+  let encoding: ParameterEncoding = URLEncoding.default
+  var headers: HTTPHeaders?
 }

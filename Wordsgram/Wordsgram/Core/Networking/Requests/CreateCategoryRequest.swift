@@ -8,20 +8,20 @@
 import Alamofire
 import Foundation
 struct CreateCategoryRequest: APIRequest {
-    typealias Response = CategoryResponse // Replace with your actual response model
-
-    var environment: NetworkEnvironment { .production }
-    var path: String { "/categories" }
-    var method: HTTPMethod { .post }
-    var parameters: Encodable?
-    var headers: HTTPHeaders? = ["Authorization": "Bearer \(AuthService.shared.token ?? "")"]
-    var encoding: ParameterEncoding { JSONEncoding.default }
-    
-    init(_ parameter: CreateCategoryParam) {
-        self.parameters = parameter
-    }
+  typealias Response = CategoryResponse
+  
+  var environment: NetworkEnvironment { .production }
+  var path: String { "/categories" }
+  var method: HTTPMethod { .post }
+  var parameters: Encodable?
+  var headers: HTTPHeaders? = ["Authorization": "Bearer \(AuthService.shared.token ?? "")"]
+  var encoding: ParameterEncoding { JSONEncoding.default }
+  
+  init(_ parameter: CreateCategoryParam) {
+    self.parameters = parameter
+  }
 }
 
 struct CreateCategoryParam: Encodable {
-    let name: String
+  let name: String
 }

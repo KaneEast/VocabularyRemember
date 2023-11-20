@@ -19,10 +19,9 @@ extension APIRequest {
       let request = try asURLRequest()
       return NetworkSessionManager.shared.alamofireSession
         .request(request)
-        .validate() // Validate HTTP response status codes
+        .validate()
         .responseString { response in
-          // Print the response string for debugging
-          print("Response String: \(response)")
+          //print("Response String: \(response)")
         }
         .publishDecodable(type: Response.self)
         .tryMap { result in

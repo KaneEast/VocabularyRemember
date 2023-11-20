@@ -8,13 +8,13 @@
 import Foundation
 
 struct CreateWordData: Codable {
-    let name: String
-    let meaning: String
-    let userID: UUID
+  let name: String
+  let meaning: String
+  let userID: UUID
 }
 
 extension Word {
-    func toCreateData() -> CreateWordData {
-        CreateWordData(name: self.name, meaning: self.meaning, userID: self.user.id)
-    }
+  func toCreateData() -> CreateWordData {
+    CreateWordData(name: self.name, meaning: self.meaning, userID: self.user.id)
+  }
 }

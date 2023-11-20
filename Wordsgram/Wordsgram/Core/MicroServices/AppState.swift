@@ -9,6 +9,4 @@ import SwiftUI
 
 class AppState: ObservableObject {
     @AppStorage("isNoLoginMode") var isNoUser = false
-//    static let shared = AppState()
-//    private init() {}
 }

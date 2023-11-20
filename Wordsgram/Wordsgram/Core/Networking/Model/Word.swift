@@ -12,7 +12,7 @@ final class Word: Codable {
   var name: String
   var meaning: String
   var user: WordUser
-
+  
   init(name: String, meaning: String, userID: UUID) {
     self.name = name
     self.meaning = meaning
@@ -23,7 +23,7 @@ final class Word: Codable {
 
 final class WordUser: Codable {
   var id: UUID
-
+  
   init(id: UUID) {
     self.id = id
   }
