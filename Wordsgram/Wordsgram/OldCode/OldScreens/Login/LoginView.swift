@@ -17,7 +17,6 @@ struct LoginView: View {
   @EnvironmentObject var authService: AuthService
   @EnvironmentObject var appState: AppState
   @StateObject private var vm = LoginViewModel()
-  @State private var signInSucces = false
   
   var body: some View {
     VStack(alignment: .leading, spacing: 10) {
