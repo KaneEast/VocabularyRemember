@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct BookCellView: View {
-  let book: Book
+  //let book: Book
+  let title: String
+  let author: String
+  let cover: Data?
+  var publishedYear: Int
   
   var body: some View {
     HStack(alignment: .top) {
-      if let cover = book.cover, let image = UIImage(data: cover) {
+      if let cover = cover, let image = UIImage(data: cover) {
         Image(uiImage: image)
           .resizable()
           .scaledToFit()
@@ -21,15 +25,19 @@ struct BookCellView: View {
       }
       
       VStack(alignment: .leading) {
-        Text(book.title)
+        Text(title)
           .bold()
         Group {
-          Text("Author: \(book.author)")
-          Text("Published on: \(book.publishedYear.description)")
+          Text("Author: \(author)")
+          Text("Published on: \(publishedYear.description)")
         }
         .font(.footnote)
         .foregroundStyle(.secondary)
       }
     }
   }
+}
+
+#Preview {
+  BookCellView(title: "Title", author: "author", cover: nil, publishedYear: 3023)
 }

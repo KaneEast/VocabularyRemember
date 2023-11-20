@@ -1,5 +1,5 @@
 //
-//  BookService.swift
+//  BookClient.swift
 //  Wordsgram
 //
 //  Created by Kane on 2023/11/16.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class BookService: ObservableObject {
+class BookClient {
   var cancellables = Set<AnyCancellable>()
   
   func searchBook(title: String, author: String) async throws -> BookSearchResponse {

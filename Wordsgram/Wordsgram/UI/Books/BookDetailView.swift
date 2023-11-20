@@ -14,6 +14,7 @@ struct BookDetailView: View {
   
   @Environment(\.modelContext) private var context
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var coordinator: BookCoordinator
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
@@ -164,13 +165,14 @@ struct BookDetailView: View {
         genre.books.append(book)
       }
     }
+//    
+//    do {
+//      try context.save()
+//    } catch {
+//      print(error.localizedDescription)
+//    }
     
-    do {
-      try context.save()
-    } catch {
-      print(error.localizedDescription)
-    }
-    
+    try? coordinator.save()
     dismiss()
   }
 }

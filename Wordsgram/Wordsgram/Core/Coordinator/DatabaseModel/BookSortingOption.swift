@@ -1,5 +1,5 @@
 //
-//  SortingOption.swift
+//  BookSortingOption.swift
 //  Wordsgram
 //
 //  Created by Kane on 2023/11/15.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SortingOption: String, Identifiable, CaseIterable {
+enum BookSortingOption: String, Identifiable, CaseIterable {
   
   var id: Self { return self }
   

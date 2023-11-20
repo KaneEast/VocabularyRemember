@@ -15,13 +15,13 @@ public final class Book {
   var author: String
   var publishedYear: Int
   
-  /// Notice that we are setting deleteRule for this relationship as cascade which indicates that upon deleting this book any related models will be deleted as well.
+  /// Notice that we are setting deleteRule for this relationship as cascade which indicates that upon deleting
+  /// this book any related models will be deleted as well.
   /// Other delete rules include:
-  
-  /// noAction: A rule that doesn’t make changes to the related models.
-  /// nullify: A rule that nullifies its related model’s reference.
-  /// deny: A rule that prevents the deletion of a model because it contains one or more references to the other models
-  /// cascade: A rule that deletes any related models.
+    /// - noAction: A rule that doesn’t make changes to the related models.
+    /// - nullify: A rule that nullifies its related model’s reference.
+    /// - deny: A rule that prevents the deletion of a model because it contains one or more references to the other models
+    /// - cascade: A rule that deletes any related models.
   @Relationship(deleteRule: .cascade, inverse: \Note.book)
   var notes = [Note]()
   

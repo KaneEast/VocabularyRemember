@@ -10,15 +10,13 @@ import SwiftData
 import PhotosUI
 
 struct AddNewBookView: View {
-  @EnvironmentObject var service: BookService
-  @EnvironmentObject var provider: BookProvider
+  @EnvironmentObject var coordinator: BookCoordinator
   @Environment(\.dismiss) private var dismiss
   
   @State var title = NSMutableAttributedString(string: "")
   @State private var author: String = ""
   @State private var publishedYear: Int?
   @State private var selectedGenres = Set<Genre>()
-  
   @State private var selectedCover: PhotosPickerItem?
   @State private var selectedCoverData: Data?
   @State private var bookItem: Item?
@@ -109,18 +107,18 @@ struct AddNewBookView: View {
   }
   
   private func search() {
-    Task {
-      do {
-        let response = try await service.searchBook(title: title.string, author: author)
-        print("=========================")
-        print(response.items.first ?? "")
-        print("=========================")
-        print(response.items.first?.volumeInfo?.imageLinks?.thumbnail ?? "")
-        self.bookItem = response.items.first
-      } catch {
-        print(error)
-      }
-    }
+//    Task {
+//      do {
+//        let response = try await service.searchBook(title: title.string, author: author)
+//        print("=========================")
+//        print(response.items.first ?? "")
+//        print("=========================")
+//        print(response.items.first?.volumeInfo?.imageLinks?.thumbnail ?? "")
+//        self.bookItem = response.items.first
+//      } catch {
+//        print(error)
+//      }
+//    }
   }
   
   private func save() {
@@ -130,7 +128,7 @@ struct AddNewBookView: View {
     book.genres = Array(selectedGenres)
     book.cover = selectedCoverData
     do {
-      try provider.set(item: book)
+      try coordinator.create(books: [book])
     } catch {
       print(error.localizedDescription)
     }
