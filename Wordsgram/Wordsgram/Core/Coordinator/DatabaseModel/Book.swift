@@ -25,6 +25,9 @@ public final class Book {
   @Relationship(deleteRule: .cascade, inverse: \Note.book)
   var notes = [Note]()
   
+  @Relationship(deleteRule: .cascade, inverse: \NewWord.book)
+  var words = [NewWord]()
+  
   @Relationship(deleteRule: .nullify, inverse: \Genre.books)
   var genres = [Genre]()
   

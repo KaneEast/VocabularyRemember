@@ -18,6 +18,7 @@ struct BookDetailView: View {
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
+  @State private var showAddNewWord = false
   @State private var title: String = ""
   @State private var author: String = ""
   @State private var publishedYear: Int? = nil
@@ -37,42 +38,35 @@ struct BookDetailView: View {
     Form {
       if isEditing {
         Group {
-          TextField("Book title", text: $title)
-          TextField("Book author", text: $author)
-          TextField("Published year", value: $publishedYear, formatter: NumberFormatter())
-            .keyboardType(.numberPad)
-          
           HStack {
             PhotosPicker(
               selection: $selectedCover,
               matching: .images,
               photoLibrary: .shared()
             ) {
-              Label(book.cover == nil ? "Add Cover" : "Update Cover", systemImage: "book.closed")
+              if let selectedCoverData, let image = UIImage(data: selectedCoverData) {
+                Image(uiImage: image)
+                  .resizable()
+                  .scaledToFit()
+                  .clipShape(.rect(cornerRadius: 10))
+                  .frame(width: 100, height: 100)
+              } else {
+                Image(systemName: "photo")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 100, height: 100)
+                  .foregroundColor(.aPrimaryRed)
+              }
             }
-            .padding(.vertical)
             
-            Spacer()
-            
-            if let selectedCoverData,
-               let image = UIImage(data: selectedCoverData) {
-              Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(.rect(cornerRadius: 10))
-                .frame(width: 100, height: 100)
-              
-            } else if let cover = book.cover, let image = UIImage(data: cover) {
-              Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(.rect(cornerRadius: 5))
-                .frame(height: 100)
-            } else {
-              Image(systemName: "photo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
+            VStack {
+              TextField("Enter title", text: $title)
+                .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
+              TextField("Enter book author", text: $author)
+                .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
+              TextField("Enter published year", value: $publishedYear, format: .number)
+                .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
+                .keyboardType(.numberPad)
             }
           }
           
@@ -83,9 +77,21 @@ struct BookDetailView: View {
         
         Button("Save", action: save)
       } else {
-        Text(book.title)
-        Text(book.author)
-        Text(book.publishedYear.description)
+        HStack {
+          if let cover = book.cover, let image = UIImage(data: cover) {
+            Image(uiImage: image)
+              .resizable()
+              .scaledToFit()
+              .clipShape(.rect(cornerRadius: 5))
+              .frame(height: 100)
+          }
+          
+          VStack(alignment: .leading) {
+            Text(book.title)
+            Text(book.author)
+            Text(book.publishedYear.description)
+          }
+        }
         
         if !book.genres.isEmpty {
           HStack {
@@ -98,37 +104,45 @@ struct BookDetailView: View {
             }
           }
         }
-        if let cover = book.cover, let image = UIImage(data: cover) {
-          HStack {
-            Text("Book Cover")
-            Spacer()
-            Image(uiImage: image)
-              .resizable()
-              .scaledToFit()
-              .clipShape(.rect(cornerRadius: 5))
-              .frame(height: 100)
-          }
-        }
       }
       
-      Section("Notes") {
-        Button("Add new note") {
-          showAddNewNote.toggle()
+      Section("Words") {
+        Button("Add new word") {
+          showAddNewWord.toggle()
         }
-        .sheet(isPresented: $showAddNewNote, content: {
+        .sheet(isPresented: $showAddNewWord, content: {
           NavigationStack {
-            AddNewNote(book: book)
+            AddNewWord(book: book)
           }
           .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
           //.interactiveDismissDisabled()
         })
         
         if book.notes.isEmpty {
-          ContentUnavailableView("No notes", systemImage: "note")
+          ContentUnavailableView("No Words", systemImage: "note")
         } else {
-          NotesListView(book: book)
+          WordListView(book: book)
         }
       }
+      
+//      Section("Notes") {
+//        Button("Add new note") {
+//          showAddNewNote.toggle()
+//        }
+//        .sheet(isPresented: $showAddNewNote, content: {
+//          NavigationStack {
+//            AddNewNote(book: book)
+//          }
+//          .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
+//          //.interactiveDismissDisabled()
+//        })
+//        
+//        if book.notes.isEmpty {
+//          ContentUnavailableView("No notes", systemImage: "note")
+//        } else {
+//          NotesListView(book: book)
+//        }
+//      }
     }
     .toolbar {
       ToolbarItem(placement: .topBarTrailing) {
@@ -165,12 +179,12 @@ struct BookDetailView: View {
         genre.books.append(book)
       }
     }
-//    
-//    do {
-//      try context.save()
-//    } catch {
-//      print(error.localizedDescription)
-//    }
+    //
+    //    do {
+    //      try context.save()
+    //    } catch {
+    //      print(error.localizedDescription)
+    //    }
     
     try? coordinator.save()
     dismiss()
