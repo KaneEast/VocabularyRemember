@@ -24,7 +24,7 @@ enum Configuration {
     return value
   }
   
-  static let googlebook_apikey = "AIzaSyD6HIRAMsM7jI3p4rVYQ03DjXLlYlNzJGs"
+  static let googlebook_apikey = "API_KEY"
   
   static var appToken: String {
     // swiftlint:disable:next force_try

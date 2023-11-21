@@ -1,5 +1,14 @@
 import SwiftUI
 
+extension UIFont {
+  static var uiLargeTitle: UIFont {
+    .init(name: "Relative Pro Bold", size: 34.0)!
+  }
+  static var uiHeadline: UIFont {
+    .init(name: "Relative Pro Medium", size: 17.0)!
+  }
+}
+
 @MainActor
 public extension Font {
   // See https://gist.github.com/zacwest/916d31da5d03405809c4 for iOS values
