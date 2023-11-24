@@ -60,6 +60,7 @@ struct AddNewBookView: View {
               .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
               .keyboardType(.numberPad)
           }
+          
         }
         
         GenreSelectionView(selectedGenres: $selectedGenres)

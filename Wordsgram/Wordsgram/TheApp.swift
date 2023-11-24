@@ -106,6 +106,8 @@ extension App: SwiftUI.App {
           .environmentObject(users)
           .environmentObject(BookCoordinator(bookClient: BookClient(),
                                              bookRepository: ModelRepository<Book>(context: sharedModelContainer.mainContext)))
+          .environmentObject(WordCoordinator(repository: ModelRepository<NewWord>(context: sharedModelContainer.mainContext)))
+          .environmentObject(GenreCoordinator(repository: ModelRepository<Genre>(context: sharedModelContainer.mainContext)))
 #if DEBUG
         //.modelContainer(TheApp.previewModelContainer)
 #endif

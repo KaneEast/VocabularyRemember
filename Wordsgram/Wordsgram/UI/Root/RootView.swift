@@ -18,7 +18,7 @@ struct RootView: View {
       tabBarView
         .task {
           if AuthService.shared.isLoggedIn {
-            SystemServices.fetch()
+            //SystemServices.fetch()
           }
         }
         .onAppear {

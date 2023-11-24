@@ -10,9 +10,8 @@ import SwiftData
 
 struct WordListView: View {
   let book: Book
-  @Environment(\.modelContext) private var context
-  @State private var showDict = false
-  @State private var showingWord = ""
+  @EnvironmentObject private var coordinator: WordCoordinator
+  @Binding var searchDictTerm: String
   
   var body: some View {
     List {
@@ -22,9 +21,7 @@ struct WordListView: View {
             .bold()
           Spacer()
           Button {
-            showingWord = word.word
-            showDict = true
-            print(showingWord)
+            searchDictTerm = word.word
           } label: {
             HStack(spacing: 2) {
               Image(systemName: "rectangle.and.text.magnifyingglass")
@@ -33,25 +30,19 @@ struct WordListView: View {
           }
         }
       }
-      
-      .onDelete(perform: deleteNote(indexSet:))
-    }
-    .sheet(isPresented: $showDict){
-      DictionaryView(word: showingWord)
+      .onDelete(perform: delete(indexSet:))
     }
   }
   
-  private func deleteNote(indexSet: IndexSet) {
+  private func delete(indexSet: IndexSet) {
     indexSet.forEach { index in
       let word = book.words[index]
-      context.delete(word)
-      book.words.remove(at: index)
       do {
-        try context.save()
+        book.words.remove(at: index)
+        try coordinator.deldete(words: [word])
       } catch {
         print(error.localizedDescription)
       }
     }
   }
 }
-

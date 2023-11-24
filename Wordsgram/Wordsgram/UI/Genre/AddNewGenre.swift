@@ -48,6 +48,7 @@ struct AddNewGenre: View {
         
         Spacer()
       }
+      .disableAutocorrection(true)
       .onAppear {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
           self.nameIsFocused = true

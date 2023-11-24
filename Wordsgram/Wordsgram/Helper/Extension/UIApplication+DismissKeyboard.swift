@@ -1,10 +1,3 @@
-//
-//  UIApplication+DismissKeyboard.swift
-//  Wordsgram
-//
-//  Created by Kane on 2023/11/15.
-//
-
 import UIKit
 
 extension UIApplication {

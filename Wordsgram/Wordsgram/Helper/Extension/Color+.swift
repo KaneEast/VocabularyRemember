@@ -1,10 +1,3 @@
-//
-//  Color+.swift
-//  Wordsgram
-//
-//  Created by Kane on 2023/11/16.
-//
-
 import SwiftUI
 
 extension Color {

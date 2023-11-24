@@ -20,11 +20,10 @@ class BookCoordinator: ObservableObject {
   
   func create(books: [Book]) throws {
     try bookRepository.create(books)
-    
     // check network
     //bookClient.create()
-    
   }
+  
   func deldete(books: [Book]) throws {
     try bookRepository.deleteEntities(books)
     // check network

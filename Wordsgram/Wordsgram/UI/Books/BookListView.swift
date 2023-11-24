@@ -45,7 +45,7 @@ struct BookListView: View {
   }
 }
 
-#Preview {
-  BookListView()
-    .environmentObject(BookCoordinator(bookClient: BookClient(), bookRepository: ModelRepository<Book>(context: SystemServices.previewModelContainer.mainContext)))
-}
+//#Preview {
+//  BookListView()
+//    .environmentObject(BookCoordinator(bookClient: BookClient(), bookRepository: ModelRepository<Book>(context: SystemServices.previewModelContainer.mainContext)))
+//}

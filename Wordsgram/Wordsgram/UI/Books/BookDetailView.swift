@@ -11,10 +11,9 @@ import PhotosUI
 
 struct BookDetailView: View {
   let book: Book
-  
-  @Environment(\.modelContext) private var context
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var coordinator: BookCoordinator
+  @EnvironmentObject private var genreCoordinator: GenreCoordinator
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
@@ -25,6 +24,8 @@ struct BookDetailView: View {
   @State private var selectedGenres = Set<Genre>()
   @State private var selectedCover: PhotosPickerItem?
   @State private var selectedCoverData: Data?
+  @State private var showDict = false
+  @State private var searchDictTerm = ""
   
   init(book: Book) {
     self.book = book
@@ -62,11 +63,14 @@ struct BookDetailView: View {
             VStack {
               TextField("Enter title", text: $title)
                 .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
+                .disableAutocorrection(true)
               TextField("Enter book author", text: $author)
                 .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
+                .disableAutocorrection(true)
               TextField("Enter published year", value: $publishedYear, format: .number)
                 .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
                 .keyboardType(.numberPad)
+                .disableAutocorrection(true)
             }
           }
           
@@ -121,28 +125,28 @@ struct BookDetailView: View {
         if book.notes.isEmpty {
           ContentUnavailableView("No Words", systemImage: "note")
         } else {
-          WordListView(book: book)
+          WordListView(book: book, searchDictTerm: $searchDictTerm)
         }
       }
       
-//      Section("Notes") {
-//        Button("Add new note") {
-//          showAddNewNote.toggle()
-//        }
-//        .sheet(isPresented: $showAddNewNote, content: {
-//          NavigationStack {
-//            AddNewNote(book: book)
-//          }
-//          .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
-//          //.interactiveDismissDisabled()
-//        })
-//        
-//        if book.notes.isEmpty {
-//          ContentUnavailableView("No notes", systemImage: "note")
-//        } else {
-//          NotesListView(book: book)
-//        }
-//      }
+      //      Section("Notes") {
+      //        Button("Add new note") {
+      //          showAddNewNote.toggle()
+      //        }
+      //        .sheet(isPresented: $showAddNewNote, content: {
+      //          NavigationStack {
+      //            AddNewNote(book: book)
+      //          }
+      //          .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
+      //          //.interactiveDismissDisabled()
+      //        })
+      //
+      //        if book.notes.isEmpty {
+      //          ContentUnavailableView("No notes", systemImage: "note")
+      //        } else {
+      //          NotesListView(book: book)
+      //        }
+      //      }
     }
     .toolbar {
       ToolbarItem(placement: .topBarTrailing) {
@@ -150,6 +154,21 @@ struct BookDetailView: View {
           Image(systemName: isEditing ? "checkmark.circle" : "square.and.pencil.circle")
         }
       }
+    }
+    .onChange(of: searchDictTerm) {
+      if !searchDictTerm.isEmpty {
+        showDict = true
+      }
+    }
+    .sheet(isPresented: $showDict){
+      DictionaryView(word: searchDictTerm)
+        .onDisappear {
+          searchDictTerm = ""
+        }
+    }
+    .onAppear {
+      let res = UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: "Book")
+      print(res)
     }
     .task(id: selectedCover) {
       if let data = try? await selectedCover?.loadTransferable(type: Data.self) {
@@ -179,12 +198,6 @@ struct BookDetailView: View {
         genre.books.append(book)
       }
     }
-    //
-    //    do {
-    //      try context.save()
-    //    } catch {
-    //      print(error.localizedDescription)
-    //    }
     
     try? coordinator.save()
     dismiss()
