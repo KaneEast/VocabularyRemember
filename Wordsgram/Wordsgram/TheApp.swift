@@ -19,49 +19,14 @@ struct App {
   )
   
   @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+  @State private var showAlert = false
+  @State private var alertData = AlertData.empty
   
   private var auth: AuthService
   private var appState: AppState
   private var words: WordsService
   private var categories: CategoriesService
   private var users: UserService
-  
-  @State private var showAlert = false
-  @State private var alertData = AlertData.empty
-  
-  var sharedModelContainer: ModelContainer = {
-    let schema = Schema([
-      Book.self,
-      Note.self,
-      Genre.self,
-    ])
-    let modelConfiguration = ModelConfiguration(schema: schema,
-                                                isStoredInMemoryOnly: false)
-    
-    do {
-      return try ModelContainer(for: schema,
-                                configurations: [modelConfiguration])
-    } catch {
-      fatalError("Could not create ModelContainer: \(error)")
-    }
-  }()
-  
-  static var previewModelContainer: ModelContainer {
-    let previewSchema = Schema([
-      Book.self,
-      Note.self,
-      Genre.self,
-    ])
-    let previewConfiguration = ModelConfiguration(schema: previewSchema,
-                                                  isStoredInMemoryOnly: true)
-    
-    do {
-      return try ModelContainer(for: previewSchema,
-                                configurations: [previewConfiguration])
-    } catch {
-      fatalError("Could not create Preview ModelContainer: \(error)")
-    }
-  }
   
   init() {
     let appObjects = App.objects
@@ -72,6 +37,7 @@ struct App {
     users = appObjects.users
     
     NetworkMonitor.shared.startMonitoring()
+    //ModelContainerManager.shared.populateInitialData()
     applyStyle()
   }
 }
@@ -98,16 +64,16 @@ extension App: SwiftUI.App {
                   dismissButton: alertData.dismissButton)
           }
           .accentColor(.primaryRed)
-          .modelContainer(sharedModelContainer)
+          .modelContainer(ModelContainerManager.shared.sharedModelContainer)
           .environmentObject(auth)
           .environmentObject(appState)
           .environmentObject(words)
           .environmentObject(categories)
           .environmentObject(users)
           .environmentObject(BookCoordinator(bookClient: BookClient(),
-                                             bookRepository: ModelRepository<Book>(context: sharedModelContainer.mainContext)))
-          .environmentObject(WordCoordinator(repository: ModelRepository<NewWord>(context: sharedModelContainer.mainContext)))
-          .environmentObject(GenreCoordinator(repository: ModelRepository<Genre>(context: sharedModelContainer.mainContext)))
+                                             bookRepository: ModelRepository<Book>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
+          .environmentObject(WordCoordinator(repository: ModelRepository<NewWord>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
+          .environmentObject(GenreCoordinator(repository: ModelRepository<Genre>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
 #if DEBUG
         //.modelContainer(TheApp.previewModelContainer)
 #endif

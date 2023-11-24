@@ -49,7 +49,8 @@ struct AddNewWord: View {
           do {
             try wordCoordinator.create(words: [word])
             book.words.append(word)
-            try coordinator.create(books: [book])
+            //try coordinator.create(books: [book])
+            try wordCoordinator.create(words: [word])
           } catch {
             print(error.localizedDescription)
           }

@@ -13,7 +13,6 @@ struct BookDetailView: View {
   let book: Book
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var coordinator: BookCoordinator
-  @EnvironmentObject private var genreCoordinator: GenreCoordinator
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
@@ -122,7 +121,7 @@ struct BookDetailView: View {
           //.interactiveDismissDisabled()
         })
         
-        if book.notes.isEmpty {
+        if book.words.isEmpty {
           ContentUnavailableView("No Words", systemImage: "note")
         } else {
           WordListView(book: book, searchDictTerm: $searchDictTerm)
@@ -166,10 +165,6 @@ struct BookDetailView: View {
           searchDictTerm = ""
         }
     }
-    .onAppear {
-      let res = UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: "Book")
-      print(res)
-    }
     .task(id: selectedCover) {
       if let data = try? await selectedCover?.loadTransferable(type: Data.self) {
         selectedCoverData = data
@@ -199,7 +194,12 @@ struct BookDetailView: View {
       }
     }
     
-    try? coordinator.save()
+    do {
+      try coordinator.save()
+    } catch {
+      print(error.localizedDescription)
+    }
+    
     dismiss()
   }
 }

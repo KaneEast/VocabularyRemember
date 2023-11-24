@@ -57,6 +57,7 @@
 		3CA2B1E32B10280400C6419E /* UIView+FindSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2B1E22B10280400C6419E /* UIView+FindSubView.swift */; };
 		3CA2B1E52B104BED00C6419E /* WordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2B1E42B104BED00C6419E /* WordCoordinator.swift */; };
 		3CA2B1E72B104D9F00C6419E /* GenreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2B1E62B104D9F00C6419E /* GenreCoordinator.swift */; };
+		3CA2B1EC2B10577500C6419E /* ModelContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2B1EB2B10577500C6419E /* ModelContainerManager.swift */; };
 		3CAB620A2B042B0700645B5F /* GenreSortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB62092B042B0600645B5F /* GenreSortOrder.swift */; };
 		3CAB620C2B042B5300645B5F /* GenreListSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB620B2B042B5300645B5F /* GenreListSubview.swift */; };
 		3CAB62102B043F9800645B5F /* BookSortingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB620F2B043F9800645B5F /* BookSortingOption.swift */; };
@@ -211,6 +212,7 @@
 		3CA2B1E22B10280400C6419E /* UIView+FindSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindSubView.swift"; sourceTree = "<group>"; };
 		3CA2B1E42B104BED00C6419E /* WordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCoordinator.swift; sourceTree = "<group>"; };
 		3CA2B1E62B104D9F00C6419E /* GenreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCoordinator.swift; sourceTree = "<group>"; };
+		3CA2B1EB2B10577500C6419E /* ModelContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerManager.swift; sourceTree = "<group>"; };
 		3CAB62092B042B0600645B5F /* GenreSortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSortOrder.swift; sourceTree = "<group>"; };
 		3CAB620B2B042B5300645B5F /* GenreListSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListSubview.swift; sourceTree = "<group>"; };
 		3CAB620F2B043F9800645B5F /* BookSortingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSortingOption.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				3C2066D92AF40DC200C74DBA /* Assets.xcassets */,
 				3CAB62312B048A4000645B5F /* Wordsgram.entitlements */,
 				3CAF94EF2AFABAED00B8434D /* Info.plist */,
+				3CA2B1EA2B10576100C6419E /* Managers */,
 				3C9FF9212B09355600BDF74C /* Core */,
 				3CAB62382B048FB800645B5F /* Config Files */,
 				3CE9FCCE2B091D1E005CE3C9 /* DesignSystem */,
@@ -451,6 +454,8 @@
 		3C3898B12B0B882A00FE7B0B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				3CAB620F2B043F9800645B5F /* BookSortingOption.swift */,
+				3C3898A82B0B620A00FE7B0B /* ModelRepository.swift */,
 				3C3898AC2B0B627900FE7B0B /* BookCoordinator.swift */,
 				3CA2B1E42B104BED00C6419E /* WordCoordinator.swift */,
 				3CA2B1E62B104D9F00C6419E /* GenreCoordinator.swift */,
@@ -489,6 +494,14 @@
 				3C7BBA582AFD548C00C79107 /* UserService.swift */,
 			);
 			path = WGClient;
+			sourceTree = "<group>";
+		};
+		3CA2B1EA2B10576100C6419E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3CA2B1EB2B10577500C6419E /* ModelContainerManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		3CAB621E2B0489E000645B5F /* WidgetExtension */ = {
@@ -548,8 +561,6 @@
 		3CD6BA9D2B02D4DA001FC874 /* DatabaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				3C3898A82B0B620A00FE7B0B /* ModelRepository.swift */,
-				3CAB620F2B043F9800645B5F /* BookSortingOption.swift */,
 				3CD6BA9E2B02D4EA001FC874 /* Book.swift */,
 				3CD6BAAB2B02EF35001FC874 /* Note.swift */,
 				3CD6BAB42B0309FA001FC874 /* Genre.swift */,
@@ -865,6 +876,7 @@
 				3CAB62502B05AAB200645B5F /* Color+.swift in Sources */,
 				3CE3BE7B2B07D18700E6D916 /* AppRegistry.swift in Sources */,
 				3C2067182AF429CB00C74DBA /* NetworkMonitor.swift in Sources */,
+				3CA2B1EC2B10577500C6419E /* ModelContainerManager.swift in Sources */,
 				3C2067272AF4C13600C74DBA /* MyTabView.swift in Sources */,
 				3C20673E2AF56EA600C74DBA /* UsersView.swift in Sources */,
 				3CD6BAA82B02E5DE001FC874 /* BookCellView.swift in Sources */,
