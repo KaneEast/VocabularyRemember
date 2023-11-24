@@ -18,12 +18,11 @@ struct CreateWordView: View {
       Form {
         Section(header: Text("Word").textCase(.uppercase)) {
           TextField("Word", text: $name)
-            .autocapitalization(.allCharacters)
             .disableAutocorrection(true)
         }
         Section(header: Text("Meaning").textCase(.uppercase)) {
           TextField("Meaning", text: $meaning)
-            .autocapitalization(.words)
+            .disableAutocorrection(true)
         }
       }
       .navigationBarTitle("Create Word", displayMode: .inline)

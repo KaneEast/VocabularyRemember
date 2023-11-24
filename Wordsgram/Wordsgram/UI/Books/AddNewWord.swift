@@ -12,8 +12,10 @@ struct AddNewWord: View {
   
   @State private var word = NSMutableAttributedString(string: "")
   
-  @Environment(\.modelContext) private var context
+//  @Environment(\.modelContext) private var context
   @Environment(\.dismiss) private var dismiss
+  @EnvironmentObject private var coordinator: BookCoordinator
+  @EnvironmentObject private var wordCoordinator: WordCoordinator
   
   var body: some View {
     Form {
@@ -35,11 +37,19 @@ struct AddNewWord: View {
         RedButton(title: "Save") {
           let word = NewWord(word: word.string)
           word.book = book
-          context.insert(word)
+//          context.insert(word)
+//          
+//          do {
+//            try context.save()
+//            book.words.append(word)
+//          } catch {
+//            print(error.localizedDescription)
+//          }
           
           do {
-            try context.save()
+            try wordCoordinator.create(words: [word])
             book.words.append(word)
+            try coordinator.create(books: [book])
           } catch {
             print(error.localizedDescription)
           }

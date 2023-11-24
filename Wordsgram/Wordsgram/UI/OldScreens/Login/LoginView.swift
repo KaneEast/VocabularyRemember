@@ -32,12 +32,14 @@ struct LoginView: View {
       .pickerStyle(SegmentedPickerStyle())
       
       TextField(FieldType.username.placeHolderText, text: $vm.username)
+        .disableAutocorrection(true)
         .padding()
         .background(vm.usernameValidationColor, in: .rect(cornerRadius: 8).stroke())
         .padding()
       
       if vm.authState == .SignIn {
         TextField(FieldType.name.placeHolderText, text: $vm.name)
+          .disableAutocorrection(true)
           .padding()
           .background(vm.nameValidationColor, in: .rect(cornerRadius: 8).stroke())
           .padding()

@@ -1,10 +1,3 @@
-//
-//  Publisher+.swift
-//  Wordsgram
-//
-//  Created by Kane on 2023/11/10.
-//
-
 import Combine
 
 extension Publisher {

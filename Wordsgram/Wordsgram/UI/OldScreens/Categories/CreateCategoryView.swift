@@ -19,6 +19,7 @@ struct CreateCategoryView: View {
       Form {
         Section(header: Text("Name").textCase(.uppercase)) {
           TextField("Name", text: $name)
+            .disableAutocorrection(true)
         }
       }
       .navigationBarTitle("Create Category", displayMode: .inline)

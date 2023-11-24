@@ -56,7 +56,7 @@ struct BookListSubview: View {
   }
 }
 
-#Preview {
-  BookListSubview(bookSortOption: BookSortingOption.none)
-    .environmentObject(BookCoordinator(bookClient: BookClient(), bookRepository: ModelRepository<Book>(context: SystemServices.previewModelContainer.mainContext)))
-}
+//#Preview {
+//  BookListSubview(bookSortOption: BookSortingOption.none)
+//    .environmentObject(BookCoordinator(bookClient: BookClient(), bookRepository: ModelRepository<Book>(context: SystemServices.previewModelContainer.mainContext)))
+//}
