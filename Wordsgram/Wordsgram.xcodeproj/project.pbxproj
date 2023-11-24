@@ -451,16 +451,9 @@
 		3C3898B12B0B882A00FE7B0B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				3CD6BA9D2B02D4DA001FC874 /* DatabaseModel */,
-				3C3898B02B0B880900FE7B0B /* Clients */,
-				3CD6BA4E2B00219D001FC874 /* AppState.swift */,
-				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
-				3C7BBA522AFD287700C79107 /* WordsService.swift */,
-				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
 				3C3898AC2B0B627900FE7B0B /* BookCoordinator.swift */,
 				3CA2B1E42B104BED00C6419E /* WordCoordinator.swift */,
 				3CA2B1E62B104D9F00C6419E /* GenreCoordinator.swift */,
-				3C7BBA582AFD548C00C79107 /* UserService.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -468,6 +461,10 @@
 		3C9FF9212B09355600BDF74C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3CD6BA4E2B00219D001FC874 /* AppState.swift */,
+				3CA2B1E92B10569100C6419E /* WGClient */,
+				3C3898B02B0B880900FE7B0B /* Clients */,
+				3CD6BA9D2B02D4DA001FC874 /* DatabaseModel */,
 				3C3898B12B0B882A00FE7B0B /* Coordinator */,
 				3CE3BE492B06E6B100E6D916 /* Networking */,
 			);
@@ -481,6 +478,17 @@
 				3CD6BAAD2B02F1D5001FC874 /* AddNewNote.swift */,
 			);
 			path = Removes;
+			sourceTree = "<group>";
+		};
+		3CA2B1E92B10569100C6419E /* WGClient */ = {
+			isa = PBXGroup;
+			children = (
+				3C7BBA562AFD300400C79107 /* CategoriesService.swift */,
+				3C7BBA522AFD287700C79107 /* WordsService.swift */,
+				3CAF94E72AFAB10B00B8434D /* AuthService.swift */,
+				3C7BBA582AFD548C00C79107 /* UserService.swift */,
+			);
+			path = WGClient;
 			sourceTree = "<group>";
 		};
 		3CAB621E2B0489E000645B5F /* WidgetExtension */ = {
