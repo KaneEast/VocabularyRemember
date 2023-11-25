@@ -19,9 +19,7 @@ struct BookListView: View {
       BookListSubview(searchTerm: searchTerm, bookSortOption: bookSortOption)
         .toolbar {
           ToolbarItem(placement: .topBarTrailing) {
-            Button {
-              routerPath.presentedSheet = .addNewBook
-            } label: {
+            Button { routerPath.presentedSheet = .addNewBook } label: {
               Image(systemName: "plus.circle")
             }
           }

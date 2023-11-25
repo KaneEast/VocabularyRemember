@@ -97,7 +97,16 @@ struct BookDetailView: View {
         }
         
         if !book.genres.isEmpty {
-          HStack {
+//          HStack {
+//            ForEach(book.genres) { genre in
+//              Text(genre.name)
+//                .font(.caption)
+//                .padding(.horizontal, 5)
+//                .padding(.vertical, 3)
+//                .background(.pink.opacity(0.3), in: Capsule())
+//            }
+//          }
+          TagView(alignment: .center, spacing: 10){
             ForEach(book.genres) { genre in
               Text(genre.name)
                 .font(.caption)
@@ -117,7 +126,7 @@ struct BookDetailView: View {
           NavigationStack {
             AddNewWord(book: book)
           }
-          .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
+          //.presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
           //.interactiveDismissDisabled()
         })
         
@@ -161,6 +170,7 @@ struct BookDetailView: View {
     }
     .sheet(isPresented: $showDict){
       DictionaryView(word: searchDictTerm)
+        .presentationBackground(.ultraThinMaterial)
         .onDisappear {
           searchDictTerm = ""
         }
@@ -171,6 +181,7 @@ struct BookDetailView: View {
       }
     }
     .navigationTitle("Book Detail")
+    .navigationBarTitleDisplayMode(.inline)
   }
   
   private func save() {

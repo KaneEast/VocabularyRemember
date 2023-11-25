@@ -1,5 +1,5 @@
 //
-//  TheApp.swift
+//  WordsgramApp.swift
 //  Wordsgram
 //
 //  Created by Kane on 2023/11/03.
@@ -9,41 +9,30 @@ import SwiftUI
 import SwiftData
 
 @main
-struct App {
-  typealias Objects = (
-    auth: AuthService,
-    appState: AppState,
-    words: WordsService,
-    categories: CategoriesService,
-    users: UserService
-  )
+struct WordsgramApp {
   
   @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
   @State private var showAlert = false
   @State private var alertData = AlertData.empty
   
   private var auth: AuthService
-  private var appState: AppState
   private var words: WordsService
   private var categories: CategoriesService
   private var users: UserService
   
   init() {
-    let appObjects = App.objects
-    auth = appObjects.auth
-    appState = appObjects.appState
-    words = appObjects.words
-    categories = appObjects.categories
-    users = appObjects.users
+    auth = AuthService.shared
+    words = WordsService()
+    categories = CategoriesService()
+    users = UserService()
     
     NetworkMonitor.shared.startMonitoring()
-    //ModelContainerManager.shared.populateInitialData()
     applyStyle()
   }
 }
 
 // MARK: - SwiftUI.App
-extension App: SwiftUI.App {
+extension WordsgramApp: App {
   var body: some Scene {
     WindowGroup {
       ZStack {
@@ -66,7 +55,7 @@ extension App: SwiftUI.App {
           .accentColor(.primaryRed)
           .modelContainer(ModelContainerManager.shared.sharedModelContainer)
           .environmentObject(auth)
-          .environmentObject(appState)
+          .environmentObject(AppState())
           .environmentObject(words)
           .environmentObject(categories)
           .environmentObject(users)
@@ -79,60 +68,5 @@ extension App: SwiftUI.App {
 #endif
       }
     }
-  }
-}
-
-// MARK: - internal
-extension App {
-  // Initialise the database
-  static var objects: Objects {
-    // do some dependency inject
-    let appState = AppState()
-    let auth = AuthService.shared // TODO: fix this
-    let words = WordsService()
-    let categories = CategoriesService()
-    let users = UserService()
-    
-    return (
-      auth: auth,
-      appState: appState,
-      words: words,
-      categories: categories,
-      users: users
-    )
-  }
-}
-
-// MARK: - private
-private extension App {
-  mutating func startServices() {
-    
-  }
-  
-  func customizeNavigationBar() {
-    UINavigationBar.appearance().backgroundColor = .backgroundColor
-    
-    UINavigationBar.appearance().largeTitleTextAttributes = [
-      .foregroundColor: UIColor(named: "titleText")!,
-      .font: UIFont.uiLargeTitle
-    ]
-    UINavigationBar.appearance().titleTextAttributes = [
-      .foregroundColor: UIColor(named: "titleText")!,
-      .font: UIFont.uiHeadline
-    ]
-  }
-  
-  func customizeTableView() {
-    UITableView.appearance().separatorColor = .clear
-    UITableViewCell.appearance().backgroundColor = .backgroundColor
-    UITableViewCell.appearance().selectionStyle = .none
-    UITableView.appearance().backgroundColor = .backgroundColor
-  }
-  
-  func customizeControls() {
-    UISwitch.appearance().onTintColor = .accent
-  }
-  
-  func setupAppReview() {
   }
 }
