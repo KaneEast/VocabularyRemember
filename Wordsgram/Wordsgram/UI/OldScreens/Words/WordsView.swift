@@ -38,8 +38,7 @@ struct WordsView: View {
         )
       }
       .sheet(isPresented: $showingSheet) {
-        CreateWordView()
-        //.onDisappear(perform: fetchWords)
+        CreateWordView()//.onDisappear(perform: fetchWords)
       }
     }
     .onAppear {

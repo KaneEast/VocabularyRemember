@@ -17,15 +17,15 @@ struct BookListView: View {
   var body: some View {
     NavigationStack(path: $routerPath.path) {
       BookListSubview(searchTerm: searchTerm, bookSortOption: bookSortOption)
+        .withAppRouter()
+        .withSheetDestinations(sheetDestinations: $routerPath.presentedSheet)
+        .navigationTitle("Books")
+        .searchable(text: $searchTerm, prompt: "Search book title")
         .toolbar {
-          ToolbarItem(placement: .topBarTrailing) {
-            Button {
-              routerPath.presentedSheet = .addNewBook
-            } label: {
+          ToolbarItemGroup {
+            Button { routerPath.presentedSheet = .addNewBook } label: {
               Image(systemName: "plus.circle")
             }
-          }
-          ToolbarItem(placement: .topBarTrailing) {
             Menu {
               ForEach(BookSortingOption.allCases) { sortOption in
                 Button(sortOption.title) {
@@ -37,15 +37,13 @@ struct BookListView: View {
             }
           }
         }
-        .navigationTitle("Books")
-        .searchable(text: $searchTerm, prompt: "Search book title")
-        .withAppRouter()
-        .withSheetDestinations(sheetDestinations: $routerPath.presentedSheet)
     }
+    .environment(routerPath)
   }
 }
 
-//#Preview {
-//  BookListView()
-//    .environmentObject(BookCoordinator(bookClient: BookClient(), bookRepository: ModelRepository<Book>(context: SystemServices.previewModelContainer.mainContext)))
-//}
+#Preview {
+  BookListView()
+    .environmentObject(BookCoordinator(bookClient: BookClient(),
+                                       bookRepository: ModelRepository<Book>(context: ModelContainerManager.shared.previewModelContainer.mainContext)))
+}

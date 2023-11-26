@@ -13,8 +13,8 @@ struct GenreSelectionView: View {
   @Binding var selectedGenres: Set<Genre>
   
   var body: some View {
-    List {
-      Section("Literary Genres") {
+    ScrollView {
+      VStack(spacing: 20) {
         ForEach(genres) { genre in
           HStack {
             Text(genre.name)
@@ -31,9 +31,10 @@ struct GenreSelectionView: View {
           }
         }
       }
-      
+      .cornerRadius(10)
     }
-    .listStyle(.plain)
+    .padding()
+    .background(.ultraThinMaterial)
   }
 }
 

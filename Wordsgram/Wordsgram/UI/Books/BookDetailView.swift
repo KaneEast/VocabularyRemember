@@ -13,7 +13,7 @@ struct BookDetailView: View {
   let book: Book
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var coordinator: BookCoordinator
-  @EnvironmentObject private var genreCoordinator: GenreCoordinator
+  @Environment(RouterPath.self) private var routerPath
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
@@ -98,7 +98,16 @@ struct BookDetailView: View {
         }
         
         if !book.genres.isEmpty {
-          HStack {
+//          HStack {
+//            ForEach(book.genres) { genre in
+//              Text(genre.name)
+//                .font(.caption)
+//                .padding(.horizontal, 5)
+//                .padding(.vertical, 3)
+//                .background(.pink.opacity(0.3), in: Capsule())
+//            }
+//          }
+          TagView(alignment: .center, spacing: 10){
             ForEach(book.genres) { genre in
               Text(genre.name)
                 .font(.caption)
@@ -115,14 +124,15 @@ struct BookDetailView: View {
           showAddNewWord.toggle()
         }
         .sheet(isPresented: $showAddNewWord, content: {
-          NavigationStack {
+          //NavigationStack {
             AddNewWord(book: book)
-          }
-          .presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
+              .presentationBackground(.thinMaterial)
+          //}
+          //.presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
           //.interactiveDismissDisabled()
         })
         
-        if book.notes.isEmpty {
+        if book.words.isEmpty {
           ContentUnavailableView("No Words", systemImage: "note")
         } else {
           WordListView(book: book, searchDictTerm: $searchDictTerm)
@@ -162,13 +172,10 @@ struct BookDetailView: View {
     }
     .sheet(isPresented: $showDict){
       DictionaryView(word: searchDictTerm)
+        .presentationBackground(.ultraThinMaterial)
         .onDisappear {
           searchDictTerm = ""
         }
-    }
-    .onAppear {
-      let res = UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: "Book")
-      print(res)
     }
     .task(id: selectedCover) {
       if let data = try? await selectedCover?.loadTransferable(type: Data.self) {
@@ -176,6 +183,7 @@ struct BookDetailView: View {
       }
     }
     .navigationTitle("Book Detail")
+    .navigationBarTitleDisplayMode(.inline)
   }
   
   private func save() {
@@ -199,7 +207,12 @@ struct BookDetailView: View {
       }
     }
     
-    try? coordinator.save()
+    do {
+      try coordinator.save()
+    } catch {
+      print(error.localizedDescription)
+    }
+    
     dismiss()
   }
 }

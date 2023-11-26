@@ -34,12 +34,4 @@ extension View {
       }
     }
   }
-  
-  func withModelContainer() -> some View {
-    modelContainer(for: [
-      Book.self,
-      Note.self,
-      Genre.self,
-    ])
-  }
 }

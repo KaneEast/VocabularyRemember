@@ -43,4 +43,5 @@ struct GenreListView: View {
 
 #Preview {
   GenreListView()
+    .environmentObject(GenreCoordinator(repository: ModelRepository<Genre>(context: ModelContainerManager.shared.previewModelContainer.mainContext)))
 }
