@@ -10,6 +10,12 @@ import SwiftUI
 func applyStyle() {
   UINavigationBar.appearance().tintColor = UIColor(named: "APrimaryRed")
   UITabBar.appearance().tintColor = UIColor(named: "APrimaryRed")
+  
+  let appearance = UITabBarAppearance()
+  appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+  //appearance.backgroundColor = UIColor(Color.white.opacity(0.1))
+  UITabBar.appearance().standardAppearance = appearance
+  UITabBar.appearance().scrollEdgeAppearance = appearance
 }
 
 func customizeNavigationBar() {

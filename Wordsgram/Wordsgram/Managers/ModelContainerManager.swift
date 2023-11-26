@@ -42,6 +42,7 @@ let prePopulateGenres = [
   ])
   
   static var shared = ModelContainerManager()
+  static var sharedMainContext = ModelContainerManager.shared.sharedModelContainer.mainContext
   private init() {}
   
   lazy var sharedModelContainer: ModelContainer = {
@@ -72,12 +73,12 @@ let prePopulateGenres = [
       let modelContainer = try ModelContainer(for: schema,
                                               configurations: [previewConfiguration])
       
-      if previewSampleDataAdded {
-        return modelContainer
-      }
+//      if previewSampleDataAdded {
+//        return modelContainer
+//      }
       
       ModelContainerManager.populateInitialData(modelContainer)
-      previewSampleDataAdded = true
+//      previewSampleDataAdded = true
       return modelContainer
     } catch {
       fatalError("Could not create Preview ModelContainer: \(error)")

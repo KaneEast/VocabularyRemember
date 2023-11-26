@@ -10,22 +10,24 @@ import SwiftData
 
 @main
 struct WordsgramApp {
-  
   @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+  @AppStorage("appearance") var appearance: Appearance = .automatic
   @State private var showAlert = false
   @State private var alertData = AlertData.empty
-  
-  private var auth: AuthService
-  private var words: WordsService
-  private var categories: CategoriesService
-  private var users: UserService
-  
+  @State private var auth = AuthService.shared
+  @State private var words = WordsService()
+  @State private var categories = CategoriesService()
+  @State private var users = UserService()
+  @State private var bookCoordinator = BookCoordinator(bookClient: BookClient(),
+                                                       bookRepository: ModelRepository<Book>(
+                                                        context: ModelContainerManager.sharedMainContext))
+  @State private var wordCoordinator = WordCoordinator(repository:
+                                                        ModelRepository<NewWord>(
+                                                          context: ModelContainerManager.sharedMainContext))
+  @State private var genreCoordinator = GenreCoordinator(repository:
+                                                          ModelRepository<Genre>(
+                                                            context: ModelContainerManager.sharedMainContext))
   init() {
-    auth = AuthService.shared
-    words = WordsService()
-    categories = CategoriesService()
-    users = UserService()
-    
     NetworkMonitor.shared.startMonitoring()
     applyStyle()
   }
@@ -39,19 +41,9 @@ extension WordsgramApp: App {
         Rectangle()
           .fill(Color.background)
           .edgesIgnoringSafeArea(.all)
+          .accessibility(identifier: "BackgroundFirstRectangle")
         RootView()
-          .onReceive(NotificationCenter.default.publisher(for: .showAlert)) { notif in
-            // Show Alert Anywhere
-            if let data = notif.object as? AlertNotificationObject {
-              alertData = data.alertData
-              showAlert = true
-            }
-          }
-          .alert(isPresented: $showAlert) {
-            Alert(title: alertData.title,
-                  message: alertData.message,
-                  dismissButton: alertData.dismissButton)
-          }
+          .modifier(AlertModifier(showAlert: $showAlert, alertData: $alertData))
           .accentColor(.primaryRed)
           .modelContainer(ModelContainerManager.shared.sharedModelContainer)
           .environmentObject(auth)
@@ -59,14 +51,35 @@ extension WordsgramApp: App {
           .environmentObject(words)
           .environmentObject(categories)
           .environmentObject(users)
-          .environmentObject(BookCoordinator(bookClient: BookClient(),
-                                             bookRepository: ModelRepository<Book>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
-          .environmentObject(WordCoordinator(repository: ModelRepository<NewWord>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
-          .environmentObject(GenreCoordinator(repository: ModelRepository<Genre>(context: ModelContainerManager.shared.sharedModelContainer.mainContext)))
+          .environmentObject(bookCoordinator)
+          .environmentObject(wordCoordinator)
+          .environmentObject(genreCoordinator)
+          .preferredColorScheme(appearance.getColorScheme())
 #if DEBUG
         //.modelContainer(TheApp.previewModelContainer)
 #endif
       }
     }
+  }
+}
+
+struct AlertModifier: ViewModifier {
+  @Binding var showAlert: Bool
+  @Binding var alertData: AlertData
+  
+  func body(content: Content) -> some View {
+    content
+      .onReceive(NotificationCenter.default.publisher(for: .showAlert)) { notif in
+        // Show Alert Anywhere
+        if let data = notif.object as? AlertNotificationObject {
+          alertData = data.alertData
+          showAlert = true
+        }
+      }
+      .alert(isPresented: $showAlert) {
+        Alert(title: alertData.title,
+              message: alertData.message,
+              dismissButton: alertData.dismissButton)
+      }
   }
 }

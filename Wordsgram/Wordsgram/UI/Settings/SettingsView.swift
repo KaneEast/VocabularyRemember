@@ -11,14 +11,41 @@ import StoreKit
 struct SettingsView: View {
   @EnvironmentObject var appState: AppState
   @EnvironmentObject var authService: AuthService
+  @AppStorage("appearance") var appearance: Appearance = .automatic
   @Environment(\.requestReview) var requestReview
+  @State var dailyReminderTime = Date(timeIntervalSince1970: 0)
+  @AppStorage("dailyReminderEnabled") var dailyReminderEnabled = false
+  @AppStorage("dailyReminderTime") var dailyReminderTimeShadow: Double = 0
   
   var body: some View {
-    NavigationStack {
-      VStack(spacing: 20) {
-        SettingsList()
+    //NavigationStack {
+      List {
+        Section(header: Text("Appearance")) {
+//          VStack(alignment: .leading) {
+            Picker("", selection: $appearance) {
+              ForEach(Appearance.allCases) { appearance in
+                Text(appearance.name).tag(appearance)
+              }          }
+            .pickerStyle(SegmentedPickerStyle())
+//          }
+        }
         
-        Spacer()
+        Section(header: Text("Notifications")) {
+          HStack {
+            Toggle("Daily Reminder", isOn: $dailyReminderEnabled)
+            DatePicker("", selection: $dailyReminderTime, displayedComponents: .hourAndMinute)
+          }
+        }
+        .onChange(of: dailyReminderEnabled) {
+          configureNotification()
+        }
+        .onChange(of: dailyReminderTime) {
+          dailyReminderTimeShadow = dailyReminderTime.timeIntervalSince1970
+          configureNotification()
+        }
+        .onAppear {
+          dailyReminderTime = Date(timeIntervalSince1970: dailyReminderTimeShadow)
+        }
         
         Button("Re login") {
           appState.isNoUser = false
@@ -45,8 +72,16 @@ struct SettingsView: View {
           authService.signOut()
         }
       }
-      .padding(20)
+      
       .navigationTitle("Settings")
+    //}
+  }
+  
+  func configureNotification() {
+    if dailyReminderEnabled {
+      LocalNotifications.shared.createReminder(time: dailyReminderTime)
+    } else {
+      LocalNotifications.shared.deleteReminder()
     }
   }
   
@@ -64,32 +99,6 @@ struct HomeScreen_Previews: PreviewProvider {
   }
 }
 
-struct SettingsList: View {
-  var body: some View {
-    VStack(spacing: 0) {
-      ForEach(SettingsOption.allCases) { self[$0] }
-    }
-  }
-}
-
-private extension SettingsList {
-  @ViewBuilder subscript(option: SettingsOption) -> some View {
-    switch option {
-    case .settings1:
-      SettingsDisclosureRow(title: option.title, value: "")
-    case .settings2:
-      SettingsDisclosureRow(title: option.title, value: "")
-    case .settings3:
-      NavigationLink(destination: CountryListView()) {
-        SettingsDisclosureRow(title: option.title, value: "")
-      }
-    case .libraries:
-      NavigationLink(destination: EmptyView()) {
-        SettingsDisclosureRow(title: option.title, value: "")
-      }
-    }
-  }
-}
 
 #Preview {
   Group {

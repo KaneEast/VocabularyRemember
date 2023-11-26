@@ -13,6 +13,7 @@ struct BookDetailView: View {
   let book: Book
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var coordinator: BookCoordinator
+  @Environment(RouterPath.self) private var routerPath
   
   @State private var isEditing = false
   @State private var showAddNewNote = false
@@ -123,9 +124,10 @@ struct BookDetailView: View {
           showAddNewWord.toggle()
         }
         .sheet(isPresented: $showAddNewWord, content: {
-          NavigationStack {
+          //NavigationStack {
             AddNewWord(book: book)
-          }
+              .presentationBackground(.thinMaterial)
+          //}
           //.presentationDetents([.fraction(0.9), .fraction(0.6), .fraction(0.3)])
           //.interactiveDismissDisabled()
         })

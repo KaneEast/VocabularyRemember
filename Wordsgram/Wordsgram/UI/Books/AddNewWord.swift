@@ -9,108 +9,27 @@ import SwiftUI
 
 struct AddNewWord: View {
   let book: Book
-  
   @State private var word = NSMutableAttributedString(string: "")
-  
-  //  @Environment(\.modelContext) private var context
   @Environment(\.dismiss) private var dismiss
   @EnvironmentObject private var coordinator: BookCoordinator
   @EnvironmentObject private var wordCoordinator: WordCoordinator
   
   var body: some View {
-    //    Form {
-    //      TextView($word, getTextView: { textView in
-    //      })
-    //      .placeholder("Enter title")
-    //      .setKeyboardType(.twitter)
-    //      .roundedBorderStyle(color: .gray, width: 1, cornerRadius: 2)
-    //    }
-    ContentView(book: book)
-      .navigationTitle("Add New Word")
-      .navigationBarTitleDisplayMode(.inline)
-      .toolbar {
-        ToolbarItem(placement: .topBarLeading) {
-          RedButton(title: "Close") {
-            dismiss()
-          }
-        }
-        
-        ToolbarItem(placement: .topBarTrailing) {
-          RedButton(title: "Save") {
-            let word = NewWord(word: word.string)
-            word.book = book
-            //          context.insert(word)
-            //
-            //          do {
-            //            try context.save()
-            //            book.words.append(word)
-            //          } catch {
-            //            print(error.localizedDescription)
-            //          }
-            
-            do {
-              try wordCoordinator.create(words: [word])
-              book.words.append(word)
-              //try coordinator.create(books: [book])
-              try wordCoordinator.create(words: [word])
-            } catch {
-              print(error.localizedDescription)
+    NavigationView {
+      ContentView(book: book)
+        .navigationTitle("Add New Word")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+          ToolbarItem(placement: .topBarLeading) {
+            RedButton(title: "Close") {
+              dismiss()
             }
-            
-            dismiss()
           }
-        }
-      }
-  }
-}
-
-
-
-struct ContentView: View {
-//  @State var tags: [Tag] = rawTags.compactMap { tag -> Tag? in
-//    return .init(name: tag)
-//  }
-  let book: Book
-//  var words: [NewWord]
-  @EnvironmentObject private var wordCoordinator: WordCoordinator
-  
-  
-  // MARK: Segment Value
-  @State var alignmentValue: Int = 1
-  // MARK: Text Value
-  @State var text: String = ""
-  var body: some View {
-    NavigationStack {
-      VStack{
-        // TagView or ScrollView
-        //TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .center : .trailing, spacing: 10){
-        ScrollView {
-          ForEach(book.words) { word in
-            // MARK: New Toggle API
-            Text(word.word)
-          }
-        }
-//        .withStrokeBorder(lineWidth: 1, strokeColor: .red)
-//        .padding(5)
-        .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6), value: alignmentValue)
-        
-        Spacer()
-        
-        HStack{
-          // MARK: New API
-          // Multi Line TextField
-          TextField("Word", text: $text,axis: .vertical)
-            .textFieldStyle(.roundedBorder)
-          // Line Limit
-          // If It Exceeds Then It will Enable ScrollView
-//            .lineLimit(1...5)
-            .lineLimit(1)
           
-          Button("Add"){
-            withAnimation(.spring()){
-              let word = NewWord(word: text)
+          ToolbarItem(placement: .topBarTrailing) {
+            RedButton(title: "Save") {
+              let word = NewWord(word: word.string)
               word.book = book
-              text = ""
               do {
                 try wordCoordinator.create(words: [word])
                 book.words.append(word)
@@ -119,25 +38,71 @@ struct ContentView: View {
               } catch {
                 print(error.localizedDescription)
               }
+              
+              dismiss()
             }
           }
-          .buttonStyle(.bordered)
-          .buttonBorderShape(.roundedRectangle(radius: 4))
-          .tint(.red)
-          .disabled(text == "")
         }
-      }
-      //.shadow(color: .red, radius: 2)
-      .padding(15)
     }
   }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    ContentView()
-//  }
-//}
+
+
+struct ContentView: View {
+  let book: Book
+  @EnvironmentObject private var wordCoordinator: WordCoordinator
+  
+  // MARK: Segment Value
+  @State var alignmentValue: Int = 1
+  // MARK: Text Value
+  @State var text: String = ""
+  var body: some View {
+    
+    VStack{
+      // TagView or ScrollView
+      //TagView(alignment: alignmentValue == 0 ? .leading : alignmentValue == 1 ? .center : .trailing, spacing: 10){
+      ScrollView {
+        ForEach(book.words) { word in
+          // MARK: New Toggle API
+          Text(word.word)
+        }
+      }
+      .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6), value: alignmentValue)
+      
+      Spacer()
+      
+      HStack{
+        TextField("Word", text: $text,axis: .vertical)
+          .textFieldStyle(.roundedBorder)
+          .lineLimit(1)
+        
+        Button("Add"){
+          withAnimation(.spring()){
+            let word = NewWord(word: text)
+            word.book = book
+            text = ""
+            do {
+              try wordCoordinator.create(words: [word])
+              book.words.append(word)
+              //try coordinator.create(books: [book])
+              try wordCoordinator.create(words: [word])
+            } catch {
+              print(error.localizedDescription)
+            }
+          }
+        }
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.roundedRectangle(radius: 4))
+        .tint(.red)
+        .disabled(text == "")
+      }
+    }
+    //.shadow(color: .red, radius: 2)
+    .padding(15)
+  }
+  
+}
 
 // MARK: Building Custom Layout With The New Layout API
 struct TagView: Layout {
@@ -150,33 +115,33 @@ struct TagView: Layout {
     self.spacing = spacing
   }
   
-//  func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-//    // Returning Default Proposal Size
-//    return .init(width: proposal.width ?? 0, height: proposal.height ?? 0)
-//  }
+  //  func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+  //    // Returning Default Proposal Size
+  //    return .init(width: proposal.width ?? 0, height: proposal.height ?? 0)
+  //  }
   func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-      // 初始尺寸
-      var totalHeight: CGFloat = 0
-      var currentWidth: CGFloat = 0
-      var maxHeightInRow: CGFloat = 0
-
-      for subview in subviews {
-          let subviewSize = subview.sizeThatFits(proposal)
-          if currentWidth + subviewSize.width > proposal.width ?? CGFloat.infinity {
-              // 新的一行
-              totalHeight += maxHeightInRow + spacing
-              currentWidth = 0
-              maxHeightInRow = 0
-          }
-          
-          currentWidth += subviewSize.width + spacing
-          maxHeightInRow = max(maxHeightInRow, subviewSize.height)
+    // 初始尺寸
+    var totalHeight: CGFloat = 0
+    var currentWidth: CGFloat = 0
+    var maxHeightInRow: CGFloat = 0
+    
+    for subview in subviews {
+      let subviewSize = subview.sizeThatFits(proposal)
+      if currentWidth + subviewSize.width > proposal.width ?? CGFloat.infinity {
+        // 新的一行
+        totalHeight += maxHeightInRow + spacing
+        currentWidth = 0
+        maxHeightInRow = 0
       }
       
-      totalHeight += maxHeightInRow // 添加最后一行的高度
-      return CGSize(width: proposal.width ?? 0, height: totalHeight)
+      currentWidth += subviewSize.width + spacing
+      maxHeightInRow = max(maxHeightInRow, subviewSize.height)
+    }
+    
+    totalHeight += maxHeightInRow // 添加最后一行的高度
+    return CGSize(width: proposal.width ?? 0, height: totalHeight)
   }
-
+  
   
   func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
     // MARK: Placing View
@@ -236,16 +201,4 @@ struct TagView: Layout {
       origin.y += (maxHeight + spacing)
     }
   }
-}
-
-// MARK: String Tags
-var rawTags: [String] = [
-  "SwiftUI","Xcode","Apple","WWDC 22","iOS 16","iPadOS 16","macOS 13","watchOS 9","Xcode 14","API's"
-]
-
-// MARK: Tag Model
-struct Tag: Identifiable{
-  var id = UUID().uuidString
-  var name: String
-  var isSelected: Bool = false
 }

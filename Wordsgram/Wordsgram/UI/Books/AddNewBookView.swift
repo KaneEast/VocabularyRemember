@@ -22,7 +22,7 @@ struct AddNewBookView: View {
   @State private var bookItem: Item?
   
   var body: some View {
-    NavigationStack {
+    NavigationView {
       VStack(alignment: .leading) {
         HStack {
           PhotosPicker(
@@ -101,6 +101,7 @@ struct AddNewBookView: View {
         }
       }
     }
+    .presentationBackground(.ultraThinMaterial)
   }
   
   private var isValid: Bool {

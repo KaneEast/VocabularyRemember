@@ -14,14 +14,6 @@ struct RootView: View {
   var body: some View {
     if auth.isLoggedIn || appState.isNoUser {
       AppTabView()
-        .onAppear {
-          guard let urlApp = FileManager.default.urls(for: .applicationSupportDirectory,
-                                                      in: .userDomainMask).last else { return }
-          let url = urlApp.appendingPathComponent("default.store")
-          if FileManager.default.fileExists(atPath: url.path) {
-            print("DataStore is located at \(url.absoluteString)")
-          }
-        }
     } else {
       LoginView()
     }
