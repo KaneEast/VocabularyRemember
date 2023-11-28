@@ -10,7 +10,7 @@ import SwiftData
 
 @MainActor
 struct BookListView: View {
-  @State private var routerPath = RouterPath()
+  @State var routerPath = RouterManager.shared.bookTabRouter
   @State private var searchTerm: String = ""
   @State private var bookSortOption = BookSortingOption.none
   

@@ -12,9 +12,4 @@ extension String {
   static let books = "Books"
   static let genres = "Genres"
   static let settings = "Settings"
-  
-  static let settings1 = "settings 1"
-  static let settings2 = "settings 2"
-  static let settings3 = "settings 3"
-  static let libraries = "Libraries"
 }

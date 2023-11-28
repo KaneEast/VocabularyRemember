@@ -15,7 +15,7 @@ enum AuthActionState: String {
 
 struct LoginView: View {
   @EnvironmentObject var authService: AuthService
-  @EnvironmentObject var appState: AppState
+  @Environment(UserPreferences.self) private var preferences
   @StateObject private var vm = LoginViewModel()
   
   var body: some View {
@@ -60,7 +60,7 @@ struct LoginView: View {
         
         Button(
           action: {
-            appState.isNoUser = true
+            preferences.isNoUser = true
           },
           label: {
             Text("Just Use")

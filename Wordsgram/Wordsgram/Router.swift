@@ -17,17 +17,26 @@ public enum RouterDestination: Hashable {
 
 public enum SheetDestination: Identifiable {
   case addNewBook
+  case addNewWord(book: Book)
+  case addNewNote(book: Book)
   case addNewGenre
   case createCategory
+  case showDict(searchTerm: String)
   
   public var id: String {
     switch self {
     case .addNewBook:
       "addNewBook"
+    case .addNewWord:
+      "addNewWord"
     case .addNewGenre:
       "addNewGenre"
     case .createCategory:
       "createCategory"
+    case .addNewNote:
+      "addNewNote"
+    case .showDict:
+      "showDict"
     }
   }
 }

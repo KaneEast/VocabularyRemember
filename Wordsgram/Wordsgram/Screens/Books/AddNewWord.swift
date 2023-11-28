@@ -20,29 +20,34 @@ struct AddNewWord: View {
         .navigationTitle("Add New Word")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-          ToolbarItem(placement: .topBarLeading) {
-            RedButton(title: "Close") {
-              dismiss()
-            }
-          }
-          
-          ToolbarItem(placement: .topBarTrailing) {
-            RedButton(title: "Save") {
-              let word = NewWord(word: word.string)
-              word.book = book
-              do {
-                try wordCoordinator.create(words: [word])
-                book.words.append(word)
-                //try coordinator.create(books: [book])
-                try wordCoordinator.create(words: [word])
-              } catch {
-                print(error.localizedDescription)
-              }
-              
-              dismiss()
-            }
-          }
+          myToolbarContent
         }
+    }
+  }
+  
+  @ToolbarContentBuilder
+  private var myToolbarContent: some ToolbarContent {
+    ToolbarItem(placement: .topBarLeading) {
+      RedButton(title: "Close") {
+        dismiss()
+      }
+    }
+    
+    ToolbarItem(placement: .topBarTrailing) {
+      RedButton(title: "Save") {
+        let word = NewWord(word: word.string)
+        word.book = book
+        do {
+          try wordCoordinator.create(words: [word])
+          book.words.append(word)
+          //try coordinator.create(books: [book])
+          try wordCoordinator.create(words: [word])
+        } catch {
+          print(error.localizedDescription)
+        }
+        
+        dismiss()
+      }
     }
   }
 }
