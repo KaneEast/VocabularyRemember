@@ -31,6 +31,14 @@ extension View {
           .interactiveDismissDisabled()
       case .createCategory:
         CreateCategoryView()
+      case let .addNewWord(book):
+        AddNewWord(book: book)
+          .presentationBackground(.thinMaterial)
+      case let .addNewNote(book):
+        AddNewNote(book: book)
+          .presentationBackground(.thinMaterial)
+      case let .showDict(searchTerm):
+        DictionaryView(word: searchTerm)        
       }
     }
   }

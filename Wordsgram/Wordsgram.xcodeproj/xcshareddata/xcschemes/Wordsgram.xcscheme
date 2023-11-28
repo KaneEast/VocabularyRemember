@@ -45,7 +45,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C2066EB2AF40DC300C74DBA"
+               BlueprintIdentifier = "3C119CE52B12F97F008F92CD"
                BuildableName = "WordsgramUITests.xctest"
                BlueprintName = "WordsgramUITests"
                ReferencedContainer = "container:Wordsgram.xcodeproj">

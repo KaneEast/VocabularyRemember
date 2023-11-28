@@ -9,10 +9,10 @@ import SwiftUI
 
 struct RootView: View {
   @EnvironmentObject var auth: AuthService
-  @EnvironmentObject var appState: AppState
+  @Environment(UserPreferences.self) private var preferences
   
   var body: some View {
-    if auth.isLoggedIn || appState.isNoUser {
+    if auth.isLoggedIn || preferences.isNoUser {
       AppTabView()
     } else {
       LoginView()

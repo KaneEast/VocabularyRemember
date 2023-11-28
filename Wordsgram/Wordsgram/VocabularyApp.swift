@@ -9,11 +9,12 @@ import SwiftUI
 import SwiftData
 
 @main
-struct WordsgramApp {
-  @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-  @AppStorage("appearance") var appearance: Appearance = .automatic
+struct VocabularyApp {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate 
   @State private var showAlert = false
   @State private var alertData = AlertData.empty
+  
+  @State private var userPreferences = UserPreferences.shared
   @State private var auth = AuthService.shared
   @State private var words = WordsService()
   @State private var categories = CategoriesService()
@@ -34,7 +35,7 @@ struct WordsgramApp {
 }
 
 // MARK: - SwiftUI.App
-extension WordsgramApp: App {
+extension VocabularyApp: App {
   var body: some Scene {
     WindowGroup {
       ZStack {
@@ -42,22 +43,21 @@ extension WordsgramApp: App {
           .fill(Color.background)
           .edgesIgnoringSafeArea(.all)
           .accessibility(identifier: "BackgroundFirstRectangle")
+        
         RootView()
           .modifier(AlertModifier(showAlert: $showAlert, alertData: $alertData))
           .accentColor(.primaryRed)
           .modelContainer(ModelContainerManager.shared.sharedModelContainer)
           .environmentObject(auth)
-          .environmentObject(AppState())
           .environmentObject(words)
           .environmentObject(categories)
+          .environment(userPreferences)
           .environmentObject(users)
           .environmentObject(bookCoordinator)
           .environmentObject(wordCoordinator)
           .environmentObject(genreCoordinator)
-          .preferredColorScheme(appearance.getColorScheme())
-#if DEBUG
-        //.modelContainer(TheApp.previewModelContainer)
-#endif
+          //.preferredColorScheme(appearance.getColorScheme())
+          .preferredColorScheme(userPreferences.appearance.getColorScheme())
       }
     }
   }

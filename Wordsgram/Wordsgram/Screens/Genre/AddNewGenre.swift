@@ -27,14 +27,7 @@ struct AddNewGenre: View {
         
         HStack {
           Button("Save") {
-            let genre = Genre(name: name)
-            context.insert(genre)
-            do {
-              try context.save()
-            } catch {
-              print(error.localizedDescription)
-            }
-            dismiss()
+            save()
           }
           .buttonStyle(.bordered)
           .foregroundColor(.red)
@@ -55,6 +48,17 @@ struct AddNewGenre: View {
         }
       }
     }
+  }
+  
+  private func save() {
+    let genre = Genre(name: name)
+    context.insert(genre)
+    do {
+      try context.save()
+    } catch {
+      print(error.localizedDescription)
+    }
+    dismiss()
   }
 }
 
