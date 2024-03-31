@@ -1,5 +1,8 @@
 # VocabularyRemember App With SwiftUI & Vapor
 
+アプリのデザインについて考案中なので開発は止めています。
+
+
 VaporとSwiftUIでオンライン機能を持つ英単語記憶アプリ
 
 # 機能
