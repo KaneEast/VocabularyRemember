@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-metrics/Sources/CoreMetrics/Locks.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Locks.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Locks.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Locks~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Locks.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-metrics/Sources/CoreMetrics/Metrics.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Metrics.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Metrics.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Metrics~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/CoreMetrics.build/Metrics.swiftdeps"
+  }
+}

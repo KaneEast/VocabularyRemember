@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-numerics/Sources/ComplexModule/Arithmetic.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Arithmetic.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Arithmetic.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Arithmetic~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Arithmetic.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-numerics/Sources/ComplexModule/Complex.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Complex.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Complex.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Complex~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Complex.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-numerics/Sources/ComplexModule/Differentiable.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Differentiable.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Differentiable.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Differentiable~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/Differentiable.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-numerics/Sources/ComplexModule/ElementaryFunctions.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/ElementaryFunctions.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/ElementaryFunctions.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/ElementaryFunctions~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ComplexModule.build/ElementaryFunctions.swiftdeps"
+  }
+}
