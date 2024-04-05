@@ -35,3 +35,48 @@ GET http://localhost:8080/api/categories/396C39C6-1A7E-4984-8C33-89C98CD10ED6/wo
 ### Remove Relationship
 DELETE http://localhost:8080/api/words/2D3D9CC6-CD10-4A9F-A4B8-E2113E179E3D/categories/07ED5600-CC8D-4857-8E65-9981B920EC85
 Authorization: Bearer AOM03FS90G7HgW0A0Ze0Dw==
+
+
+### 
+GET https://wordsapiv1.p.rapidapi.com/words/frequently
+X-RapidAPI-Key: 767e46fc15msha947d9612078375p1eb21fjsn401280b9bb27
+X-RapidAPI-Host: wordsapiv1.p.rapidapi.com
+
+
+
+{
+  "type": "object",
+  "properties": {
+    "word": {
+      "type": "string"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "syllables": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pronunciation": {
+      "type": "object",
+      "properties": {
+        "all": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

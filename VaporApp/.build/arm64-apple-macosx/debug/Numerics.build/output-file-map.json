@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Numerics.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/swift-numerics/Sources/Numerics/Numerics.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Numerics.build/Numerics.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Numerics.build/Numerics.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Numerics.build/Numerics~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/Numerics.build/Numerics.swiftdeps"
+  }
+}

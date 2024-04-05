@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/AppTests.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/AppTests.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/AppTests.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/AppTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/AppTests.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/Application+Testable.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Application+Testable.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Application+Testable.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Application+Testable~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Application+Testable.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/CategoryTests.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/CategoryTests.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/CategoryTests.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/CategoryTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/CategoryTests.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/Models+Testable.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Models+Testable.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Models+Testable.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Models+Testable~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/Models+Testable.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/UserTests.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/UserTests.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/UserTests.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/UserTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/UserTests.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Tests/AppTests/WordTests.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/WordTests.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/WordTests.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/WordTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/AppTests.build/WordTests.swiftdeps"
+  }
+}

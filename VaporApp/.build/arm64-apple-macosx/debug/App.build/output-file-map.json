@@ -1,0 +1,107 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Controllers/CategoriesController.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CategoriesController.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CategoriesController.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CategoriesController~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CategoriesController.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Controllers/UsersController.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/UsersController.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/UsersController.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/UsersController~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/UsersController.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Controllers/WordsController.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordsController.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordsController.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordsController~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordsController.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateAdminUser.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateAdminUser.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateAdminUser.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateAdminUser~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateAdminUser.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateCategory.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateCategory.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateCategory.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateCategory~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateCategory.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateToken.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateToken.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateToken.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateToken~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateToken.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateUser.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateUser.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateUser.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateUser~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateUser.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateWord.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWord.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWord.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWord~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWord.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Migrations/CreateWordCategoryPivot.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWordCategoryPivot.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWordCategoryPivot.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWordCategoryPivot~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/CreateWordCategoryPivot.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Models/Category.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Category.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Category.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Category~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Category.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Models/Token.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Token.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Token.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Token~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Token.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Models/User.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/User.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/User.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/User~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/User.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Models/Word.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Word.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Word.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Word~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/Word.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/Models/WordCategoryPivot.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordCategoryPivot.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordCategoryPivot.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordCategoryPivot~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/WordCategoryPivot.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/configure.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/configure.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/configure.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/configure~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/configure.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/entrypoint.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/entrypoint.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/entrypoint.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/entrypoint~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/entrypoint.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/Sources/App/routes.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/routes.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/routes.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/routes~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/App.build/routes.swiftdeps"
+  }
+}

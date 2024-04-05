@@ -1,0 +1,299 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/master.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/ActivityBar.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityBar.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityBar.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityBar~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityBar.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/ActivityIndicator.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicator.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicator.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicator~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicator.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/ActivityIndicatorRenderer.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorRenderer.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorRenderer.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorRenderer~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorRenderer.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/ActivityIndicatorState.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorState.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorState.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorState~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ActivityIndicatorState.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/CustomActivity.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CustomActivity.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CustomActivity.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CustomActivity~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CustomActivity.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/LoadingBar.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoadingBar.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoadingBar.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoadingBar~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoadingBar.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Activity/ProgressBar.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ProgressBar.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ProgressBar.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ProgressBar~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ProgressBar.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Clear/Console+Clear.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Clear.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Clear.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Clear~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Clear.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Clear/Console+Ephemeral.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ephemeral.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ephemeral.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ephemeral~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ephemeral.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Clear/ConsoleClear.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleClear.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleClear.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleClear~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleClear.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/AnyCommand.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyCommand.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyCommand.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyCommand.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Argument.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Argument.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Argument.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Argument~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Argument.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Async/AnyAsyncCommand.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyAsyncCommand.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyAsyncCommand.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyAsyncCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AnyAsyncCommand.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Async/AsyncCommand.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommand.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommand.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommand.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Async/AsyncCommandGroup.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommandGroup.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommandGroup.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommandGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommandGroup.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Async/AsyncCommands.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommands.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommands.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommands~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/AsyncCommands.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Command.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Command.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Command.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Command~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Command.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/CommandContext.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandContext.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandContext.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandContext~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandContext.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/CommandError.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandError.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandError.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandError~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandError.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/CommandGroup.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandGroup.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandGroup.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandGroup.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/CommandInput.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandInput.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandInput.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandInput~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandInput.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/CommandSignature.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandSignature.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandSignature.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandSignature~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/CommandSignature.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Commands.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Commands.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Commands.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Commands~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Commands.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Completion.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Completion.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Completion.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Completion~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Completion.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Console+Run.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Run.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Run.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Run~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Run.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Flag.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Flag.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Flag.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Flag~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Flag.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Option.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Option.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Option.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Option~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Option.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Command/Utilities.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Utilities.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Utilities.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Utilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Utilities.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Console.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Input/Console+Ask.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ask.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ask.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ask~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Ask.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Input/Console+Choose.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Choose.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Choose.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Choose~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Choose.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Input/Console+Confirm.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Confirm.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Confirm.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Confirm~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Confirm.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Input/Console+Input.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Input.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Input.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Input~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Input.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/Console+Center.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Center.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Center.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Center~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Center.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/Console+Output.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Output.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Output.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Output~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Output.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/Console+Wait.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Wait.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Wait.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Wait~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Console+Wait.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/ConsoleColor.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleColor.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleColor.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleColor~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleColor.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/ConsoleStyle.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleStyle.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleStyle.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleStyle~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleStyle.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/ConsoleText.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleText.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleText.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleText~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleText.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Output/ConsoleTextFragment.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleTextFragment.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleTextFragment.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleTextFragment~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleTextFragment.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Terminal/ANSI.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ANSI.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ANSI.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ANSI~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ANSI.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Terminal/Terminal.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Terminal.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Terminal.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Terminal~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/Terminal.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Terminal/readpassphrase_linux.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/readpassphrase_linux.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/readpassphrase_linux.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/readpassphrase_linux~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/readpassphrase_linux.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/ConsoleError.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleError.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleError.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleError~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleError.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/ConsoleLogger.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleLogger.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleLogger.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleLogger~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/ConsoleLogger.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/GenerateAsyncAutocompleteCommand.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAsyncAutocompleteCommand.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAsyncAutocompleteCommand.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAsyncAutocompleteCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAsyncAutocompleteCommand.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/GenerateAutocompleteCommand.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAutocompleteCommand.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAutocompleteCommand.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAutocompleteCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/GenerateAutocompleteCommand.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/LoggerFragment.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoggerFragment.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoggerFragment.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoggerFragment~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/LoggerFragment.swiftdeps"
+  },
+  "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/checkouts/console-kit/Sources/ConsoleKit/Utilities/String+LevenshteinDistance.swift": {
+    "dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/String+LevenshteinDistance.d",
+    "object": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/String+LevenshteinDistance.swift.o",
+    "swiftmodule": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/String+LevenshteinDistance~partial.swiftmodule",
+    "swift-dependencies": "/Users/kane/Documents/VocabularyRemember/VaporApp/.build/arm64-apple-macosx/debug/ConsoleKit.build/String+LevenshteinDistance.swiftdeps"
+  }
+}
